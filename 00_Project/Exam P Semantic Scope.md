@@ -39,7 +39,7 @@ $$
 
 Hölder, Cauchy–Schwarz and Jensen are required. Completeness of $L^p$, density theorems, full duality, weak convergence and Fourier analysis belong to the advanced analysis line, not the Exam P deployment core.
 
-Therefore $L^p$ remains a foundation interface rather than an independent top-level module.
+Therefore $L^p$ has a visible interface module for architectural separation, but not the scope of an independent full theory. Its boundary is semantic: only the structures consumed by probability and the main proof line belong there.
 
 ## Necessary next module
 
@@ -55,7 +55,7 @@ $$
 \text{change of variables}.
 $$
 
-This should be built as a formal module after Integration and Convergence. It must not be hidden inside a supplement.
+The directory [[35_Product-Measures-and-Transformations/00_Module Map|Product Measures and Transformations]] now reserves this as a formal module after Integration and Convergence. Its mathematical content remains planned and must not be hidden inside a supplement.
 
 ## Excluded from the current core
 

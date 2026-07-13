@@ -10,23 +10,27 @@ status: canonical
 
 ```mermaid
 flowchart LR
-    IC["Integral construction, MCT, Fatou, DCT"] --> F1
+    IC["Integration and convergence"] --> LP["$L^p$ interface"]
+    IC --> SM["Signed measures"]
     IC --> RN
     IC --> P
-    F1["$L^1$ across measures"] --> RN["Radon–Nikodym"]
-    F2["$L^1$–$L^\infty$ interface"] --> CE["Conditional expectation"]
-    F3["Signed measures and Hahn decomposition"] --> RN
+    IC --> PM["Product measures and transformations"]
+    LP --> RN["Radon–Nikodym"]
+    LP --> CE["Conditional expectation"]
+    SM --> RN
     L["Core lemmas"] --> RN
     L --> CE
     RN --> CE
     P["Pushforwards and laws"] --> CL["Conditional laws"]
+    P --> PM
+    PM --> EP["Exam P translations"]
     CE --> CL
-    P --> EP["Exam P translations"]
+    P --> EP
     CE --> EP
     CL --> EP
 ```
 
-The next formal module is product measures, Tonelli/Fubini and change of variables. It will sit between integration theory and the joint-law applications of pushforwards.
+Product Measures and Transformations is now a formal planned module. Its internal documents remain to be written; the dependency slot is no longer hidden inside Applications or Supplements.
 
 ## Canonical Radon–Nikodym proof route
 

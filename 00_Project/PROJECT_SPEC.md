@@ -846,9 +846,12 @@ $$
 
 ## 42. 目錄的數學職能
 
-- `10_Foundations`：跨模組先備；
-- `20_Radon-Nikodym`：RN 定理、Hahn-first 證明與 TD；
+- `10_Integration-and-Convergence`：積分建構、MCT、Fatou、DCT；
+- `15_Lp-Interface`：$L^1$、$L^2$、$L^\infty$ 的必要介面；
+- `18_Signed-Measures`：Hahn–Jordan decomposition 與 signed-measure structure；
+- `20_Radon-Nikodym`：RN 定理與 Hahn-first 證明；
 - `30_Pushforwards-and-Laws`：pushforward、laws、densities、mixtures；
+- `35_Product-Measures-and-Transformations`：product measures、Tonelli/Fubini、change of variables；
 - `40_Conditional-Expectation`：抽象條件期望；
 - `50_Conditional-Laws`：state-space representation 與條件事件律；
 - `60_Applications`：Exam P 轉譯與統計應用；
@@ -858,12 +861,24 @@ $$
 
 ## 43. 文件角色
 
-Cours、TD、corrigé 與 complement 必須分檔。若一份 supplement 擴張成系統性章節，應升格為 foundation 或正式 complement，不得以「補充」之名另開一門隱藏課程。
+每個正式單元固定包含：
+
+1. `00_Module Map`；
+2. `01_Cours`；
+3. `02_TD`；
+4. `03_Corriges`；
+5. `04_Colles`；
+6. `05_Example-Sheets`；
+7. `06_Supplements`。
+
+各角色的責任與完成狀態以 [[00_Project/Unit Structure|Unit Structure]] 為準。Cours、TD、corrigé、colle、example sheet 與 supplement 必須分檔；目錄固定不表示必須製造內容。
+
+若一份 supplement 擴張成系統性章節，應升格為 Cours 內容或獨立正式單元，不得以「補充」之名另開一門隱藏課程。
 
 不使用「概念卡」作為文件類型。該名稱無法區分 lemma、proposition、proof mechanism 與 semantic convention，因而沒有合法的分類功能。
 
 ## 44. Exam P 基礎邊界
 
-Integral construction、MCT、Fatou 與 DCT 是 RN、pushforward integration 與 conditional expectation 的正式先備，必須在 `10_Foundations` 中保持可重建。
+Integral construction、MCT、Fatou 與 DCT 是 RN、pushforward integration 與 conditional expectation 的正式先備，必須在 `10_Integration-and-Convergence` 中保持可重建。
 
-對 Exam P 而言，$L^p$ 只部署 $L^1$、$L^2$、$L^\infty$ 的必要 interface，以及 Hölder、Cauchy–Schwarz、Jensen。完整的 Banach-space theory、duality 與 weak convergence 不升格為主模組。
+對 Exam P 而言，`15_Lp-Interface` 只部署 $L^1$、$L^2$、$L^\infty$ 的必要 interface，以及 Hölder、Cauchy–Schwarz、Jensen。此目錄的獨立只為責任分離，不授權其膨脹為完整 Banach-space theory、duality 或 weak convergence。

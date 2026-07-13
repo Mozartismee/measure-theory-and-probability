@@ -6,11 +6,15 @@ status: canonical
 
 # 測度論：Radon–Nikodym、條件期望與條件律
 
-本專案是一個 **measure-theoretic probability 核心模組**，理論標準為 ENS L3 末至 M1 初；它不是一部企圖吞下全部測度論的百科全書。
+本專案是一組 measure-theoretic probability 教學單元，理論標準為 ENS L3 末至 M1 初，並保留一條受控的 Exam P 轉譯線。它不企圖吞下整部測度論；百科全書式肥大通常只是沒有做出選擇。
 
 主線為
 
 $$
+\text{integration and convergence}
+\longrightarrow
+\text{signed measures}
+\longrightarrow
 \text{Radon–Nikodym}
 \longrightarrow
 \text{conditional expectation}
@@ -18,41 +22,64 @@ $$
 \text{conditional laws}.
 $$
 
-Pushforward、laws、densities 與 mixtures 構成另一條必要支線，並在 state-space representation 處與條件期望合流。
+Pushforwards and Laws 與 Product Measures and Transformations 構成 state-space 支線；有限 $L^p$ interface 則供應 integrability、test functions、moments 與 projection 所需的工具。
 
-## 建議閱讀順序
+## 正式模組
 
-1. [[10_Foundations/Integration and Convergence|Integration and Convergence]]
-2. [[10_Foundations/TD 01 — Integration and Convergence|Integration and Convergence TD]]
-3. [[10_Foundations/L1 Across Measures|$L^1$ Across Measures]]
-4. [[10_Foundations/L1-Linfty Interface|The $L^1$–$L^\infty$ Interface]]
-5. [[10_Foundations/Signed Measures and Hahn-Jordan Decomposition|Signed Measures and Hahn–Jordan Decomposition]]
-6. [[20_Radon-Nikodym/Cours|Radon–Nikodym Cours]]
-7. [[20_Radon-Nikodym/TD 01 — Boundary and Local Domination|RN TD 01]]
-8. [[20_Radon-Nikodym/TD 02 — Constructing the Density|RN TD 02]]
-9. [[30_Pushforwards-and-Laws/Cours|Pushforwards and Laws Cours]]
-10. [[40_Conditional-Expectation/Cours|Conditional Expectation Cours]]
-11. [[40_Conditional-Expectation/TD 01 — RN Construction|Conditional Expectation TD 01]]
-12. [[40_Conditional-Expectation/TD 02 — Finite Sigma-Fields|Conditional Expectation TD 02]]
-13. [[50_Conditional-Laws/Cours|Conditional Laws Cours]]
-14. [[50_Conditional-Laws/TD 01 — State-Space Representations|Conditional Laws TD 01]]
+| 順序 | 模組 | 現況 |
+| --- | --- | --- |
+| 10 | [[10_Integration-and-Convergence/00_Module Map|Integration and Convergence]] | in-progress |
+| 15 | [[15_Lp-Interface/00_Module Map|$L^p$ Interface]] | in-progress |
+| 18 | [[18_Signed-Measures/00_Module Map|Signed Measures]] | in-progress |
+| 20 | [[20_Radon-Nikodym/00_Module Map|Radon–Nikodym]] | in-progress |
+| 30 | [[30_Pushforwards-and-Laws/00_Module Map|Pushforwards and Laws]] | in-progress |
+| 35 | [[35_Product-Measures-and-Transformations/00_Module Map|Product Measures and Transformations]] | planned |
+| 40 | [[40_Conditional-Expectation/00_Module Map|Conditional Expectation]] | in-progress |
+| 50 | [[50_Conditional-Laws/00_Module Map|Conditional Laws]] | in-progress |
 
-## 檔案角色
+每個正式模組均遵循 [[00_Project/Unit Structure|Unit Structure]]：
 
-- `Cours`：提供可部署的定義、定理、證明架構與邊界。
-- `TD`：把責任留給學生，形成依賴鏈，而不是平行題庫。
-- `Corriges`：完整、壓縮、可重建的解答。
-- `Complements`：只處理主線之外但仍有直接依賴的結果。
-- [[80_Lemmas/INDEX|`80_Lemmas`]]：可獨立部署、附證明的重要引理。
-- `90_Review`：跨模組的白紙重建題。
-- `99_Sources`：唯讀原始文獻；不在其中生成筆記。
-- `_Archive`：非現行正本，不得作為主線依賴。
+    00_Module Map
+    01_Cours
+    02_TD
+    03_Corriges
+    04_Colles
+    05_Example-Sheets
+    06_Supplements
+
+目錄位置固定；內容不偽造。缺少 corrigé、colle 或 example sheet 時，Module Map 直接記載缺口。
+
+## 建議閱讀主線
+
+1. [[10_Integration-and-Convergence/01_Cours/Cours|Integration and Convergence]]
+2. [[10_Integration-and-Convergence/02_TD/TD 01 — Integration and Convergence|Integration and Convergence TD]]
+3. [[15_Lp-Interface/01_Cours/Cours|The $L^1$–$L^\infty$ Interface]]
+4. [[15_Lp-Interface/01_Cours/L1 Across Measures|$L^1$ Across Measures]]
+5. [[18_Signed-Measures/01_Cours/Cours|Signed Measures and Hahn–Jordan Decomposition]]
+6. [[20_Radon-Nikodym/01_Cours/Cours|Radon–Nikodym Cours]]
+7. [[20_Radon-Nikodym/02_TD/TD 01 — Boundary and Local Domination|RN TD 01]]
+8. [[20_Radon-Nikodym/02_TD/TD 02 — Constructing the Density|RN TD 02]]
+9. [[30_Pushforwards-and-Laws/01_Cours/Cours|Pushforwards and Laws Cours]]
+10. Product Measures and Transformations（planned）
+11. [[40_Conditional-Expectation/01_Cours/Cours|Conditional Expectation Cours]]
+12. [[40_Conditional-Expectation/02_TD/TD 01 — RN Construction|Conditional Expectation TD 01]]
+13. [[40_Conditional-Expectation/02_TD/TD 02 — Finite Sigma-Fields|Conditional Expectation TD 02]]
+14. [[50_Conditional-Laws/01_Cours/Cours|Conditional Laws Cours]]
+15. [[50_Conditional-Laws/02_TD/TD 01 — State-Space Representations|Conditional Laws TD 01]]
+
+## 跨模組區
+
+- [[60_Applications/INDEX|Applications]]：Exam P 轉譯與統計應用。
+- [[80_Lemmas/INDEX|Lemmas]]：可獨立部署、附證明的重要引理。
+- [[90_Review/INDEX|Review]]：跨模組白紙重建。
+- [[99_Sources/ENS/INDEX|Sources]]：唯讀原始文獻。
+- _Archive：非現行正本，不得成為主線依賴。
 
 ## 兩種 regime
 
 ### ENS 理論線
 
-要求假設可見、證明可重建，並明確區分 measure、density、equivalence class、state-space object 與 probability-space object。
+要求假設可見、證明可重建，並區分 measure、density、equivalence class、state-space object 與 probability-space object。
 
 ### Exam P 轉譯線
 
@@ -61,9 +88,10 @@ Pushforward、laws、densities 與 mixtures 構成另一條必要支線，並在
 ## 專案規範與來源
 
 - [[00_Project/PROJECT_SPEC|專案生成規格]]
+- [[00_Project/Unit Structure|教學單元結構]]
 - [[00_Project/Dependency Map|概念依賴圖]]
 - [[00_Project/Bibliography|文獻與使用位置]]
 - [[00_Project/Exam P Semantic Scope|Exam P 語義範圍]]
 - [[99_Sources/ENS/INDEX|ENS 原始文獻索引]]
 
-每一數學物件只保留一份現行正本。其他文件應以連結引用，不以複製維持表面上的完整性。
+每一數學物件只保留一份現行正本；其餘文件以連結引用，不以複製維持表面完整。
