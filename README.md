@@ -24,6 +24,8 @@ $$
 
 Pushforwards and Laws 與 Product Measures and Transformations 構成 state-space 支線；有限 $L^p$ interface 則供應 integrability、test functions、moments 與 projection 所需的工具。
 
+目前執行中的四週學習循環統一記錄於 [[00_Project/Study Schedule — RN Reconstruction to Conditional Expectation|Study Schedule — RN Reconstruction to Conditional Expectation]]。
+
 ## 正式模組
 
 | 順序 | 模組 | 現況 |
@@ -55,17 +57,19 @@ Pushforwards and Laws 與 Product Measures and Transformations 構成 state-spac
 2. [[10_Integration-and-Convergence/02_TD/TD 01 — Integration and Convergence|Integration and Convergence TD]]
 3. [[15_Lp-Interface/01_Cours/Cours|The $L^1$–$L^\infty$ Interface]]
 4. [[15_Lp-Interface/01_Cours/L1 Across Measures|$L^1$ Across Measures]]
-5. [[18_Signed-Measures/01_Cours/Cours|Signed Measures and Hahn–Jordan Decomposition]]
-6. [[20_Radon-Nikodym/01_Cours/Cours|Radon–Nikodym Cours]]
-7. [[20_Radon-Nikodym/02_TD/TD 01 — Boundary and Local Domination|RN TD 01]]
-8. [[20_Radon-Nikodym/02_TD/TD 02 — Constructing the Density|RN TD 02]]
-9. [[30_Pushforwards-and-Laws/01_Cours/Cours|Pushforwards and Laws Cours]]
-10. Product Measures and Transformations（planned）
-11. [[40_Conditional-Expectation/01_Cours/Cours|Conditional Expectation Cours]]
-12. [[40_Conditional-Expectation/02_TD/TD 01 — RN Construction|Conditional Expectation TD 01]]
-13. [[40_Conditional-Expectation/02_TD/TD 02 — Finite Sigma-Fields|Conditional Expectation TD 02]]
-14. [[50_Conditional-Laws/01_Cours/Cours|Conditional Laws Cours]]
-15. [[50_Conditional-Laws/02_TD/TD 01 — State-Space Representations|Conditional Laws TD 01]]
+5. [[15_Lp-Interface/02_TD/TD 01 — Integrability, Test Functions, and Change of Measure|$L^p$ Interface TD]]
+6. [[18_Signed-Measures/01_Cours/Cours|Signed Measures and Hahn–Jordan Decomposition]]
+7. [[18_Signed-Measures/02_TD/TD 01 — Hahn–Jordan Structure and Domination|Signed Measures TD]]
+8. [[20_Radon-Nikodym/01_Cours/Cours|Radon–Nikodym Cours]]
+9. [[20_Radon-Nikodym/02_TD/TD 01 — Boundary and Local Domination|RN TD 01]]
+10. [[20_Radon-Nikodym/02_TD/TD 02 — Constructing the Density|RN TD 02]]
+11. [[30_Pushforwards-and-Laws/01_Cours/Cours|Pushforwards and Laws Cours]]
+12. Product Measures and Transformations（planned）
+13. [[40_Conditional-Expectation/01_Cours/Cours|Conditional Expectation Cours]]
+14. [[40_Conditional-Expectation/02_TD/TD 01 — RN Construction|Conditional Expectation TD 01]]
+15. [[40_Conditional-Expectation/02_TD/TD 02 — Finite Sigma-Fields|Conditional Expectation TD 02]]
+16. [[50_Conditional-Laws/01_Cours/Cours|Conditional Laws Cours]]
+17. [[50_Conditional-Laws/02_TD/TD 01 — State-Space Representations|Conditional Laws TD 01]]
 
 ## 跨模組區
 

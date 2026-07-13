@@ -20,12 +20,12 @@ module-status: in-progress
 ## Files
 
 - Cours：[[18_Signed-Measures/01_Cours/Cours|Signed Measures and Hahn–Jordan Decomposition]]
-- TD：尚未建置。
-- Corriges：尚未建置。
+- TD：[[18_Signed-Measures/02_TD/TD 01 — Hahn–Jordan Structure and Domination|TD 01 — Hahn–Jordan Structure and Domination]]。
+- Corriges：[[18_Signed-Measures/03_Corriges/TD 01 — Hahn–Jordan Structure and Domination|TD 01 corrigé]]。
 - Colles：尚未建置。
 - Example-Sheets：尚未建置。
 - Supplements：目前無必要補件。
 
 ## Completion criterion
 
-建立 TD、corrigé、colles 與 canonical decompositions example sheet；反例必須擊中 positivity、finiteness 或 uniqueness 的確切斷點。
+補齊 colles 與 canonical decompositions example sheet；反例必須擊中 positivity、finiteness 或 uniqueness 的確切斷點。
