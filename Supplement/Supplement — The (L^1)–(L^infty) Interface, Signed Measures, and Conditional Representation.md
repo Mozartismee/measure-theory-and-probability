@@ -1,0 +1,1616 @@
+# Supplement — The \(L^1\)–\(L^\infty\) Interface, Signed Measures, and Conditional Representation
+
+Throughout, \((E,\mathcal A,\mu)\) denotes a measure space. All equalities between measurable functions are understood modulo \(\mu\)-almost everywhere equality unless otherwise stated.
+
+The purpose of this supplement is to isolate the functional and signed-measure structures used in the construction of Radon–Nikodym derivatives and conditional expectations. No general theory of \(L^p\)-duality or total variation is required.
+
+---
+
+## 1. The \(L^1\)–\(L^\infty\) interface
+
+### 1.1. Lebesgue spaces
+
+For \(1\leq p<\infty\), define
+
+$$
+L^p(\mu)
+=
+\left\{
+f:E\to\mathbb R\text{ measurable}:
+\int_E |f|^p\,d\mu<\infty
+\right\}\big/\!\sim,
+$$
+
+where
+
+$$
+f\sim g
+\quad\Longleftrightarrow\quad
+f=g
+\qquad \mu\text{-a.e.}
+$$
+
+The associated norm is
+
+$$
+\|f\|_p
+=
+\left(
+\int_E |f|^p\,d\mu
+\right)^{1/p}.
+$$
+
+The space \(L^\infty(\mu)\) consists of the equivalence classes of essentially bounded measurable functions. Its norm is
+
+$$
+\|f\|_\infty
+=
+\operatorname*{ess\,sup}_{x\in E}|f(x)|
+=
+\inf\left\{
+M\geq0:
+|f|\leq M
+\quad\mu\text{-a.e.}
+\right\}.
+$$
+
+Thus
+
+$$
+|f|\leq\|f\|_\infty
+\qquad\mu\text{-a.e.}
+$$
+
+The qualifier *essential* means that values on a \(\mu\)-null set are discarded. For instance, under Lebesgue measure on \(\mathbb R\),
+
+$$
+\|\mathbf 1_{\{0\}}\|_\infty=0,
+$$
+
+since \(\mathbf 1_{\{0\}}=0\) almost everywhere.
+
+After modifying a representative on a null set, one may always assume that
+
+$$
+|f(x)|\leq\|f\|_\infty
+\qquad\text{for every }x\in E.
+$$
+
+---
+
+### 1.2. The endpoint Hölder inequality
+
+#### Proposition 1.1
+
+Let \(f\in L^1(\mu)\) and \(Z\in L^\infty(\mu)\). Then \(fZ\in L^1(\mu)\) and
+
+$$
+\|fZ\|_1
+\leq
+\|Z\|_\infty\|f\|_1.
+$$
+
+#### Proof
+
+Since
+
+$$
+|fZ|
+\leq
+\|Z\|_\infty |f|
+\qquad\mu\text{-a.e.},
+$$
+
+we have
+
+$$
+\int_E|fZ|\,d\mu
+\leq
+\|Z\|_\infty
+\int_E|f|\,d\mu.
+$$
+
+---
+
+This estimate is the basic reason bounded measurable functions serve as test functions against \(L^1\)-functions.
+
+The pairing
+
+$$
+\langle f,Z\rangle
+=
+\int_E fZ\,d\mu
+$$
+
+is therefore well defined on
+
+$$
+L^1(\mu)\times L^\infty(\mu).
+$$
+
+No general duality theorem is being asserted here.
+
+---
+
+### 1.3. Embeddings on finite measure spaces
+
+#### Proposition 1.2
+
+Assume that \(\mu(E)<\infty\). If
+
+$$
+1\leq p<q\leq\infty,
+$$
+
+then
+
+$$
+L^q(\mu)\subseteq L^p(\mu)
+$$
+
+and
+
+$$
+\|f\|_p
+\leq
+\mu(E)^{\frac1p-\frac1q}\|f\|_q.
+$$
+
+In particular, if \(\mu\) is a probability measure,
+
+$$
+\|f\|_p\leq\|f\|_q.
+$$
+
+#### Proof
+
+Suppose first that \(q<\infty\). Hölder's inequality, with conjugate exponents
+
+$$
+\frac{q}{p}
+\qquad\text{and}\qquad
+\frac{q}{q-p},
+$$
+
+gives
+
+$$
+\begin{aligned}
+\|f\|_p^p
+&=
+\int_E |f|^p\mathbf 1_E\,d\mu
+\\
+&\leq
+\left(\int_E|f|^q\,d\mu\right)^{p/q}
+\mu(E)^{1-p/q}.
+\end{aligned}
+$$
+
+Taking the \(p\)-th root yields the stated estimate. If \(q=\infty\), then
+
+$$
+\|f\|_p^p
+=
+\int_E|f|^p\,d\mu
+\leq
+\|f\|_\infty^p\mu(E).
+$$
+
+There is no corresponding inclusion on a general infinite measure space.
+
+---
+
+### 1.4. Bounded approximation
+
+#### Proposition 1.3
+
+Let \(Z:E\to\mathbb R\) be bounded and measurable. There exists a sequence of measurable simple functions \((Z_n)\) such that
+
+$$
+Z_n(x)\longrightarrow Z(x)
+$$
+
+for every \(x\in E\), and
+
+$$
+|Z_n|\leq\|Z\|_\infty
+$$
+
+after a possible modification of \(Z\) on a null set.
+
+Consequently, if \(f\in L^1(\mu)\), then
+
+$$
+fZ_n\longrightarrow fZ
+$$
+
+pointwise almost everywhere and
+
+$$
+|fZ_n|
+\leq
+\|Z\|_\infty |f|.
+$$
+
+Since the function on the right belongs to \(L^1(\mu)\), the dominated convergence theorem gives
+
+$$
+\int_E fZ_n\,d\mu
+\longrightarrow
+\int_E fZ\,d\mu.
+$$
+
+The relevant convergence theorem is DCT, not MCT: the sequence \((fZ_n)\) need not be nonnegative or increasing.
+
+---
+
+### 1.5. Indicators and bounded test functions
+
+Let \(\mathcal G\subseteq\mathcal A\) be a sub-\(\sigma\)-field.
+
+#### Proposition 1.4
+
+Let \(f,g\in L^1(\mu)\). The following assertions are equivalent:
+
+1. For every \(A\in\mathcal G\),
+
+   $$
+   \int_A f\,d\mu
+   =
+   \int_A g\,d\mu.
+   $$
+
+2. For every bounded \(\mathcal G\)-measurable real function \(Z\),
+
+   $$
+   \int_E Zf\,d\mu
+   =
+   \int_E Zg\,d\mu.
+   $$
+
+#### Proof
+
+The second assertion implies the first by taking \(Z=\mathbf 1_A\).
+
+Conversely, assume the first assertion. By linearity, the required identity holds for every \(\mathcal G\)-measurable simple function. Let \(Z\) be bounded and \(\mathcal G\)-measurable, and choose simple functions \(Z_n\) such that
+
+$$
+Z_n\longrightarrow Z,
+\qquad
+|Z_n|\leq\|Z\|_\infty.
+$$
+
+Then
+
+$$
+|Z_n(f-g)|
+\leq
+\|Z\|_\infty |f-g|
+\in L^1(\mu).
+$$
+
+The result follows from the dominated convergence theorem.
+
+---
+
+## 2. Measures generated by integrable functions
+
+### 2.1. Positive densities
+
+Let \(f:E\to[0,\infty]\) be measurable. Define
+
+$$
+(f\cdot\mu)(A)
+=
+\int_A f\,d\mu,
+\qquad A\in\mathcal A.
+$$
+
+Then \(f\cdot\mu\) is a positive measure on \((E,\mathcal A)\).
+
+Moreover,
+
+$$
+f\cdot\mu\ll\mu.
+$$
+
+Indeed,
+
+$$
+\mu(A)=0
+\quad\Longrightarrow\quad
+\int_A f\,d\mu=0.
+$$
+
+If \(f\in L^1(\mu)\), then \(f\cdot\mu\) is finite and
+
+$$
+(f\cdot\mu)(E)=\|f\|_1
+$$
+
+when \(f\geq0\).
+
+---
+
+### 2.2. Signed densities
+
+Let \(f\in L^1(\mu)\). Define
+
+$$
+\nu_f(A)
+=
+\int_A f\,d\mu.
+$$
+
+Then \(\nu_f\) is a finite signed measure.
+
+Indeed, writing
+
+$$
+f=f^+-f^-,
+$$
+
+we have
+
+$$
+\nu_f
+=
+f^+\cdot\mu-f^-\cdot\mu,
+$$
+
+where both measures on the right are finite.
+
+If \((A_n)\) is a sequence of pairwise disjoint measurable sets, then
+
+$$
+\sum_{n\geq1}|\nu_f(A_n)|
+\leq
+\sum_{n\geq1}\int_{A_n}|f|\,d\mu
+=
+\int_{\bigcup_{n\geq1}A_n}|f|\,d\mu
+<\infty.
+$$
+
+Furthermore,
+
+$$
+\nu_f\ll\mu.
+$$
+
+---
+
+### 2.3. Absolute continuity of the integral
+
+#### Proposition 2.1
+
+Let \(f\in L^1(\mu)\). For every \(\varepsilon>0\), there exists \(\delta>0\) such that
+
+$$
+\mu(A)<\delta
+\quad\Longrightarrow\quad
+\int_A|f|\,d\mu<\varepsilon.
+$$
+
+#### Proof
+
+Choose \(M>0\) such that
+
+$$
+\int_{\{|f|>M\}}|f|\,d\mu
+<
+\frac{\varepsilon}{2}.
+$$
+
+Then
+
+$$
+\int_A|f|\,d\mu
+\leq
+M\mu(A)
++
+\int_{\{|f|>M\}}|f|\,d\mu.
+$$
+
+Taking
+
+$$
+\delta=\frac{\varepsilon}{2M}
+$$
+
+gives the result.
+
+---
+
+This is a quantitative form of the absolute continuity statement
+
+$$
+|f|\cdot\mu\ll\mu,
+$$
+
+and hence implies, in particular,
+
+$$
+\nu_f\ll\mu.
+$$
+
+Absolute continuity itself is qualitative; Proposition 2.1 gives uniform control on measurable sets of sufficiently small \(\mu\)-measure.
+
+---
+
+### 2.4. Uniqueness of densities
+
+#### Proposition 2.2
+
+Let \(f,g\in L^1(\mu)\). Assume that
+
+$$
+\int_A f\,d\mu
+=
+\int_A g\,d\mu
+$$
+
+for every \(A\in\mathcal A\). Then
+
+$$
+f=g
+\qquad\mu\text{-a.e.}
+$$
+
+#### Proof
+
+Set
+
+$$
+W=f-g.
+$$
+
+Then
+
+$$
+\int_AW\,d\mu=0
+$$
+
+for every \(A\in\mathcal A\).
+
+Since
+
+$$
+A_+=\{W>0\}\in\mathcal A,
+$$
+
+the hypothesis gives
+
+$$
+\int_{A_+}W\,d\mu=0.
+$$
+
+The function \(W\mathbf 1_{A_+}\) is nonnegative. Hence
+
+$$
+W\mathbf 1_{A_+}=0
+\qquad\mu\text{-a.e.}
+$$
+
+It follows that
+
+$$
+\mu(W>0)=0.
+$$
+
+Applying the same argument to
+
+$$
+A_-=\{W<0\}
+$$
+
+gives
+
+$$
+\mu(W<0)=0.
+$$
+
+Therefore \(W=0\) almost everywhere.
+
+---
+
+The same conclusion holds if one assumes
+
+$$
+\int_E Zf\,d\mu
+=
+\int_E Zg\,d\mu
+$$
+
+for every bounded measurable \(Z\). It is enough to take \(Z=\mathbf 1_A\).
+
+---
+
+## 3. Finite signed measures and Hahn decomposition
+
+### 3.1. Signed measures
+
+A finite signed measure on \((E,\mathcal A)\) is a mapping
+
+$$
+\sigma:\mathcal A\longrightarrow\mathbb R
+$$
+
+such that
+
+$$
+\sigma(\varnothing)=0
+$$
+
+and, for every sequence \((A_n)\) of pairwise disjoint measurable sets,
+
+$$
+\sum_{n\geq1}|\sigma(A_n)|<\infty
+$$
+
+and
+
+$$
+\sigma\left(\bigcup_{n\geq1}A_n\right)
+=
+\sum_{n\geq1}\sigma(A_n).
+$$
+
+Every difference of two finite positive measures is a finite signed measure.
+
+In particular, if \(\rho\) and \(\mu\) are finite positive measures and \(c>0\), then
+
+$$
+\sigma_c=\rho-c\mu
+$$
+
+is a finite signed measure.
+
+---
+
+### 3.2. Positive and negative sets
+
+A measurable set \(P\) is positive for \(\sigma\) if
+
+$$
+\sigma(A)\geq0
+$$
+
+for every measurable \(A\subseteq P\).
+
+A measurable set \(N\) is negative for \(\sigma\) if
+
+$$
+\sigma(A)\leq0
+$$
+
+for every measurable \(A\subseteq N\).
+
+A measurable set \(Z\) is \(\sigma\)-null if
+
+$$
+\sigma(A)=0
+$$
+
+for every measurable \(A\subseteq Z\).
+
+A set which is both positive and negative is \(\sigma\)-null.
+
+---
+
+### 3.3. Hahn decomposition
+
+#### Theorem 3.1 — Hahn decomposition
+
+Let \(\sigma\) be a finite signed measure. There exist disjoint measurable sets \(P,N\) such that
+
+$$
+E=P\sqcup N,
+$$
+
+where \(P\) is positive and \(N\) is negative for \(\sigma\).
+
+If
+
+$$
+E=P'\sqcup N'
+$$
+
+is another Hahn decomposition, then
+
+$$
+P\triangle P'
+$$
+
+and
+
+$$
+N\triangle N'
+$$
+
+are \(\sigma\)-null.
+
+Thus the sets in a Hahn decomposition are not uniquely determined, but their ambiguity is confined to \(\sigma\)-null sets.
+
+---
+
+### 3.4. Jordan decomposition
+
+Let
+
+$$
+E=P\sqcup N
+$$
+
+be a Hahn decomposition for \(\sigma\). Define
+
+$$
+\sigma^+(A)
+=
+\sigma(A\cap P)
+$$
+
+and
+
+$$
+\sigma^-(A)
+=
+-\sigma(A\cap N).
+$$
+
+Then \(\sigma^+\) and \(\sigma^-\) are finite positive measures and
+
+$$
+\sigma=\sigma^+-\sigma^-.
+$$
+
+They are concentrated on disjoint measurable sets:
+
+$$
+\sigma^+(N)=0,
+\qquad
+\sigma^-(P)=0.
+$$
+
+The pair \((\sigma^+,\sigma^-)\) does not depend on the choice of the Hahn decomposition and is characterized by the minimality property
+
+$$
+\sigma=\alpha-\beta,
+\qquad
+\alpha,\beta\geq0
+$$
+
+implies
+
+$$
+\sigma^+\leq\alpha,
+\qquad
+\sigma^-\leq\beta.
+$$
+
+The decomposition
+
+$$
+\sigma=\sigma^+-\sigma^-
+$$
+
+is the Jordan decomposition of \(\sigma\).
+
+The positive measure
+
+$$
+|\sigma|
+=
+\sigma^++\sigma^-
+$$
+
+is called the total variation of \(\sigma\). No further theory of total variation will be needed here.
+
+If
+
+$$
+\sigma(A)=\int_A f\,d\mu
+$$
+
+with \(f\in L^1(\mu)\), then
+
+$$
+\sigma^+=f^+\cdot\mu,
+\qquad
+\sigma^-=f^-\cdot\mu,
+\qquad
+|\sigma|=|f|\cdot\mu.
+$$
+
+---
+
+### 3.5. Hahn decomposition and domination
+
+Let \(\rho\) and \(\mu\) be finite positive measures, let \(c>0\), and set
+
+$$
+\sigma_c=\rho-c\mu.
+$$
+
+Let
+
+$$
+E=P_c\sqcup N_c
+$$
+
+be a Hahn decomposition for \(\sigma_c\).
+
+#### Proposition 3.2
+
+One has
+
+$$
+c\mathbf 1_{P_c}\mu\leq\rho
+$$
+
+and
+
+$$
+\rho|_{N_c}\leq c\mu|_{N_c}.
+$$
+
+#### Proof
+
+For every \(A\in\mathcal A\), the set \(A\cap P_c\) is contained in the positive set \(P_c\). Hence
+
+$$
+0
+\leq
+\sigma_c(A\cap P_c)
+=
+\rho(A\cap P_c)-c\mu(A\cap P_c).
+$$
+
+Therefore
+
+$$
+c\mathbf 1_{P_c}\mu(A)
+=
+c\mu(A\cap P_c)
+\leq
+\rho(A\cap P_c)
+\leq
+\rho(A).
+$$
+
+Similarly, since \(A\cap N_c\subseteq N_c\),
+
+$$
+\sigma_c(A\cap N_c)\leq0.
+$$
+
+Thus
+
+$$
+\rho(A\cap N_c)
+\leq
+c\mu(A\cap N_c),
+$$
+
+which is precisely
+
+$$
+\rho|_{N_c}\leq c\mu|_{N_c}.
+$$
+
+---
+
+If, in addition,
+
+$$
+\rho\ll\mu,
+$$
+
+then
+
+$$
+\mu(P_c)=0
+\quad\Longleftrightarrow\quad
+\rho(P_c)=0.
+$$
+
+Indeed,
+
+$$
+\mu(P_c)=0
+\quad\Longrightarrow\quad
+\rho(P_c)=0
+$$
+
+by absolute continuity, whereas
+
+$$
+\rho(P_c)=0
+\quad\Longrightarrow\quad
+c\mu(P_c)\leq\rho(P_c)=0
+$$
+
+by Proposition 3.2.
+
+The two inequalities in Proposition 3.2 are the local domination statements encoded by the sign of
+
+$$
+\rho-c\mu.
+$$
+
+---
+
+## 4. Radon–Nikodym representation and conditional expectation
+
+Let \((\Omega,\mathcal F,\mathbb P)\) be a probability space and let
+
+$$
+\mathcal G\subseteq\mathcal F
+$$
+
+be a sub-\(\sigma\)-field.
+
+Write
+
+$$
+\mathbb P_{\mathcal G}
+=
+\mathbb P|_{\mathcal G}.
+$$
+
+---
+
+### 4.1. Radon–Nikodym theorem
+
+#### Theorem 4.1 — Radon–Nikodym
+
+Let \(\mu\) and \(\nu\) be \(\sigma\)-finite positive measures on \((E,\mathcal A)\). If
+
+$$
+\nu\ll\mu,
+$$
+
+then there exists a nonnegative measurable function \(f\), unique \(\mu\)-almost everywhere, such that
+
+$$
+\nu(A)
+=
+\int_A f\,d\mu
+$$
+
+for every \(A\in\mathcal A\).
+
+The function \(f\) is denoted by
+
+$$
+\frac{d\nu}{d\mu}.
+$$
+
+For the construction of conditional expectation, both measures are finite.
+
+---
+
+### 4.2. Construction for nonnegative integrable variables
+
+Let
+
+$$
+X\in L^1(\mathbb P),
+\qquad
+X\geq0.
+$$
+
+Define a finite positive measure \(Q_X\) on \((\Omega,\mathcal G)\) by
+
+$$
+Q_X(A)
+=
+\mathbb E[X\mathbf 1_A],
+\qquad A\in\mathcal G.
+$$
+
+If
+
+$$
+\mathbb P_{\mathcal G}(A)=0,
+$$
+
+then \(\mathbf 1_A=0\) almost surely, and therefore
+
+$$
+Q_X(A)=0.
+$$
+
+Hence
+
+$$
+Q_X\ll\mathbb P_{\mathcal G}.
+$$
+
+By the Radon–Nikodym theorem, there exists a nonnegative \(\mathcal G\)-measurable random variable \(Y\) such that
+
+$$
+Q_X(A)
+=
+\int_A Y\,d\mathbb P
+$$
+
+for every \(A\in\mathcal G\).
+
+Equivalently,
+
+$$
+\mathbb E[X\mathbf 1_A]
+=
+\mathbb E[Y\mathbf 1_A],
+\qquad A\in\mathcal G.
+$$
+
+Taking \(A=\Omega\) gives
+
+$$
+\mathbb E[Y]
+=
+\mathbb E[X]
+<
+\infty.
+$$
+
+Thus \(Y\in L^1(\mathbb P)\).
+
+---
+
+### 4.3. Construction for arbitrary integrable variables
+
+Let \(X\in L^1(\mathbb P)\). Write
+
+$$
+X=X^+-X^-.
+$$
+
+Apply the preceding construction separately to \(X^+\) and \(X^-\). There exist nonnegative \(\mathcal G\)-measurable variables \(U\) and \(V\) such that
+
+$$
+\mathbb E[X^+\mathbf 1_A]
+=
+\mathbb E[U\mathbf 1_A]
+$$
+
+and
+
+$$
+\mathbb E[X^-\mathbf 1_A]
+=
+\mathbb E[V\mathbf 1_A]
+$$
+
+for every \(A\in\mathcal G\).
+
+Set
+
+$$
+Y=U-V.
+$$
+
+Then \(Y\in L^1(\mathbb P)\), \(Y\) is \(\mathcal G\)-measurable, and
+
+$$
+\mathbb E[X\mathbf 1_A]
+=
+\mathbb E[Y\mathbf 1_A]
+$$
+
+for every \(A\in\mathcal G\).
+
+This avoids any need to apply a signed version of the Radon–Nikodym theorem.
+
+The notation is deliberate: although \(U,V\geq0\), they need not be the positive and negative parts of \(Y\). Restriction to \(\mathcal G\) may destroy the mutual singularity present in the decomposition of \(X\).
+
+---
+
+### 4.4. Uniqueness
+
+Suppose that \(Y_1,Y_2\in L^1(\mathbb P)\) are \(\mathcal G\)-measurable and satisfy
+
+$$
+\mathbb E[Y_1\mathbf 1_A]
+=
+\mathbb E[Y_2\mathbf 1_A]
+$$
+
+for every \(A\in\mathcal G\).
+
+Set
+
+$$
+W=Y_1-Y_2.
+$$
+
+Since \(W\) is \(\mathcal G\)-measurable,
+
+$$
+A_+=\{W>0\}\in\mathcal G.
+$$
+
+The hypothesis, applied to \(A_+\), gives
+
+$$
+\int_{A_+}W\,d\mathbb P=0.
+$$
+
+Since \(W\mathbf 1_{A_+}\geq0\), it follows that
+
+$$
+W\mathbf 1_{A_+}=0
+\qquad\mathbb P\text{-a.s.}
+$$
+
+Hence
+
+$$
+\mathbb P(W>0)=0.
+$$
+
+The same argument applied to \(\{W<0\}\) gives
+
+$$
+\mathbb P(W<0)=0.
+$$
+
+Therefore
+
+$$
+Y_1=Y_2
+\qquad\mathbb P\text{-a.s.}
+$$
+
+---
+
+### 4.5. Definition and characteristic property
+
+#### Definition 4.2
+
+Let \(X\in L^1(\mathbb P)\). The conditional expectation of \(X\) given \(\mathcal G\) is the unique element
+
+$$
+\mathbb E[X\mid\mathcal G]
+\in
+L^1(\Omega,\mathcal G,\mathbb P_{\mathcal G})
+$$
+
+such that
+
+$$
+\mathbb E[X\mathbf 1_A]
+=
+\mathbb E[\mathbb E[X\mid\mathcal G]\mathbf 1_A]
+$$
+
+for every \(A\in\mathcal G\).
+
+Equivalently,
+
+$$
+\mathbb E[XZ]
+=
+\mathbb E[\mathbb E[X\mid\mathcal G]Z]
+$$
+
+for every bounded \(\mathcal G\)-measurable random variable \(Z\).
+
+The equivalence follows from Proposition 1.4.
+
+Thus conditional expectation is characterized by two simultaneous requirements:
+
+1. information constraint:
+
+   $$
+   \mathbb E[X\mid\mathcal G]
+   \text{ is }\mathcal G\text{-measurable};
+   $$
+
+2. integral preservation on \(\mathcal G\):
+
+   $$
+   \int_A\mathbb E[X\mid\mathcal G]\,d\mathbb P
+   =
+   \int_A X\,d\mathbb P,
+   \qquad A\in\mathcal G.
+   $$
+
+Neither requirement alone determines the conditional expectation.
+
+---
+
+### 4.6. Basic consequences
+
+Let \(X,X'\in L^1(\mathbb P)\).
+
+#### Measurable variables
+
+If \(X\) is \(\mathcal G\)-measurable, then
+
+$$
+\mathbb E[X\mid\mathcal G]=X.
+$$
+
+#### Linearity
+
+For \(\alpha,\beta\in\mathbb R\),
+
+$$
+\mathbb E[\alpha X+\beta X'\mid\mathcal G]
+=
+\alpha\mathbb E[X\mid\mathcal G]
++
+\beta\mathbb E[X'\mid\mathcal G].
+$$
+
+#### Positivity
+
+If \(X\geq0\), then
+
+$$
+\mathbb E[X\mid\mathcal G]\geq0
+\qquad\mathbb P\text{-a.s.}
+$$
+
+#### Monotonicity
+
+If \(X\leq X'\), then
+
+$$
+\mathbb E[X\mid\mathcal G]
+\leq
+\mathbb E[X'\mid\mathcal G].
+$$
+
+#### Preservation of expectation
+
+Taking \(A=\Omega\) gives
+
+$$
+\mathbb E[\mathbb E[X\mid\mathcal G]]
+=
+\mathbb E[X].
+$$
+
+#### Absolute-value inequality
+
+Since
+
+$$
+-|X|\leq X\leq |X|,
+$$
+
+positivity and linearity yield
+
+$$
+-\mathbb E[|X|\mid\mathcal G]
+\leq
+\mathbb E[X\mid\mathcal G]
+\leq
+\mathbb E[|X|\mid\mathcal G].
+$$
+
+Therefore
+
+$$
+\left|
+\mathbb E[X\mid\mathcal G]
+\right|
+\leq
+\mathbb E[|X|\mid\mathcal G].
+$$
+
+Taking expectations gives the \(L^1\)-contraction property
+
+$$
+\left\|
+\mathbb E[X\mid\mathcal G]
+\right\|_1
+\leq
+\|X\|_1.
+$$
+
+---
+
+### 4.7. Nonnegative variables
+
+Let
+
+$$
+X:\Omega\longrightarrow[0,\infty]
+$$
+
+be measurable, without assuming integrability.
+
+Set
+
+$$
+X_n=X\wedge n.
+$$
+
+Then \(X_n\in L^1(\mathbb P)\) and
+
+$$
+X_n\uparrow X.
+$$
+
+For each \(n\), monotonicity gives
+
+$$
+0
+\leq
+\mathbb E[X_n\mid\mathcal G]
+\leq
+\mathbb E[X_{n+1}\mid\mathcal G]
+$$
+
+almost surely. Since only countably many inequalities are involved, we may choose versions and modify them on one \(\mathcal G\)-measurable null set so that the sequence is pointwise nonnegative and increasing. Define
+
+$$
+Y
+=
+\lim_{n\to\infty}
+\mathbb E[X_n\mid\mathcal G].
+$$
+
+Then \(Y:\Omega\to[0,\infty]\) is \(\mathcal G\)-measurable.
+
+For every \(A\in\mathcal G\), MCT gives
+
+$$
+\begin{aligned}
+\mathbb E[Y\mathbf 1_A]
+&=
+\lim_{n\to\infty}
+\mathbb E[\mathbb E[X_n\mid\mathcal G]\mathbf 1_A]
+\\
+&=
+\lim_{n\to\infty}
+\mathbb E[X_n\mathbf 1_A]
+\\
+&=
+\mathbb E[X\mathbf 1_A].
+\end{aligned}
+$$
+
+The variable \(Y\) is denoted by
+
+$$
+\mathbb E[X\mid\mathcal G].
+$$
+
+The definition is independent of the chosen versions: two choices agree outside the countable union of the null sets on which the corresponding integrable conditional expectations differ.
+
+Here MCT is legitimate because the approximation is nonnegative and increasing.
+
+---
+
+### 4.8. Conditional Jensen and \(L^p\)-contraction
+
+#### Proposition 4.3 — Conditional Jensen
+
+Let \(X\in L^1(\mathbb P)\), and let \(\varphi:\mathbb R\to\mathbb R\) be convex. If
+
+$$
+\varphi(X)\in L^1(\mathbb P),
+$$
+
+then
+
+$$
+\varphi\!\left(\mathbb E[X\mid\mathcal G]\right)
+\leq
+\mathbb E[\varphi(X)\mid\mathcal G]
+\qquad
+\mathbb P\text{-a.s.}
+$$
+
+#### Proof
+
+A finite convex function on \(\mathbb R\) is the pointwise supremum of a countable family of affine minorants:
+
+$$
+\varphi(x)
+=
+\sup_{k\geq1}(a_kx+b_k).
+$$
+
+For every \(k\),
+
+$$
+a_kX+b_k
+\leq
+\varphi(X).
+$$
+
+Linearity and monotonicity of conditional expectation therefore give
+
+$$
+a_k\mathbb E[X\mid\mathcal G]+b_k
+\leq
+\mathbb E[\varphi(X)\mid\mathcal G].
+$$
+
+Taking the supremum over \(k\) proves the result.
+
+If \(1\leq p<\infty\) and \(X\in L^p(\mathbb P)\), apply the proposition to
+
+$$
+\varphi(x)=|x|^p.
+$$
+
+Then
+
+$$
+\left|
+\mathbb E[X\mid\mathcal G]
+\right|^p
+\leq
+\mathbb E[|X|^p\mid\mathcal G],
+$$
+
+and hence
+
+$$
+\left\|
+\mathbb E[X\mid\mathcal G]
+\right\|_p
+\leq
+\|X\|_p.
+$$
+
+If \(X\in L^\infty(\mathbb P)\), monotonicity applied to
+
+$$
+-\|X\|_\infty
+\leq
+X
+\leq
+\|X\|_\infty
+$$
+
+gives
+
+$$
+\left\|
+\mathbb E[X\mid\mathcal G]
+\right\|_\infty
+\leq
+\|X\|_\infty.
+$$
+
+---
+
+### 4.9. The \(L^2\)-projection interpretation
+
+Assume that \(X\in L^2(\mathbb P)\). Conditional Jensen gives
+
+$$
+\mathbb E[X\mid\mathcal G]\in L^2(\mathbb P).
+$$
+
+Let
+
+$$
+Y=\mathbb E[X\mid\mathcal G].
+$$
+
+For every bounded \(\mathcal G\)-measurable \(Z\),
+
+$$
+\mathbb E[(X-Y)Z]=0.
+$$
+
+By truncation and the Cauchy–Schwarz inequality, the identity extends to every
+
+$$
+Z\in L^2(\Omega,\mathcal G,\mathbb P_{\mathcal G}).
+$$
+
+Thus
+
+$$
+X-Y
+\perp
+L^2(\Omega,\mathcal G,\mathbb P_{\mathcal G}).
+$$
+
+Consequently,
+
+$$
+\mathbb E[X\mid\mathcal G]
+$$
+
+is the orthogonal projection of \(X\) onto the closed subspace
+
+$$
+L^2(\Omega,\mathcal G,\mathbb P_{\mathcal G})
+\subseteq
+L^2(\Omega,\mathcal F,\mathbb P).
+$$
+
+For every \(Z\in L^2(\mathcal G)\),
+
+$$
+\|X-Z\|_2^2
+=
+\|X-Y\|_2^2+\|Y-Z\|_2^2.
+$$
+
+In particular,
+
+$$
+\|X-Y\|_2
+\leq
+\|X-Z\|_2.
+$$
+
+The Radon–Nikodym construction is valid in \(L^1\); the projection interpretation is specific to \(L^2\).
+
+---
+
+## 5. Reconstruction problems
+
+### Exercise 1 — The endpoint pairing
+
+Let \(f\in L^1(\mu)\) and let \(Z\) be measurable.
+
+1. Prove that \(Z\in L^\infty(\mu)\) implies \(fZ\in L^1(\mu)\).
+2. Assume that \(\mu(E)<\infty\). Establish the inclusion
+
+   $$
+   L^\infty(\mu)\subseteq L^q(\mu)\subseteq L^p(\mu)\subseteq L^1(\mu),
+   \qquad
+   1\leq p\leq q\leq\infty.
+   $$
+
+3. Give counterexamples to these inclusions when \(\mu(E)=\infty\).
+
+---
+
+### Exercise 2 — Separation by test functions
+
+Let \(f,g\in L^1(\mu)\), and let \(\mathcal G\subseteq\mathcal A\) be a sub-\(\sigma\)-field.
+
+Prove the equivalence of the following assertions:
+
+1. For every \(A\in\mathcal G\),
+
+   $$
+   \int_A f\,d\mu
+   =
+   \int_A g\,d\mu.
+   $$
+
+2. For every bounded \(\mathcal G\)-measurable \(Z\),
+
+   $$
+   \int_EZf\,d\mu
+   =
+   \int_EZg\,d\mu.
+   $$
+
+Assume in addition that \(f\) and \(g\) are \(\mathcal G\)-measurable. Deduce that
+
+$$
+f=g
+\qquad\mu\text{-a.e.}
+$$
+
+---
+
+### Exercise 3 — Hahn decomposition and domination
+
+Let \(\mu\) and \(\rho\) be finite positive measures, let \(c>0\), and set
+
+$$
+\sigma_c=\rho-c\mu.
+$$
+
+Let
+
+$$
+E=P_c\sqcup N_c
+$$
+
+be a Hahn decomposition for \(\sigma_c\).
+
+1. Prove that
+
+   $$
+   c\mathbf 1_{P_c}\mu\leq\rho
+   $$
+
+   and
+
+   $$
+   \rho|_{N_c}\leq c\mu|_{N_c}.
+   $$
+
+2. Assume that \(\rho\ll\mu\). Prove that
+
+   $$
+   \mu(P_c)=0
+   \quad\Longleftrightarrow\quad
+   \rho(P_c)=0.
+   $$
+
+3. Determine the Jordan decomposition of \(\sigma_c\) in terms of \(P_c\) and \(N_c\).
+
+---
+
+### Exercise 4 — Conditional expectation from Radon–Nikodym
+
+Let \(X\in L^1(\mathbb P)\), and let \(\mathcal G\subseteq\mathcal F\).
+
+1. Construct \(\mathbb E[X\mid\mathcal G]\) using only the positive Radon–Nikodym theorem.
+2. Prove uniqueness.
+3. Extend the characteristic property from indicators to bounded \(\mathcal G\)-measurable test functions.
+4. Prove that
+
+   $$
+   \left|
+   \mathbb E[X\mid\mathcal G]
+   \right|
+   \leq
+   \mathbb E[|X|\mid\mathcal G].
+   $$
+
+5. Deduce that conditional expectation is a contraction on \(L^1(\mathbb P)\).
+
+---
+
+## 6. Structural summary
+
+The constructions of this supplement reduce to the following chain:
+
+$$
+f\in L^1(\mu)
+\quad\Longrightarrow\quad
+A\longmapsto\int_Af\,d\mu
+\text{ is a finite signed measure}.
+$$
+
+For a positive measure \(\nu\) satisfying
+
+$$
+\nu\ll\mu,
+$$
+
+the Radon–Nikodym theorem reverses this passage:
+
+$$
+\nu(A)
+=
+\int_A\frac{d\nu}{d\mu}\,d\mu.
+$$
+
+For \(X\in L^1(\mathbb P)\), restriction to a sub-\(\sigma\)-field gives the finite signed measure
+
+$$
+A\in\mathcal G
+\longmapsto
+\mathbb E[X\mathbf 1_A].
+$$
+
+If \(X\geq0\), its Radon–Nikodym derivative with respect to \(\mathbb P|_{\mathcal G}\) is
+
+$$
+\mathbb E[X\mid\mathcal G].
+$$
+
+For general \(X\in L^1(\mathbb P)\), the same object is constructed as the difference of the two positive Radon–Nikodym derivatives associated with \(X^+\) and \(X^-\); equivalently, it is the density in the signed Radon–Nikodym sense.
+
+Finally,
+
+$$
+\text{indicator tests}
+\quad\Longleftrightarrow\quad
+\text{bounded }\mathcal G\text{-measurable tests}
+$$
+
+through simple approximation and dominated convergence.
+
+These are the functional and measure-theoretic interfaces required for the Radon–Nikodym construction of conditional expectation.
