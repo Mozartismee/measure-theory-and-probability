@@ -1,0 +1,338 @@
+\sheettitle
+  {Self-contained lecture notes}
+  {Admissibility, representation, transformation, and finite conditioning}
+
+These notes contain every definition, theorem statement, and proof interface required by the exercises. Self-contained does not mean encyclopedic: the signed Radon--Nikodym theorem is stated in the exact finite regime in which it is used, while its Hahn--Jordan construction remains a declared deferred proof debt.
+
+\section*{1. The probability-space $L^p$ gate}
+
+Let $(E,\mathcal A,\mu)$ be a finite measure space. If $1\le p<q<\infty$, H\"older's inequality with exponents $q/p$ and $q/(q-p)$ gives
+\[
+\|f\|_p^p
+=
+\int_E |f|^p\ind_E\,d\mu
+\le
+\left(\int_E|f|^q\,d\mu\right)^{p/q}
+\mu(E)^{1-p/q}.
+\]
+Hence
+\[
+\boxed{
+\|f\|_p
+\le
+\mu(E)^{1/p-1/q}\|f\|_q
+},
+\qquad
+L^q(\mu)\subseteq L^p(\mu).
+\]
+For $q=\infty$, the same conclusion follows from
+\[
+\int_E|f|^p\,d\mu
+\le
+\|f\|_\infty^p\mu(E).
+\]
+On a probability space this becomes
+\[
+L^\infty(\mathbb P)\subseteq L^q(\mathbb P)\subseteq L^p(\mathbb P)\subseteq L^1(\mathbb P),
+\qquad
+\|f\|_p\le\|f\|_q
+\quad(p<q).
+\]
+There is no corresponding inclusion on an arbitrary infinite measure space.
+
+Let $Y\in L^1(\mathbb P)$ and let $\mathcal G\subseteq\mathcal F$ be a sub-$\sigma$-field. Define on $(\Omega,\mathcal G)$
+\[
+\nu_Y^{\mathcal G}(A)
+=
+\mathbb E[Y\ind_A],
+\qquad A\in\mathcal G.
+\]
+Writing $Y=Y^+-Y^-$ shows that $\nu_Y^{\mathcal G}$ is a finite signed measure. Moreover,
+\[
+|\nu_Y^{\mathcal G}|(\Omega)
+\le
+\mathbb E[|Y|]
+<\infty,
+\qquad
+\nu_Y^{\mathcal G}\ll\mathbb P|_{\mathcal G}.
+\]
+
+\textbf{Signed Radon--Nikodym interface.}
+If $\mu$ is $\sigma$-finite and $\nu$ is a finite signed measure with $\nu\ll\mu$, then there exists $h\in L^1(\mu)$ such that
+\[
+\nu(A)=\int_Ah\,d\mu
+\quad\text{for every measurable }A,
+\]
+and $h$ is unique $\mu$-almost everywhere. Applied on $(\Omega,\mathcal G)$, this gives a $\mathcal G$-measurable $H\in L^1(\mathbb P|_{\mathcal G})$, unique $\mathbb P$-almost surely, such that
+\[
+\mathbb E[Y\ind_A]=\int_AH\,d\mathbb P,
+\qquad A\in\mathcal G.
+\]
+This representative is $\mathbb E[Y\mid\mathcal G]$. The numerator, reference measure, measurable space, and almost-everywhere basis are all part of the object.
+
+\section*{2. Expectation and its domain of definition}
+
+For a measurable $X:\Omega\to\overline{\mathbb R}$, write
+\[
+X^+=\max\{X,0\},
+\qquad
+X^-=\max\{-X,0\}.
+\]
+The regimes are distinct:
+\begin{itemize}
+  \item If $X\ge0$, then $\mathbb E[X]\in[0,+\infty]$ is always defined.
+  \item For signed $X$, the expression $\mathbb E[X^+]-\mathbb E[X^-]$ is defined unless both terms are $+\infty$.
+  \item If $X\in L^1(\mathbb P)$, then $\mathbb E[X]$ is finite and $|\mathbb E[X]|\le\mathbb E[|X|]$.
+\end{itemize}
+Thus ``defined'' and ``finite'' are not synonyms. A nonnegative random variable may have expectation $+\infty$; a signed random variable may have no expectation at all because $+\infty-(+\infty)$ is not defined.
+
+\section*{3. Laws and the pushforward integration formula}
+
+Let $X:(\Omega,\mathcal F,\mathbb P)\to(S,\mathcal S)$ be measurable. Its law is the probability measure
+\[
+\mu_X=X_\#\mathbb P,
+\qquad
+\mu_X(C)=\mathbb P(X\in C),
+\quad C\in\mathcal S.
+\]
+
+\textbf{LOTUS.}
+For every measurable $\varphi:S\to[0,+\infty]$,
+\[
+\boxed{
+\mathbb E[\varphi(X)]
+=
+\int_S\varphi\,d\mu_X
+}.
+\]
+The same identity holds for signed $\varphi$ whenever the integral is defined.
+
+\textbf{Proof.}
+For $C\in\mathcal S$,
+\[
+\mathbb E[\ind_C(X)]
+=
+\mathbb P(X\in C)
+=
+\mu_X(C)
+=
+\int_S\ind_C\,d\mu_X.
+\]
+Linearity gives the identity for nonnegative simple functions. If $\varphi\ge0$ is measurable, choose nonnegative simple functions $\varphi_n\uparrow\varphi$. Then $\varphi_n(X)\uparrow\varphi(X)$, so monotone convergence on both spaces yields
+\[
+\mathbb E[\varphi(X)]
+=
+\lim_n\mathbb E[\varphi_n(X)]
+=
+\lim_n\int_S\varphi_n\,d\mu_X
+=
+\int_S\varphi\,d\mu_X.
+\]
+For signed $\varphi$, apply the nonnegative result to $\varphi^+$ and $\varphi^-$ whenever their difference is defined. \hfill$\square$
+
+If $\mu_X$ is atomic, the integral is a weighted sum. If $\mu_X\ll\lambda$ on $\mathbb R^d$, Radon--Nikodym supplies a density $f_X=d\mu_X/d\lambda$, unique $\lambda$-almost everywhere, and
+\[
+\mathbb E[\varphi(X)]
+=
+\int_{\mathbb R^d}\varphi(x)f_X(x)\,dx.
+\]
+The density formula is a representation of LOTUS under an additional domination hypothesis. The law itself needs no chosen reference measure and no density.
+
+\section*{4. Tonelli and the layer-cake representation}
+
+Let $(E,\mathcal A,\mu)$ and $(F,\mathcal B,\nu)$ be $\sigma$-finite measure spaces. If $f:E\times F\to[0,+\infty]$ is measurable, Tonelli's theorem gives
+\[
+\int_{E\times F}f\,d(\mu\otimes\nu)
+=
+\int_E\!\left(\int_Ff(x,y)\,\nu(dy)\right)\mu(dx)
+=
+\int_F\!\left(\int_Ef(x,y)\,\mu(dx)\right)\nu(dy),
+\]
+with all three values allowed to be $+\infty$. Positivity is decisive. For a signed integrand, Fubini requires absolute integrability; otherwise an exchange may conceal the undefined expression $+\infty-(+\infty)$.
+
+Let $f:E\to[0,+\infty]$ be measurable and set
+\[
+H_f=\{(x,t)\in E\times(0,+\infty):t<f(x)\}.
+\]
+The subgraph is measurable because
+\[
+H_f
+=
+\bigcup_{q\in\mathbb Q_{>0}}
+\{x:f(x)>q\}\times(0,q).
+\]
+Since
+\[
+f(x)=\int_0^\infty\ind_{\{t<f(x)\}}\,dt,
+\]
+Tonelli applied to $\ind_{H_f}$ gives
+\[
+\boxed{
+\int_Ef\,d\mu
+=
+\int_0^\infty\mu(f>t)\,dt
+}.
+\]
+More generally, for $p>0$,
+\[
+\int_Ef^p\,d\mu
+=
+p\int_0^\infty t^{p-1}\mu(f>t)\,dt.
+\]
+On a probability space, for $X\ge0$,
+\[
+\boxed{
+\mathbb E[X]
+=
+\int_0^\infty\mathbb P(X>t)\,dt
+}.
+\]
+The identity remains valid when the common value is $+\infty$.
+
+\section*{5. Transformed insurance payments}
+
+For $X\ge0$, a deductible $d>0$, and a cap $u>0$, apply the tail formula to the transformed variable, not to its mean. Since
+\[
+\mathbb P((X-d)_+>t)=\mathbb P(X>d+t),
+\]
+one obtains
+\[
+\boxed{
+\mathbb E[(X-d)_+]
+=
+\int_d^\infty\mathbb P(X>s)\,ds
+}.
+\]
+Similarly,
+\[
+\boxed{
+\mathbb E[X\wedge u]
+=
+\int_0^u\mathbb P(X>s)\,ds
+},
+\]
+and the limited-loss payment satisfies
+\[
+\boxed{
+\mathbb E[\min\{(X-d)_+,u\}]
+=
+\int_d^{d+u}\mathbb P(X>s)\,ds
+}.
+\]
+If $X\sim\operatorname{Exp}(\lambda)$, these become
+\[
+\mathbb E[(X-d)_+]
+=
+\frac{e^{-\lambda d}}{\lambda},
+\qquad
+\mathbb E[X\wedge u]
+=
+\frac{1-e^{-\lambda u}}{\lambda},
+\]
+and
+\[
+\mathbb E[\min\{(X-d)_+,u\}]
+=
+\frac{e^{-\lambda d}(1-e^{-\lambda u})}{\lambda}.
+\]
+
+If $g$ is convex, $X\in L^1$, and $g(X)\in L^1$, Jensen's inequality gives
+\[
+g(\mathbb E[X])\le\mathbb E[g(X)].
+\]
+It gives a comparison, not the value of $\mathbb E[g(X)]$.
+
+\section*{6. Conditioning on a positive-probability event}
+
+For $B\in\mathcal F$ with $\mathbb P(B)>0$, define the normalized restriction
+\[
+\mathbb P_B(A)
+=
+\frac{\mathbb P(A\cap B)}{\mathbb P(B)},
+\qquad A\in\mathcal F.
+\]
+Then $\mathbb P_B\ll\mathbb P$ and
+\[
+\boxed{
+\frac{d\mathbb P_B}{d\mathbb P}
+=
+\frac{\ind_B}{\mathbb P(B)}
+}
+\quad\mathbb P\text{-almost surely}.
+\]
+For $Y\in L^1(\mathbb P)$,
+\[
+\mathbb E[Y\mid B]
+=
+\frac{\mathbb E[Y\ind_B]}{\mathbb P(B)}.
+\]
+The ratio formula does not condition on a null event. If $X$ has a continuous law, then typically $\mathbb P(X=x)=0$; conditioning on $X=x$ requires a conditional kernel or density and a version choice, which lies beyond this packet.
+
+\section*{7. Finite partitions, total expectation, and Bayes}
+
+Let $(B_i)_{1\le i\le r}$ be a measurable partition and set $\mathcal G=\sigma(B_1,\ldots,B_r)$. Every finite real-valued $\mathcal G$-measurable random variable is constant on each atom, hence has the form
+\[
+H=\sum_{i=1}^rc_i\ind_{B_i}.
+\]
+For $Y\in L^1(\mathbb P)$, the conditional-expectation identities
+\[
+\int_AH\,d\mathbb P
+=
+\int_AY\,d\mathbb P,
+\qquad A\in\mathcal G,
+\]
+determine the coefficients on positive-probability atoms:
+\[
+\boxed{
+\mathbb E[Y\mid\mathcal G]
+=
+\sum_{i:\,\mathbb P(B_i)>0}
+\frac{\mathbb E[Y\ind_{B_i}]}{\mathbb P(B_i)}\ind_{B_i}
+}.
+\]
+On a null atom the coefficient is arbitrary; conditional expectation is an almost-sure equivalence class.
+
+Taking expectations gives the law of total expectation,
+\[
+\mathbb E[Y]
+=
+\sum_i\mathbb P(B_i)\mathbb E[Y\mid B_i],
+\]
+where null-atom terms contribute zero. Setting $Y=\ind_A$ gives total probability,
+\[
+\mathbb P(A)
+=
+\sum_i\mathbb P(A\mid B_i)\mathbb P(B_i).
+\]
+If $\mathbb P(A)>0$, normalization of the joint masses gives Bayes' formula:
+\[
+\boxed{
+\mathbb P(B_j\mid A)
+=
+\frac{\mathbb P(A\mid B_j)\mathbb P(B_j)}
+{\sum_i\mathbb P(A\mid B_i)\mathbb P(B_i)}
+}.
+\]
+Bayes and total expectation are consequences of the same finite-partition structure, not additional axioms.
+
+\section*{8. Representation ledger}
+
+A formula is not enough to identify a density. Record its numerator, reference measure, domain, and uniqueness basis. A pushforward law is a measure in its own right and therefore occupies a representation row, not a malformed density row.
+
+{\footnotesize
+\hbadness=10000
+\begin{tabularx}{\textwidth}{@{}Y Y Y Y Y@{}}
+\toprule
+Object & Numerator or construction & Reference & Domain & Equality basis \\
+\midrule
+$d(f\mathbb P)/d\mathbb P=f$ & $A\mapsto\mathbb E[f\ind_A]$ & $\mathbb P$ & $(\Omega,\mathcal F)$ & $\mathbb P$-a.s. \\
+$\mu_X=X_\#\mathbb P$ & pushforward of $\mathbb P$ by $X$ & none & $(S,\mathcal S)$ & equality of measures \\
+$f_X=d\mu_X/d\lambda$ & law $\mu_X$, only if $\mu_X\ll\lambda$ & $\lambda$ & state space & $\lambda$-a.e. \\
+$d\mathbb P_A/d\mathbb P$ & $C\mapsto\mathbb P(C\cap A)/\mathbb P(A)$ & $\mathbb P$ & $(\Omega,\mathcal F)$ & $\mathbb P$-a.s. \\
+$\mathbb E[Y\mid\mathcal G]$ & $C\mapsto\mathbb E[Y\ind_C]$, $C\in\mathcal G$ & $\mathbb P|_{\mathcal G}$ & $(\Omega,\mathcal G)$ & $\mathbb P$-a.s. \\
+\bottomrule
+\end{tabularx}
+\par
+}
+
+The same algebraic expression may represent different objects on different measurable spaces. The ambient measure and almost-everywhere relation are not decorative annotations; they are part of the statement.

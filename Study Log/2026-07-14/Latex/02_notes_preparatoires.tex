@@ -1,0 +1,261 @@
+\sheettitle
+  {Preparatory notes}
+  {From ambient $L^p$ spaces to probability representations}
+
+\section*{0. The ambient measure is part of the object}
+
+Let $(E,\mathcal A,\mu)$ be a measure space. For $1\le p<\infty$,
+\[
+L^p(\mu)
+=
+\left\{
+f:E\to\mathbb R\text{ measurable}:
+\int_E|f|^p\,d\mu<\infty
+\right\}\big/\!\sim_\mu,
+\]
+where
+\[
+f\sim_\mu g
+\quad\Longleftrightarrow\quad
+f=g\quad\mu\text{-almost everywhere}.
+\]
+The norm is
+\[
+\|f\|_p
+=
+\left(\int_E|f|^p\,d\mu\right)^{1/p}.
+\]
+The space $L^\infty(\mu)$ consists of the equivalence classes of essentially bounded measurable functions, with
+\[
+\|f\|_\infty
+=
+\inf\{M\ge0:|f|\le M\ \mu\text{-almost everywhere}\}.
+\]
+
+Changing the ambient measure may change integrability, the norm, the null sets, and therefore the equivalence class represented by a fixed pointwise formula. On a probability space,
+\[
+X\in L^p(\mathbb P)
+\quad\Longleftrightarrow\quad
+\mathbb E[|X|^p]<\infty.
+\]
+
+\section*{1. Finite-measure embeddings}
+
+\textbf{Proposition 1.}
+Assume $\mu(E)<\infty$ and let $1\le p<q\le\infty$. Then
+\[
+L^q(\mu)\subseteq L^p(\mu),
+\qquad
+\|f\|_p
+\le
+\mu(E)^{1/p-1/q}\|f\|_q,
+\]
+with the convention $1/\infty=0$.
+
+\textit{Proof.}
+Suppose first that $q<\infty$. Hölder's inequality with conjugate exponents
+\[
+r=\frac qp,
+\qquad
+r'=\frac q{q-p}
+\]
+gives
+\[
+\begin{aligned}
+\|f\|_p^p
+&=
+\int_E |f|^p\mathbf 1_E\,d\mu\\
+&\le
+\left(\int_E|f|^q\,d\mu\right)^{p/q}
+\left(\int_E\mathbf 1_E\,d\mu\right)^{1-p/q}\\
+&=
+\|f\|_q^p\mu(E)^{1-p/q}.
+\end{aligned}
+\]
+Taking the $p$-th root yields the estimate. If $q=\infty$, then
+\[
+\|f\|_p^p
+\le
+\|f\|_\infty^p\mu(E).
+\]
+This is the same estimate at the endpoint.
+
+The hypothesis $\mu(E)<\infty$ enters through the integrability of $\mathbf 1_E$. No inclusion of this form is asserted on an arbitrary infinite measure space.
+
+\textbf{Probability-space consequence.}
+Since $\mathbb P(\Omega)=1$,
+\[
+\|X\|_p\le\|X\|_q
+\qquad(1\le p<q\le\infty),
+\]
+and in particular
+\[
+L^\infty(\mathbb P)
+\subseteq
+L^2(\mathbb P)
+\subseteq
+L^1(\mathbb P).
+\]
+The three spaces serve different purposes: $L^1$ gives finite expectations and finite signed RN numerators; $L^\infty$ supplies indicators and bounded tests; $L^2$ legitimizes second moments and cross-products.
+
+\section*{2. The two product interfaces}
+
+\textbf{Proposition 2.}
+If $Y\in L^1(\mu)$ and $Z\in L^\infty(\mu)$, then
+\[
+YZ\in L^1(\mu),
+\qquad
+\|YZ\|_1
+\le
+\|Z\|_\infty\|Y\|_1.
+\]
+
+\textit{Proof.}
+The estimate follows by integrating
+\[
+|YZ|
+\le
+\|Z\|_\infty |Y|
+\quad\mu\text{-almost everywhere}.
+\]
+
+\textbf{Proposition 3.}
+If $U,V\in L^2(\mu)$, then
+\[
+UV\in L^1(\mu),
+\qquad
+\|UV\|_1\le\|U\|_2\|V\|_2.
+\]
+
+\textit{Proof.}
+This is the Cauchy--Schwarz inequality applied to $|U|$ and $|V|$.
+
+The first proposition legitimizes bounded test functions against $L^1$ variables. The second legitimizes covariance and the cross-term in variance decompositions. Neither statement requires the Hilbert-space projection theorem.
+
+\section*{3. From event identities to bounded tests}
+
+\textbf{Proposition 4.}
+Let $\mathcal G\subseteq\mathcal A$ be a sub-$\sigma$-field and let $f,g\in L^1(\mu)$. If
+\[
+\int_A f\,d\mu
+=
+\int_A g\,d\mu
+\qquad\text{for every }A\in\mathcal G,
+\]
+then
+\[
+\int_E Zf\,d\mu
+=
+\int_E Zg\,d\mu
+\]
+for every bounded $\mathcal G$-measurable $Z$.
+
+\textit{Proof.}
+Linearity gives the identity first for bounded $\mathcal G$-measurable simple functions. Let $Z$ be bounded and $\mathcal G$-measurable. Choose simple functions $Z_n$ such that $Z_n\to Z$ pointwise and $|Z_n|\le\|Z\|_\infty$. Then
+\[
+|Z_n(f-g)|
+\le
+\|Z\|_\infty|f-g|\in L^1(\mu).
+\]
+Dominated convergence passes the identity to $Z$.
+
+If $f$ and $g$ are themselves $\mathcal G$-measurable, taking $A=\{f>g\}$ and $A=\{g>f\}$ also shows
+\[
+f=g\quad\mu\text{-almost everywhere}.
+\]
+
+\section*{4. Density-generated measures}
+
+\textbf{Proposition 5.}
+If $h:E\to[0,\infty]$ is measurable, then
+\[
+(h\mu)(A)=\int_Ah\,d\mu
+\]
+defines a positive measure and $h\mu\ll\mu$. No integrability or $\sigma$-finiteness hypothesis is required for this forward construction.
+
+\textit{Proof.}
+For pairwise disjoint measurable sets $A_n$, monotone convergence applied to
+\[
+h\mathbf 1_{\cup_n A_n}
+=
+\sum_{n\ge1}h\mathbf 1_{A_n}
+\]
+gives countable additivity. If $\mu(A)=0$, then $\int_Ah\,d\mu=0$.
+
+\textbf{Proposition 6.}
+If $f\in L^1(\mu)$, then
+\[
+\nu_f(A)=\int_Af\,d\mu
+\]
+defines a finite signed measure, $\nu_f\ll\mu$, and
+\[
+|\nu_f|=|f|\mu.
+\]
+If $g\in L^1(\mu)$ and $\nu_f=\nu_g$, then
+\[
+f=g\quad\mu\text{-almost everywhere}.
+\]
+
+\textit{Proof.}
+Write $f=f^+-f^-$. The positive measures $f^+\mu$ and $f^-\mu$ are finite and mutually singular, so they form the Jordan decomposition of $\nu_f$; hence $|\nu_f|=(f^++f^-)\mu=|f|\mu$. Absolute continuity is immediate.
+
+For uniqueness, put $u=f-g$. The identity $\nu_f=\nu_g$ gives
+\[
+\int_Au\,d\mu=0
+\qquad(A\in\mathcal A).
+\]
+Taking $A=\{u>0\}$ and $A=\{u<0\}$ shows that $u^+=u^-=0$ almost everywhere.
+
+\section*{5. Change of measure}
+
+\textbf{Proposition 7.}
+Let $\nu=h\mu$ with $h\ge0$ measurable. For every nonnegative measurable $\varphi$,
+\[
+\int_E\varphi\,d\nu
+=
+\int_E\varphi h\,d\mu,
+\]
+where either side may equal $+\infty$. For signed $\varphi$, the same identity holds whenever
+\[
+\int_E|\varphi|\,d\nu
+=
+\int_E|\varphi|h\,d\mu
+<\infty.
+\]
+Consequently,
+\[
+\varphi\in L^1(\nu)
+\quad\Longleftrightarrow\quad
+|\varphi|h\in L^1(\mu).
+\]
+
+\textit{Proof.}
+The identity follows for indicators from the definition of $\nu$, then for nonnegative simple functions by linearity, and finally for arbitrary nonnegative functions by monotone convergence. Apply the result to positive and negative parts in the integrable signed regime.
+
+Since $\nu\ll\mu$, every $\mu$-almost-everywhere identity is also a $\nu$-almost-everywhere identity. Absolute continuity alone does not imply that every element of $L^1(\mu)$ belongs to $L^1(\nu)$.
+
+\section*{6. RN theorem boundary and signed extension}
+
+\textbf{Radon--Nikodym theorem, positive standard regime.}
+Let $\mu$ and $\rho$ be $\sigma$-finite positive measures on $(E,\mathcal A)$. If $\rho\ll\mu$, then there exists a measurable $h\ge0$ such that
+\[
+\rho=h\mu.
+\]
+The density $h=d\rho/d\mu$ is unique $\mu$-almost everywhere.
+
+If $\mu$ is $\sigma$-finite and $\nu$ is a finite signed measure satisfying $\nu\ll\mu$, apply the positive theorem to the Jordan parts $\nu^+$ and $\nu^-$. Their densities $h^+$ and $h^-$ give
+\[
+\nu=(h^+-h^-)\mu.
+\]
+This is the legitimate signed extension; a positive-measure theorem is not silently applied to a signed numerator.
+
+\section*{7. July consumer map}
+
+\begin{enumerate}
+  \item \textbf{General density, 14 July:} numerator $f\mu$, reference $\mu$, uniqueness $\mu$-almost everywhere.
+  \item \textbf{Event conditioning, 19 July:} numerator $\mathbb P_B$, reference $\mathbb P$, explicit density $\mathbf 1_B/\mathbb P(B)$ when $\mathbb P(B)>0$.
+  \item \textbf{State-space density, 24 July:} numerator $\mu_X=X_\#\mathbb P$, reference chosen on the state space, typically Lebesgue measure. A law is not a density before this choice and an absolute-continuity relation.
+  \item \textbf{Conditional expectation, 26 July:} for $Y\in L^1(\mathbb P)$ and a sub-$\sigma$-field $\mathcal G\subseteq\mathcal F$, numerator $A\mapsto\mathbb E[Y\mathbf 1_A]$ on $\mathcal G$, reference $\mathbb P|_{\mathcal G}$, uniqueness $\mathbb P$-almost surely.
+\end{enumerate}
+
+The RN theorem consumes a numerator measure, a reference measure, absolute continuity, and the correct measure-theoretic regime. It is not a formal consequence of an $L^p$ embedding.

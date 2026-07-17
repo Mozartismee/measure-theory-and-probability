@@ -1,0 +1,67 @@
+\sheettitle
+  {Expectation, Laws, Tail Integrals, and Finite Conditioning}
+  {Self-contained offline study packet -- 17--19 July 2026}
+
+This packet deploys three interfaces which cooperate but must not be collapsed into one causal chain:
+\[
+\begin{aligned}
+Y\in L^1(\mathbb P)
+&\Longrightarrow
+\mathbb E[Y]\text{ is finite and }Y\mathbb P\text{ is finite signed},\\
+X\longmapsto\mu_X=X_\#\mathbb P
+&\Longrightarrow
+\mathbb E[\varphi(X)]=\int\varphi\,d\mu_X,\\
+\mathbb P_B\text{ and finite partitions}
+&\Longrightarrow
+\text{Bayes' formula and finite-partition conditional expectation}.
+\end{aligned}
+\]
+The first line is an admissibility gate, the second is a pushforward representation, and the third is normalized restriction. A law exists without a Lebesgue density, and expectation is not defined through Radon--Nikodym.
+
+\section*{Contract}
+
+\begin{itemize}
+  \item \textbf{Objects:} expectation as an integral, pushforward laws, transformed payments, and finite conditioning.
+  \item \textbf{Purpose:} deploy the $L^1$/density interface into probability calculations while retaining the exact measure-theoretic boundary.
+  \item \textbf{Regime:} ENS L3+/early M1 theorem discipline with Exam P mechanisms used only as terminal checks.
+  \item \textbf{Required output:} three closed-book attempts, a representation ledger, the first point of rupture, and a minimal repair.
+  \item \textbf{Boundary:} the full Hahn-first proof of Radon--Nikodym and general conditional densities are deferred.
+\end{itemize}
+
+\section*{Session 1 -- Friday, 17 July, 90 minutes}
+
+\begin{enumerate}
+  \item 15 minutes: complete Exercise 0 without notes.
+  \item 25 minutes: read Lecture Notes, Sections 1--3.
+  \item 40 minutes: complete Exercise 1.
+  \item 10 minutes: enter the law $\mu_X=X_\#\mathbb P$ in the representation ledger, and add a pdf row only under an explicit domination hypothesis.
+\end{enumerate}
+
+\textbf{Required output.} Reconstruct LOTUS from the pushforward definition; distinguish nonnegative expectation, defined signed expectation, and finite $L^1$ expectation; explain why a law needs no density.
+
+\section*{Session 2 -- Saturday, 18 July, 120 minutes}
+
+\begin{enumerate}
+  \item 20 minutes: read Lecture Notes, Sections 4--5.
+  \item 25 minutes: prove the subgraph measurability and Tonelli identity in Exercise 2(a)--(b).
+  \item 35 minutes: complete the transformed-payment parts of Exercise 2.
+  \item 25 minutes: complete Exercise 5(a)--(b), the capped-payment and Poisson deployment analogues.
+  \item 15 minutes: reconstruct the cap, deductible, and limited-loss tail identities without notes.
+\end{enumerate}
+
+\textbf{Required output.} Identify $g(X)$ before taking its expectation; use Jensen only as a comparison theorem, never as a substitute for the expectation calculation.
+
+\section*{Session 3 -- Sunday, 19 July, 120 minutes}
+
+\begin{enumerate}
+  \item 25 minutes: read Lecture Notes, Sections 6--8.
+  \item 55 minutes: complete Exercises 3--4.
+  \item 20 minutes: complete Exercise 5(c), the finite-mixture deployment analogue.
+  \item 20 minutes: complete the work record. Open the independent solutions only after a complete attempt.
+\end{enumerate}
+
+\textbf{Required output.} Derive Bayes' formula from normalized joint masses and derive total expectation from finite-partition conditional expectation.
+
+\section*{Attempt discipline}
+
+Use \texttt{main.tex} until every assigned exercise has a complete attempt. The independent solution document is compiled from \texttt{solutions\_main.tex}. When a rupture occurs, repair the first step that prevents a legitimate continuation; do not restart the entire theory.
