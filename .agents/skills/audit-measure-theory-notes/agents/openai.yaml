@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Measure-Theory Notes"
+  short_description: "Review measure-theory notes with minimal valid repairs"
+  default_prompt: "Use $audit-measure-theory-notes to audit the specified note and repair only genuine mathematical defects."
