@@ -15,13 +15,13 @@ module-status: in-progress
 - Prerequisites：integration and convergence；基本 measure algebra。
 - Output：能由 sign structure 建立 domination 與 density extraction 所需的局部工具。
 
-結構遵循 [[00_Project/Unit Structure|Unit Structure]]。
+結構遵循 [Unit Structure](../00_Project/Unit%20Structure.md)。
 
 ## Files
 
-- Cours：[[18_Signed-Measures/01_Cours/Cours|Signed Measures and Hahn–Jordan Decomposition]]
-- TD：[[18_Signed-Measures/02_TD/TD 01 — Hahn–Jordan Structure and Domination|TD 01 — Hahn–Jordan Structure and Domination]]。
-- Corriges：[[18_Signed-Measures/03_Corriges/TD 01 — Hahn–Jordan Structure and Domination|TD 01 corrigé]]。
+- Cours：[Signed Measures and Hahn–Jordan Decomposition](01_Cours/Cours.md)
+- TD：[TD 01 — Hahn–Jordan Structure and Domination](02_TD/TD%2001%20—%20Hahn–Jordan%20Structure%20and%20Domination.md)。
+- Corriges：[TD 01 corrigé](03_Corriges/TD%2001%20—%20Hahn–Jordan%20Structure%20and%20Domination.md)。
 - Colles：尚未建置。
 - Example-Sheets：尚未建置。
 - Supplements：目前無必要補件。

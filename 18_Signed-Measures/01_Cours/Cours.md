@@ -154,12 +154,10 @@ $$
 \sigma^-(P)=0.
 $$
 
-The pair \((\sigma^+,\sigma^-)\) does not depend on the choice of the Hahn decomposition and is characterized by the minimality property
+The pair \((\sigma^+,\sigma^-)\) does not depend on the choice of the Hahn decomposition and is characterized by the following minimality property: for finite positive measures \(\alpha\) and \(\beta\),
 
 $$
-\sigma=\alpha-\beta,
-\qquad
-\alpha,\beta\geq0
+\sigma=\alpha-\beta
 $$
 
 implies

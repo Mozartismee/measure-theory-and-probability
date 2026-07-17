@@ -11,21 +11,21 @@ module-status: in-progress
 
 - Object：conditional laws as state-space representations。
 - Purpose：將 $\mathbb E[Y\mid\sigma(X)]$ 表示為 $g(X)$，並分辨 eventwise density 與 probability kernel。
-- Regime：measure-theoretic probability 主線；regular conditional laws 仍在邊界之外。
-- Prerequisites：Pushforwards and Laws、Conditional Expectation、Radon–Nikodym。
-- Output：能構造 $d\rho_Y/d\mu_X$、轉移 versions，並指出 joint measurability 尚未由 eventwise construction 保證。
+- Regime：measure-theoretic probability 主線；dominated Euclidean kernel 在模組內，一般 regular conditional-law existence 與 disintegration 仍在邊界之外。
+- Prerequisites：Pushforwards and Laws、Product Measures and Transformations、Conditional Expectation、Radon–Nikodym。
+- Output：能構造 $d\rho_Y/d\mu_X$、轉移 versions、在 dominated Euclidean regime 建立 explicit kernel，並指出一般 eventwise construction 的邊界。
 
-結構遵循 [[00_Project/Unit Structure|Unit Structure]]。
+結構遵循 [Unit Structure](../00_Project/Unit%20Structure.md)。
 
 ## Files
 
-- Cours：[[50_Conditional-Laws/01_Cours/Cours|Cours]]
-- TD：[[50_Conditional-Laws/02_TD/TD 01 — State-Space Representations|TD 01]]
-- Corriges：尚未建置。
+- Cours：[Cours](01_Cours/Cours.md)
+- TD：[TD 01](02_TD/TD%2001%20—%20State-Space%20Representations.md)；[TD 02](02_TD/TD%2002%20—%20Dominated%20Conditional%20Densities.md)
+- Corriges：[TD 02 corrigé](03_Corriges/TD%2002%20—%20Dominated%20Conditional%20Densities.md)；TD 01 corrigé 尚未建置。
 - Colles：尚未建置。
 - Example-Sheets：尚未建置。
 - Supplements：目前無必要補件。
 
 ## Completion criterion
 
-補齊 corrigé、colles 與 discrete/continuous conditional-law examples；任何 kernel statement 均須先補足 state-space hypotheses。
+補齊 TD 01 corrigé、colles 與更多 discrete examples。Dominated continuous construction 已建置；任何超出此 regime 的 kernel statement 仍須補足 state-space hypotheses。

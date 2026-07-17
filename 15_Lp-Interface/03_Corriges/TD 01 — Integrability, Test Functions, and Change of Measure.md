@@ -295,7 +295,13 @@ $$
 C\|f\|_{L^1(\mu)}.
 $$
 
-Thus $L^1(\mu)\hookrightarrow L^1(\nu)$ continuously.
+Since $\nu\ll\mu$, the rule
+
+$$
+T_{\mu\to\nu}([f]_\mu)=[f]_\nu
+$$
+
+is well defined, and the estimate shows that it is bounded. It need not be injective. For example, take $E=\{0,1\}$ with counting measure $\mu$ and let $h=\mathbf1_{\{0\}}$. Then the nonzero class $[\mathbf1_{\{1\}}]_\mu$ maps to zero in $L^1(h\mu)$.
 
 ### 3. Absolute continuity is not an integrability estimate
 
@@ -322,7 +328,7 @@ $$
 =+\infty.
 $$
 
-Therefore $L^1(\mu)\not\subseteq L^1(\nu)$.
+Therefore integrability does not transfer from $L^1(\mu)$ to $L^1(\nu)$.
 
 ### 4. Two distinct checks
 
@@ -338,6 +344,8 @@ one needs:
 2. compatibility of representatives: $f=g$ $\mu$-almost everywhere implies $f=g$ $\nu$-almost everywhere.
 
 The first follows from a quantitative domination such as $\nu\le C\mu$. The second follows from the qualitative relation $\nu\ll\mu$. They are not the same assertion.
+
+These two conditions define a canonical map, not necessarily an inclusion. A domination estimate makes it bounded. Injectivity follows from the reverse relation $\mu\ll\nu$; without it, distinct $\mu$-classes may become the same $\nu$-class.
 
 ### 5. Equivalent measures
 

@@ -8,7 +8,7 @@ status: canonical
 
 Let $(\Omega,\mathcal F,\mathbb P)$ be a probability space and let $\mathcal G\subset\mathcal F$ be a sub-$\sigma$-field.
 
-This module depends on [[20_Radon-Nikodym/01_Cours/Cours|the Radon–Nikodym construction]].
+This module depends on [the Radon–Nikodym construction](../../20_Radon-Nikodym/01_Cours/Cours.md).
 
 ## 1. Conditional expectation
 
@@ -303,7 +303,7 @@ The first object is a real number. The second is a random variable defined up to
 
 ## 7. Version discipline
 
-The ambient measure, $L^1$-space and almost-everywhere relation are recorded in [[15_Lp-Interface/06_Supplements/Version Discipline|Version Discipline]].
+The ambient measure, $L^1$-space and almost-everywhere relation are recorded in [Version Discipline](../../15_Lp-Interface/06_Supplements/Version%20Discipline.md).
 
 ## 8. Reconstruction
 
@@ -335,4 +335,4 @@ $$
 
 ## 9. Continuation
 
-Conditioning on a random variable and conditional event laws belong to [[50_Conditional-Laws/01_Cours/Cours|Conditional Laws]].
+Conditioning on a random variable and conditional event laws belong to [Conditional Laws](../../50_Conditional-Laws/01_Cours/Cours.md).

@@ -6,7 +6,7 @@ status: canonical
 
 # Cours — Construction of the Radon–Nikodym Derivative
 
-This course depends on [[18_Signed-Measures/01_Cours/Cours|signed measures and Hahn decomposition]]. The proof route is Hahn-first; the $L^2$ route in Le Gall is comparative, not implicit.
+This course depends on [signed measures and Hahn decomposition](../../18_Signed-Measures/01_Cours/Cours.md). The proof route is Hahn-first; the $L^2$ route in Le Gall is comparative, not implicit.
 
 ## 1. Absolute continuity
 
@@ -287,6 +287,8 @@ $$
 $$
 
 In particular, $g<+\infty$ $\mu$-almost everywhere.
+
+Replacing $g$ by $0$ on the $\mu$-null set $\{g=+\infty\}$ leaves the measure $g\mu$ unchanged. Henceforth, $g$ is taken to be $[0,+\infty)$-valued, as required by the theorem.
 
 ## 8. Elimination of the residue
 

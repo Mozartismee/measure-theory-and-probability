@@ -10,10 +10,11 @@ status: canonical
 
 ## Exam P bridges
 
-- [[60_Applications/Exam-P-Bridges/Measure-Theoretic Dictionary|Measure-Theoretic Dictionary for Exam P]]
+- [Measure-Theoretic Dictionary for Exam P](Exam-P-Bridges/Measure-Theoretic%20Dictionary.md)
+- [Expectation and Conditioning — Exam P Deployment Bridge](Exam-P-Bridges/Expectation%20and%20Conditioning%20—%20Exam%20P%20Deployment%20Bridge.md)
 
 ## Statistical models
 
-- [[60_Applications/Statistical-Models/Dominated Statistical Models|Dominated Statistical Models]]
+- [Dominated Statistical Models](Statistical-Models/Dominated%20Statistical%20Models.md)
 
 應用文件可以同時調用多個正式模組，但不得反過來成為基礎定理的唯一正本。

@@ -41,9 +41,9 @@ Hölder, Cauchy–Schwarz and Jensen are required. Completeness of $L^p$, densit
 
 Therefore $L^p$ has a visible interface module for architectural separation, but not the scope of an independent full theory. Its boundary is semantic: only the structures consumed by probability and the main proof line belong there.
 
-## Necessary next module
+## Product-integration bridge
 
-The remaining structural gap is
+The structural bridge is
 
 $$
 \text{product measures}
@@ -55,12 +55,12 @@ $$
 \text{change of variables}.
 $$
 
-The directory [[35_Product-Measures-and-Transformations/00_Module Map|Product Measures and Transformations]] now reserves this as a formal module after Integration and Convergence. Its mathematical content remains planned and must not be hidden inside a supplement.
+The directory [Product Measures and Transformations](../35_Product-Measures-and-Transformations/00_Module%20Map.md) now contains an in-progress formal module after Integration and Convergence. Its Cours and first TD/corrigé supply the July deployment path; the deferred Colles and full Example Sheets remain part of the mastery edition.
 
 ## Excluded from the current core
 
 - full outer-measure construction of Lebesgue measure;
-- regular conditional probabilities and disintegration;
+- general existence theory for regular conditional probabilities and disintegration;
 - uniform integrability and martingale convergence;
 - Banach-space duality and weak compactness.
 

@@ -8,7 +8,7 @@ status: canonical
 
 Let $(\Omega,\mathcal F,\mathbb P)$ be a probability space and let $\mathcal G\subset\mathcal F$ be a sub-$\sigma$-field.
 
-This supplement isolates the analytic mechanisms required in Exercise 1.2–1.3 of [[40_Conditional-Expectation/02_TD/TD 01 — RN Construction|TD 01]]. Its scope is deliberately restricted to:
+This supplement isolates the analytic mechanisms required in Exercise 1.2–1.3 of [TD 01](../02_TD/TD%2001%20—%20RN%20Construction.md). Its scope is deliberately restricted to:
 
 1. passing from nonnegative integrable functions to arbitrary elements of $L^1$;
 2. uniqueness from integral identities on $\mathcal G$;

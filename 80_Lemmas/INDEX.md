@@ -13,7 +13,8 @@ This directory contains results that are both:
 
 ## Current lemmas
 
-- [[80_Lemmas/Vanishing Integral Criterion|Vanishing Integral Criterion]]
-- [[80_Lemmas/Null Sets and Integral Invariance|Null Sets and Integral Invariance]]
+- [Lemma 1 — Vanishing Integral Criterion](Vanishing%20Integral%20Criterion.md)
+- [Lemma 2 — Null Sets and Integral Invariance](Null%20Sets%20and%20Integral%20Invariance.md)
+- [Lemma 3 — The Young–Hölder Mechanism](Young–Hölder%20Mechanism.md)
 
 Propositions tied to a single object remain in their mathematical module. For example, pushforward integration belongs to `30_Pushforwards-and-Laws`, not here.

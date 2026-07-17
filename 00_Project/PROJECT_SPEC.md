@@ -871,7 +871,7 @@ $$
 6. `05_Example-Sheets`；
 7. `06_Supplements`。
 
-各角色的責任與完成狀態以 [[00_Project/Unit Structure|Unit Structure]] 為準。Cours、TD、corrigé、colle、example sheet 與 supplement 必須分檔；目錄固定不表示必須製造內容。
+各角色的責任與完成狀態以 [Unit Structure](Unit%20Structure.md) 為準。Cours、TD、corrigé、colle、example sheet 與 supplement 必須分檔；目錄固定不表示必須製造內容。
 
 若一份 supplement 擴張成系統性章節，應升格為 Cours 內容或獨立正式單元，不得以「補充」之名另開一門隱藏課程。
 

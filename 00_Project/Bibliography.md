@@ -8,7 +8,7 @@ status: canonical
 
 ## Primary cours reference
 
-- [[99_Sources/ENS/Le Gall.pdf|Jean-François Le Gall, *Measure Theory, Probability, and Stochastic Processes*]]
+- [Jean-François Le Gall, *Measure Theory, Probability, and Stochastic Processes*](../99_Sources/ENS/Le%20Gall.pdf)
   - Chapter 4: $L^p$ spaces and the $L^2$ proof of Radon–Nikodym.
   - Chapter 6: signed measures and Jordan decomposition.
   - Chapter 11: conditional expectation constructed by Radon–Nikodym.
@@ -17,20 +17,20 @@ Le Gall supplies theorem architecture, proof density and probability application
 
 ## ENS TD sequence
 
-- [[99_Sources/ENS/TD 1 – Espaces mesurés.pdf|TD 1 — Espaces mesurés]]: measurable spaces, generated $\sigma$-fields and elementary ruptures.
-- [[99_Sources/ENS/TD 2 – Intégration et théorèmes de convergence.pdf|TD 2 — Integration and convergence]]: convergence theorems and absolute continuity of the integral.
-- [[99_Sources/ENS/TD 3 – Mesure de Lebesgue et construction de mesures.pdf|TD 3 — Lebesgue measure and construction of measures]].
-- [[99_Sources/ENS/TD 4 – Espaces Lp.pdf|TD 4 — $L^p$ spaces]].
-- [[99_Sources/ENS/TD 5 – Théorèmes de Fubini et changement de variables.pdf|TD 5 — Fubini and change of variables]].
-- [[99_Sources/ENS/TD 6 – Absolue continuité et intégrales à paramètres.pdf|TD 6 — Absolute continuity and parameter integrals]]: failure of RN without $\sigma$-finiteness.
-- [[99_Sources/ENS/TD 7 – Théorème de Radon-Nikodym, approximations.pdf|TD 7 — Radon–Nikodym and approximations]]: counterexample-first structure and corrigé density.
-- [[99_Sources/ENS/TD 8 – Dualité Lp−Lq, transformation de Fourier.pdf|TD 8 — $L^p$–$L^q$ duality]].
+- [TD 1 — Espaces mesurés](../99_Sources/ENS/TD%201%20–%20Espaces%20mesurés.pdf): measurable spaces, generated $\sigma$-fields and elementary ruptures.
+- [TD 2 — Integration and convergence](../99_Sources/ENS/TD%202%20–%20Intégration%20et%20théorèmes%20de%20convergence.pdf): convergence theorems and absolute continuity of the integral.
+- [TD 3 — Lebesgue measure and construction of measures](../99_Sources/ENS/TD%203%20–%20Mesure%20de%20Lebesgue%20et%20construction%20de%20mesures.pdf).
+- [TD 4 — $L^p$ spaces](../99_Sources/ENS/TD%204%20–%20Espaces%20Lp.pdf).
+- [TD 5 — Fubini and change of variables](../99_Sources/ENS/TD%205%20–%20Théorèmes%20de%20Fubini%20et%20changement%20de%20variables.pdf).
+- [TD 6 — Absolute continuity and parameter integrals](../99_Sources/ENS/TD%206%20–%20Absolue%20continuité%20et%20intégrales%20à%20paramètres.pdf): failure of RN without $\sigma$-finiteness.
+- [TD 7 — Radon–Nikodym and approximations](../99_Sources/ENS/TD%207%20–%20Théorème%20de%20Radon-Nikodym,%20approximations.pdf): counterexample-first structure and corrigé density.
+- [TD 8 — $L^p$–$L^q$ duality](../99_Sources/ENS/TD%208%20–%20Dualité%20Lp−Lq,%20transformation%20de%20Fourier.pdf).
 
 The source directory also contains the corresponding `td1-corrige.pdf` through `td6-corrige.pdf`. They are used to audit proof density and admissible compression after the exercises have been attempted.
 
 ## Conditional expectation
 
-- [[99_Sources/ENS/TD 5 - Espérance conditionnelle.pdf|Thomas Budzinski, TD 5 — Espérance conditionnelle]]: counterexamples, concrete calculations and nontrivial conditional distributions.
+- [Thomas Budzinski, TD 5 — Espérance conditionnelle](../99_Sources/ENS/TD%205%20-%20Espérance%20conditionnelle.pdf): counterexamples, concrete calculations and nontrivial conditional distributions.
 
 ## Citation rule
 

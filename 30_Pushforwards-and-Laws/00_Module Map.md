@@ -15,12 +15,12 @@ module-status: in-progress
 - Prerequisites：Integration and Convergence；Radon–Nikodym 用於 density representation。
 - Output：能由 pushforward definition 重建 integration formula，並處理 equality in law、mixtures 與 densities。
 
-結構遵循 [[00_Project/Unit Structure|Unit Structure]]。
+結構遵循 [Unit Structure](../00_Project/Unit%20Structure.md)。
 
 ## Files
 
-- Cours：[[30_Pushforwards-and-Laws/01_Cours/Cours|Cours]]；[[30_Pushforwards-and-Laws/01_Cours/Pushforward Integration Formula|Pushforward Integration Formula]]
-- TD：[[30_Pushforwards-and-Laws/02_TD/TD 01 — Laws, Densities, and Mixtures|TD 01]]；[[30_Pushforwards-and-Laws/02_TD/TD 02 — Pushforward and Radon-Nikodym|TD 02]]
+- Cours：[Cours](01_Cours/Cours.md)；[Pushforward Integration Formula](01_Cours/Pushforward%20Integration%20Formula.md)
+- TD：[TD 01](02_TD/TD%2001%20—%20Laws,%20Densities,%20and%20Mixtures.md)；[TD 02](02_TD/TD%2002%20—%20Pushforward%20and%20Radon-Nikodym.md)
 - Corriges：尚未建置。
 - Colles：尚未建置。
 - Example-Sheets：尚未建置。

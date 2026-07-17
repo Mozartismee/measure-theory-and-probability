@@ -22,6 +22,8 @@ This file translates the structural language of the project into the calculation
 
 The theory files should be read from object to representation. Exam P problems are usually solved in the reverse direction: recognize the representation already hidden in a density, mixture or conditional formula, then calculate.
 
+The complete first-pass route is organized in [Expectation and Conditioning — Exam P Deployment Bridge](Expectation%20and%20Conditioning%20—%20Exam%20P%20Deployment%20Bridge.md).
+
 ## Boundary
 
 This bridge does not replace the Exam P syllabus with abstract measure theory. It identifies which abstract representation controls a familiar calculation, then returns immediately to the admissible computational regime.

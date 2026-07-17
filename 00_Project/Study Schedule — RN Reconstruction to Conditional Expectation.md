@@ -1,137 +1,132 @@
 ---
 type: study-schedule
 module: project
-status: active
+status: reference
 cycle: rn-reconstruction-to-conditional-expectation
+edition: full-mastery
+calendar-status: inactive
 start: 2026-07-14
-end: 2026-08-09
+end: 2026-08-16
 timezone: Asia/Taipei
 ---
 
 # Study Schedule — RN Reconstruction to Conditional Expectation
 
+> **Reference edition.** This file preserves the complete five-week mastery sequence and its original nominal dates. The active calendar is [Study Schedule — July Exam P Measure-Theory First Pass](Study%20Schedule%20—%20July%20Exam%20P%20Measure-Theory%20First%20Pass.md). After the July first pass, return only to the proof debts recorded there; do not restart this sequence mechanically.
+
 ## Contract
 
 - **Object**：$L^p$ interface、finite signed measures、Radon–Nikodym reconstruction、conditional expectation deployment。
-- **Purpose**：把已讀過的理論壓成可閉卷重建、可在新題中辨認 reference measure 的結構。
-- **Regime**：四週自學 cycle；ENS L3 末至 M1 初；每週三個平日晚間與兩個週末 session。
-- **Admissible output**：證明、反例、density ledger、閉卷 reconstruction；不以頁數、抄寫量或主觀熟悉感充當完成證據。
+- **Purpose**：把理論壓成可閉卷重建、可在新題中辨認 reference measure 的結構。
+- **Regime**：五週自學 cycle；ENS L3 末至 M1 初；每週三個平日晚間與兩個週末 session。
+- **Admissible output**：證明、反例、density ledger、閉卷 reconstruction；不以閱讀頁數或熟悉感充當完成證據。
 
-本檔是此 cycle 唯一的安排與進度紀錄。Cours、TD、corrigés 仍各自留在正式模組中；此處只連結，不複製數學正本。
+本檔是完整 mastery edition 的 sequence reference，不再是 2026-07-17 之後的 active calendar。Cours、TD、corrigés 仍留在正式模組；本檔保存完整依賴順序與深度要求。
 
 ## Fixed rhythm
 
-| 日型 | 時間 | 預設功能 |
+| 日型 | 時間 | 功能 |
 | --- | --- | --- |
-| Tuesday | 19:30–21:00 | 新一層 object 與 theorem boundary |
+| Tuesday | 19:30–21:00 | theorem boundary 與第一層表示 |
 | Wednesday | 19:30–21:00 | 核心構造 |
 | Friday | 19:30–21:00 | TD deployment |
-| Saturday | 10:00–12:00 | 長證明、綜合題或來源 TD |
-| Sunday | 10:00–12:00 | 閉卷 reconstruction、corrigé audit、紀錄 rupture |
+| Saturday | 10:00–12:00 | 長證明、來源 TD 或跨表示題 |
+| Sunday | 10:00–12:00 | 閉卷 reconstruction、corrigé audit、rupture record |
 
-若某次 session 未完成，不把兩次工作硬塞進下一格。先記錄確切 rupture，再以星期日的 repair block 修補；依賴鏈不能靠日曆表演已經通過。
+若 session 未完成，不把兩份工作塞進下一格。先記錄第一個無法合法繼續的步驟，再用星期日修補。日曆沒有能力豁免假設。
 
 ## Completion states
 
 - `not-attempted`：尚未閉卷嘗試。
-- `rupture`：已定位第一個無法合法繼續的步驟。
-- `reconstructible`：可在不查材料的情況下恢復完整論證。
-- `deployable`：可在新題中自行選擇 object、reference measure、test class 與合法定理。
+- `rupture`：已定位第一個失效步驟。
+- `reconstructible`：可不查材料恢復完整論證。
+- `deployable`：可在新題中自行選擇 object、reference measure、test class 與定理。
 
-只有後兩者算完成。辨認看過的證明不是一種額外狀態；那只是記憶對版面的禮貌反應。
+只有後兩者算完成。
 
 ## Material registry
 
-| 代碼 | 材料 | 位置 | 用途 |
+| Code | Material | Location | Function |
 | --- | --- | --- | --- |
-| LP-C | $L^1$–$L^\infty$ Cours | [[15_Lp-Interface/01_Cours/Cours|The $L^1$–$L^∞$ Interface]] | endpoint pairing、bounded tests、density-generated measures |
-| LP-M | Across-measures note | [[15_Lp-Interface/01_Cours/L1 Across Measures|$L^1$ Across Measures]] | integrability transfer、null sets、representatives |
-| LP-TD | $L^p$ interface TD | [[15_Lp-Interface/02_TD/TD 01 — Integrability, Test Functions, and Change of Measure|TD 01 — Integrability, Test Functions, and Change of Measure]] | 本 cycle 新建的必要介面訓練 |
-| LP-COR | $L^p$ corrigé | [[15_Lp-Interface/03_Corriges/TD 01 — Integrability, Test Functions, and Change of Measure|Corrigé — $L^p$ TD 01]] | 完成閉卷嘗試後核對 |
-| SM-C | Signed-measures Cours | [[18_Signed-Measures/01_Cours/Cours|Signed Measures and Hahn–Jordan Decomposition]] | Hahn、Jordan、total variation、domination |
-| SM-TD | Signed-measures TD | [[18_Signed-Measures/02_TD/TD 01 — Hahn–Jordan Structure and Domination|TD 01 — Hahn–Jordan Structure and Domination]] | 本 cycle 新建的 sign-structure 訓練 |
-| SM-COR | Signed-measures corrigé | [[18_Signed-Measures/03_Corriges/TD 01 — Hahn–Jordan Structure and Domination|Corrigé — Signed Measures TD 01]] | 完成閉卷嘗試後核對 |
-| RN-C | RN Cours | [[20_Radon-Nikodym/01_Cours/Cours|Construction of the Radon–Nikodym Derivative]] | finite construction、residue、gluing、boundary |
-| RN-TD1 | RN local TD | [[20_Radon-Nikodym/02_TD/TD 01 — Boundary and Local Domination|TD 01 — Boundary and Local Domination]] | theorem boundary、local fragment |
-| RN-TD2 | RN construction TD | [[20_Radon-Nikodym/02_TD/TD 02 — Constructing the Density|TD 02 — Constructing the Density]] | maximal represented mass、residue、$\sigma$-finite passage |
-| CE-C | CE Cours | [[40_Conditional-Expectation/01_Cours/Cours|Conditional Expectation as an RN Representation]] | existence、uniqueness、calculus |
-| CE-TD1 | CE abstract TD | [[40_Conditional-Expectation/02_TD/TD 01 — RN Construction|TD 01 — RN Construction]] | RN deployment、test functions、tower |
-| CE-TD2 | CE finite TD | [[40_Conditional-Expectation/02_TD/TD 02 — Finite Sigma-Fields|TD 02 — Finite Sigma-Fields]] | event conditioning、law decomposition、finite partitions |
-| CE-S1 | CE signed/test supplement | [[40_Conditional-Expectation/06_Supplements/Signed Extension, Test Functions, and Convergence|Signed Extension, Test Functions, and Convergence]] | 僅在 test-class 或 convergence rupture 時調用 |
-| CE-S2 | CE $L^p$ supplement | [[40_Conditional-Expectation/06_Supplements/Nonnegative Variables, Jensen, and L2 Projection|Nonnegative Variables, Jensen, and $L^2$ Projection]] | 核心完成後接 conditional Jensen 與 projection |
-| REV | Cross-module reconstruction | [[90_Review/Reconstruction Problems — L1, Signed Measures, and Conditional Expectation|Reconstruction Problems]] | 週末閉卷測試 |
-| ENS-LP | ENS $L^p$ source TD | [[99_Sources/ENS/TD 4 – Espaces Lp.pdf|ENS TD 4 — Espaces $L^p$]] | 外部題目與反例 |
-| ENS-RN | ENS RN source TD | [[99_Sources/ENS/TD 7 – Théorème de Radon-Nikodym, approximations.pdf|ENS TD 7 — Radon–Nikodym]] | boundary audit；corrigé 與題目同檔 |
-| ENS-CE | ENS CE source TD | [[99_Sources/ENS/TD 5 - Espérance conditionnelle.pdf|ENS TD 5 — Espérance conditionnelle]] | 新情境部署 |
+| IC-C | Integration Cours | [Integration and Convergence](../10_Integration-and-Convergence/01_Cours/Cours.md) | MCT、Fatou、DCT |
+| IC-TD | Integration TD | [TD 01 — Integration and Convergence](../10_Integration-and-Convergence/02_TD/TD%2001%20—%20Integration%20and%20Convergence.md) | convergence selection |
+| IC-COR | Integration corrigé | [Integration TD 01 corrigé](../10_Integration-and-Convergence/03_Corriges/TD%2001%20—%20Integration%20and%20Convergence.md) | convergence rupture repair |
+| LP-C1 | Endpoint Cours | [The $L^1$–$L^∞$ Interface](../15_Lp-Interface/01_Cours/Cours.md) | bounded tests、density-generated measures |
+| LP-C2 | Hölder／Jensen／$L^2$ Cours | [Hölder, Jensen, and $L^2$ Geometry](../15_Lp-Interface/01_Cours/Cours%2002%20—%20Hölder,%20Jensen,%20and%20L2%20Geometry.md) | general inequalities、projection |
+| LP-M | Across-measures note | [$L^1$ Across Measures](../15_Lp-Interface/01_Cours/L1%20Across%20Measures.md) | null sets、representatives、integrability transfer |
+| LP-TD1 | $L^p$ TD 01 | [Integrability, Test Functions, and Change of Measure](../15_Lp-Interface/02_TD/TD%2001%20—%20Integrability,%20Test%20Functions,%20and%20Change%20of%20Measure.md) | endpoint interface |
+| LP-TD2 | $L^p$ TD 02 | [Hölder, Jensen, and $L^2$ Geometry](../15_Lp-Interface/02_TD/TD%2002%20—%20Hölder,%20Jensen,%20and%20L2%20Geometry.md) | moments、Jensen、normal equations |
+| LP-COR1 | $L^p$ corrigé 01 | [$L^p$ TD 01 corrigé](../15_Lp-Interface/03_Corriges/TD%2001%20—%20Integrability,%20Test%20Functions,%20and%20Change%20of%20Measure.md) | Sunday audit only |
+| LP-COR2 | $L^p$ corrigé 02 | [$L^p$ TD 02 corrigé](../15_Lp-Interface/03_Corriges/TD%2002%20—%20Hölder,%20Jensen,%20and%20L2%20Geometry.md) | Sunday audit only |
+| SM-C | Signed-measures Cours | [Signed Measures and Hahn–Jordan Decomposition](../18_Signed-Measures/01_Cours/Cours.md) | Hahn、Jordan、domination |
+| SM-TD | Signed-measures TD | [Hahn–Jordan Structure and Domination](../18_Signed-Measures/02_TD/TD%2001%20—%20Hahn–Jordan%20Structure%20and%20Domination.md) | sign structure deployment |
+| SM-COR | Signed-measures corrigé | [Signed Measures TD 01 corrigé](../18_Signed-Measures/03_Corriges/TD%2001%20—%20Hahn–Jordan%20Structure%20and%20Domination.md) | Sunday audit only |
+| RN-C | RN Cours | [Construction of the RN Derivative](../20_Radon-Nikodym/01_Cours/Cours.md) | finite construction、gluing、boundary |
+| RN-TD1 | RN TD 01 | [Boundary and Local Domination](../20_Radon-Nikodym/02_TD/TD%2001%20—%20Boundary%20and%20Local%20Domination.md) | local fragment |
+| RN-TD2 | RN TD 02 | [Constructing the Density](../20_Radon-Nikodym/02_TD/TD%2002%20—%20Constructing%20the%20Density.md) | maximal mass、residue、global passage |
+| RN-COR1 | RN corrigé 01 | [RN TD 01 corrigé](../20_Radon-Nikodym/03_Corriges/TD%2001%20—%20Boundary%20and%20Local%20Domination.md) | local audit |
+| RN-COR2 | RN corrigé 02 | [RN TD 02 corrigé](../20_Radon-Nikodym/03_Corriges/TD%2002%20—%20Constructing%20the%20Density.md) | full-construction audit |
+| CE-C | CE Cours | [Conditional Expectation as an RN Representation](../40_Conditional-Expectation/01_Cours/Cours.md) | existence、uniqueness、calculus |
+| CE-TD1 | CE TD 01 | [RN Construction](../40_Conditional-Expectation/02_TD/TD%2001%20—%20RN%20Construction.md) | abstract construction |
+| CE-TD2 | CE TD 02 | [Finite Sigma-Fields](../40_Conditional-Expectation/02_TD/TD%2002%20—%20Finite%20Sigma-Fields.md) | event／finite partition deployment |
+| CE-COR1 | CE corrigé 01 | [CE TD 01 corrigé](../40_Conditional-Expectation/03_Corriges/TD%2001%20—%20RN%20Construction.md) | abstract audit |
+| CE-COR2 | CE corrigé 02 | [CE TD 02 corrigé](../40_Conditional-Expectation/03_Corriges/TD%2002%20—%20Finite%20Sigma-Fields.md) | density-ledger audit |
+| CE-S1 | Signed/test supplement | [Signed Extension, Test Functions, and Convergence](../40_Conditional-Expectation/06_Supplements/Signed%20Extension,%20Test%20Functions,%20and%20Convergence.md) | conditional repair only |
+| CE-S2 | Jensen／projection supplement | [Nonnegative Variables, Jensen, and $L^2$ Projection](../40_Conditional-Expectation/06_Supplements/Nonnegative%20Variables,%20Jensen,%20and%20L2%20Projection.md) | core completion後使用 |
+| REV | Cross-module review | [Reconstruction Problems](../90_Review/Reconstruction%20Problems%20—%20L1,%20Signed%20Measures,%20and%20Conditional%20Expectation.md) | timed reconstruction |
+| ENS-RN | ENS RN TD | [ENS TD 7 — Radon–Nikodym](../99_Sources/ENS/TD%207%20–%20Théorème%20de%20Radon-Nikodym,%20approximations.pdf) | theorem-boundary audit |
+| ENS-CE | ENS CE TD | [ENS TD 5 — Espérance conditionnelle](../99_Sources/ENS/TD%205%20-%20Espérance%20conditionnelle.pdf) | external deployment |
+
+Corrigé 一律在完成閉卷嘗試後才讀。若 DCT／MCT 出現 rupture，先回到 IC-C、IC-TD；仍無法閉合才讀 IC-COR。
 
 ---
 
-# Week 1 — $L^p$ interface and signed measures
+# Week 1 — $L^p$ interfaces and $L^2$ geometry
 
 **Period**：2026-07-14 to 2026-07-19  
-**Weekly output**：能追蹤 ambient measure 與 a.e. relation；能由 indicators 擴張到 bounded tests；能把 Hahn sign structure 轉成 Jordan measures 與 local domination。
+**Output**：能部署 Hölder、Jensen、bounded tests、change of measure 與 orthogonal projection，並追蹤 ambient measure。
 
 ## W1-S1 — Tuesday, 2026-07-14, 19:30–21:00
 
-- [ ] 讀 LP-C §§1.1–1.3：$L^p$ equivalence classes、endpoint Hölder、finite-measure embeddings。
-- [ ] 不查解答完成 LP-TD Exercise 1。
-- [ ] 寫出有限測度假設失效時的兩個反例，並逐一檢查積分端點。
-- **Required output**：精確的 embedding 常數；一個 $L^1\setminus\bigcup_{p>1}L^p$ 反例；一個 $L^p\setminus L^1$ 反例。
-- **Materials**：LP-C；LP-TD。
+- [ ] LP-C1 §§1.1–1.3。
+- [ ] LP-TD1 Exercise 1。
+- [ ] 寫出 finite-measure embedding 常數與兩個 infinite-measure counterexamples。
+- **Required output**：$L^q\subseteq L^p$ 的精確 regime。
+- **Materials**：LP-C1；LP-TD1。
 
 ## W1-S2 — Wednesday, 2026-07-15, 19:30–21:00
 
-- [ ] 讀 LP-C §§1.4–1.5。
-- [ ] 完成 LP-TD Exercise 2。
-- [ ] 閉卷重建
-
-  $$
-  \text{indicators}
-  \to
-  \text{simple tests}
-  \to
-  \text{bounded measurable tests}.
-  $$
-
-- **Required output**：指出為何使用 DCT 而不是 MCT；完成 separation argument。
-- **Materials**：LP-C；LP-TD；[[80_Lemmas/Null Sets and Integral Invariance|Null Sets and Integral Invariance]]。
+- [ ] LP-C2 §§1–3。
+- [ ] LP-TD2 Exercises 1–2。
+- [ ] 閉卷重建 Young $\Rightarrow$ Hölder $\Rightarrow$ Cauchy–Schwarz。
+- **Required output**：equality cases 與 covariance bound。
+- **Materials**：LP-C2；LP-TD2。
 
 ## W1-S3 — Friday, 2026-07-17, 19:30–21:00
 
-- [ ] 讀 LP-C §§2.1–2.4。
-- [ ] 讀 LP-M §§3、6、7、8。
-- [ ] 完成 LP-TD Exercises 3–4。
-- [ ] 為每個 $L^1$ 陳述標出 reference measure 與 equivalence relation。
-- **Required output**：證明 $f\mapsto f\mu$；區分 integrability transfer 與 representative compatibility。
-- **Materials**：LP-C；LP-M；LP-TD。
+- [ ] LP-C1 §§1.4–2.4；LP-M §§3、6、7、8。
+- [ ] LP-TD1 Exercises 2–4。
+- [ ] 對每個 $L^1$ statement 寫 reference measure 與 equivalence relation。
+- **Required output**：indicator tests $\Rightarrow$ bounded tests；density uniqueness；change of measure。
+- **Materials**：LP-C1；LP-M；LP-TD1。
 
 ## W1-S4 — Saturday, 2026-07-18, 10:00–12:00
 
-- [ ] 讀 SM-C §§1.1–1.4。
-- [ ] 完成 SM-TD Exercises 1–3。
-- [ ] 不查 Cours 證明 Jordan minimality。
-- **Required output**：Hahn ambiguity、Jordan canonicity、$\sigma$-null 的正確定義、signed density 的 total variation。
-- **Materials**：SM-C；SM-TD。
+- [ ] LP-C2 §§4–7。
+- [ ] LP-TD2 Exercises 3–4。
+- [ ] 由 normal equations 求最佳 affine predictor。
+- **Required output**：Jensen equality boundary；projection onto $\operatorname{span}\{1,Y\}$。
+- **Materials**：LP-C2；LP-TD2。
 
 ## W1-S5 — Sunday, 2026-07-19, 10:00–12:00
 
-- [ ] 讀 SM-C §1.5。
-- [ ] 完成 SM-TD Exercise 4 與 Reconstruction。
-- [ ] 閉卷完成 REV Exercises 1–3；上限 60 分鐘。
-- [ ] 最後才用 LP-COR、SM-COR 核對；只記錄第一個合法性 rupture，不抄寫整份解答。
-- **Required output**：
+- [ ] LP-TD2 Exercise 5 與 Reconstruction。
+- [ ] 30 分鐘重建 LP-TD1 Reconstruction。
+- [ ] 最後使用 LP-COR1、LP-COR2，只記第一個 rupture 與 minimal repair。
+- **Required output**：projection theorem 的 existence／orthogonality／contraction。
+- **Materials**：LP-TD1；LP-TD2；LP-COR1；LP-COR2。
 
-  $$
-  \rho-c\mu
-  \xrightarrow{\text{Hahn}}
-  c\mathbf1_{P_c}\mu\le\rho.
-  $$
-
-- **Materials**：SM-C；SM-TD；REV；LP-COR；SM-COR。
-
-## Week 1 record
-
-| Session | Done | Actual time | State | First rupture and minimal repair |
+| Session | Done | Actual time | State | First rupture / repair |
 | --- | --- | --- | --- | --- |
 | W1-S1 | [ ] |  | not-attempted |  |
 | W1-S2 | [ ] |  | not-attempted |  |
@@ -139,69 +134,53 @@ timezone: Asia/Taipei
 | W1-S4 | [ ] |  | not-attempted |  |
 | W1-S5 | [ ] |  | not-attempted |  |
 
-**Carry only if structurally necessary**：  
 **Week 1 verdict**：rupture / reconstructible / deployable  
 
 ---
 
-# Week 2 — Radon–Nikodym reconstruction
+# Week 2 — Signed measures and RN local domination
 
 **Period**：2026-07-21 to 2026-07-26  
-**Weekly output**：可在有限 regime 下從 Hahn decomposition 建出 maximal density，消去 residue，證唯一性，再合法轉入 $\sigma$-finite regime。
+**Output**：能由 Hahn sign structure 建出 Jordan measures與 local density fragment，並辨認 non-$\sigma$-finite boundary。
 
 ## W2-S1 — Tuesday, 2026-07-21, 19:30–21:00
 
-- [ ] 先寫 RN theorem 的 hypotheses、conclusion、uniqueness relation，不查 Cours。
-- [ ] 讀 RN-C §§1–5，核對 theorem boundary 與 local density fragment。
-- [ ] 完成 RN-TD1 Exercises 0–1。
-- **Required output**：一個 non-$\sigma$-finite counterexample；兩個 Hahn-region inequalities。
-- **Materials**：RN-C；RN-TD1。
+- [ ] SM-C §§1.1–1.4。
+- [ ] SM-TD Exercises 1–2。
+- **Required output**：Hahn ambiguity、Jordan canonicity、minimality。
+- **Materials**：SM-C；SM-TD。
 
 ## W2-S2 — Wednesday, 2026-07-22, 19:30–21:00
 
-- [ ] 完成 RN-TD1 Exercise 2。
-- [ ] 完成 RN-TD1 Reconstruction，不把 local fragment 當黑箱。
-- [ ] 明示 absolute continuity 與 finiteness 各自出現的位置。
-- **Required output**：
-
-  $$
-  \nu\ne g\mu
-  \Longrightarrow
-  \exists h:\ h\mu\le\nu,
-  \quad
-  \int h\,d\mu>\int g\,d\mu.
-  $$
-
-- **Materials**：RN-TD1；SM-TD Exercise 4（只作依賴回查）。
+- [ ] SM-C §1.5。
+- [ ] SM-TD Exercises 3–4 與 Reconstruction。
+- **Required output**：signed density decomposition 與 $c\mathbf1_{P_c}\mu\le\rho$。
+- **Materials**：SM-C；SM-TD。
 
 ## W2-S3 — Friday, 2026-07-24, 19:30–21:00
 
-- [ ] 不查 RN-C，完成 RN-TD2 Exercise 1。
-- [ ] 作答後讀 RN-C §§6–7 核對 maximal represented mass 的構造。
-- [ ] 特別證明 $\mathcal C$ 對 finite maxima 穩定，以及 $g\mu\le\nu$ 的極限 passage。
-- **Required output**：$\mathcal C,\alpha,g_n,g$ 必須由論證自然產生。
-- **Materials**：RN-TD2；RN-C。
+- [ ] RN-C §§1–5。
+- [ ] RN-TD1 Exercises 0–1。
+- [ ] 寫出 standard RN theorem 的 exact hypotheses。
+- **Required output**：non-$\sigma$-finite counterexample 與 regional domination。
+- **Materials**：RN-C；RN-TD1。
 
 ## W2-S4 — Saturday, 2026-07-25, 10:00–12:00
 
-- [ ] 完成 RN-TD2 Exercises 2–3。
-- [ ] 作答後讀 RN-C §§8–10。
-- [ ] 分別寫出 residue contradiction 與 disjoint $\sigma$-finite gluing。
-- **Required output**：finite theorem、uniqueness、$\sigma$-finite passage 三段閉合。
-- **Materials**：RN-TD2；RN-C；[[80_Lemmas/Vanishing Integral Criterion|Vanishing Integral Criterion]]。
+- [ ] RN-TD1 Exercise 2 與 Reconstruction。
+- [ ] 明示 absolute continuity、finiteness、Hahn decomposition 各自被使用的位置。
+- **Required output**：nonzero residue $\Rightarrow$ strict density improvement。
+- **Materials**：RN-TD1；SM-TD Exercise 4。
 
 ## W2-S5 — Sunday, 2026-07-26, 10:00–12:00
 
-- [ ] 60 分鐘內完成 RN-TD2 Reconstruction，不查任何材料。
-- [ ] 用 RN-C §§11–12 審核 theorem boundary 與 proof spine。
-- [ ] ENS-RN 只做 Exercises 1–2；先遮住同頁 corrigé。
-- [ ] 若前三項均為 reconstructible，再選做 RN-TD2 Exercise 4；否則用剩餘時間修補第一個 rupture。
-- **Required output**：完整有限構造，以及一種 $\sigma$-finite reduction。
-- **Materials**：RN-TD2；RN-C；ENS-RN。
+- [ ] 60 分鐘完成 REV Exercises 1–3。
+- [ ] 用 SM-COR、RN-COR1 核對。
+- [ ] ENS-RN Exercise 1 作額外 boundary test；先遮住同頁解答。
+- **Required output**：local fragment 全鏈閉卷重建。
+- **Materials**：REV；SM-COR；RN-COR1；ENS-RN。
 
-## Week 2 record
-
-| Session | Done | Actual time | State | First rupture and minimal repair |
+| Session | Done | Actual time | State | First rupture / repair |
 | --- | --- | --- | --- | --- |
 | W2-S1 | [ ] |  | not-attempted |  |
 | W2-S2 | [ ] |  | not-attempted |  |
@@ -209,79 +188,52 @@ timezone: Asia/Taipei
 | W2-S4 | [ ] |  | not-attempted |  |
 | W2-S5 | [ ] |  | not-attempted |  |
 
-**RN reconstruction time**：  
-**First invalid or missing step**：  
 **Week 2 verdict**：rupture / reconstructible / deployable  
 
 ---
 
-# Week 3 — Conditional expectation as an RN representation
+# Week 3 — Global Radon–Nikodym reconstruction
 
 **Period**：2026-07-28 to 2026-08-02  
-**Weekly output**：能從 sub-$\sigma$-field 上的 measure representation 構造一般 $L^1$ conditional expectation，並只靠 defining identity 與 uniqueness 推出 calculus。
+**Output**：可建 maximal represented mass、消去 residue、證 uniqueness，並完成一種 $\sigma$-finite reduction。
 
 ## W3-S1 — Tuesday, 2026-07-28, 19:30–21:00
 
-- [ ] 讀 CE-C §§1–2。
-- [ ] 完成 CE-TD1 Exercise 1.1。
-- [ ] 對
-
-  $$
-  \nu_Y(A)=\mathbb E[Y\mathbf1_A],
-  \qquad A\in\mathcal G,
-  $$
-
-  逐項檢查 positivity、finiteness、absolute continuity、reference measure。
-- **Required output**：正變數 conditional expectation 的 RN construction。
-- **Materials**：CE-C；CE-TD1。
+- [ ] RN-TD2 Exercise 1，不先讀證明。
+- [ ] 作答後核對 RN-C §§6–7。
+- **Required output**：$\mathcal C,\alpha,g_n,g$ 的自然生成順序。
+- **Materials**：RN-TD2；RN-C。
 
 ## W3-S2 — Wednesday, 2026-07-29, 19:30–21:00
 
-- [ ] 讀 CE-C §§3–4。
-- [ ] 完成 CE-TD1 Exercise 1.2–1.4。
-- [ ] 證明 construction 與 positive decomposition 的選擇無關。
-- [ ] 從 indicator tests 推到 bounded $\mathcal G$-measurable tests。
-- **Required output**：一般 $Y\in L^1$ 的存在、唯一性與 $L^1$ contraction。
-- **Materials**：CE-C；CE-TD1；LP-C §1.5。
+- [ ] RN-TD2 Exercise 2。
+- [ ] 作答後核對 RN-C §§8–9。
+- **Required output**：residue contradiction 與 finite uniqueness。
+- **Materials**：RN-TD2；RN-C。
 
 ## W3-S3 — Friday, 2026-07-31, 19:30–21:00
 
-- [ ] 讀 CE-C §5。
-- [ ] 完成 CE-TD1 Exercise 3，所有結論只用 defining identity 與 uniqueness。
-- [ ] 每一性質標明 candidate 的 measurability 與 integral identity。
-- **Required output**：fixed point、independence、pull-out、兩條 tower、linearity、positivity。
-- **Materials**：CE-C；CE-TD1。
+- [ ] RN-TD2 Exercise 3。
+- [ ] 核對 RN-C §10。
+- **Required output**：common finite partition、local densities、gluing、global uniqueness。
+- **Materials**：RN-TD2；RN-C。
 
 ## W3-S4 — Saturday, 2026-08-01, 10:00–12:00
 
-- [ ] 完成 CE-TD1 Exercise 2。
-- [ ] 寫出 $\pi$-$\lambda$ 或 monotone-class closure，不只寫「由標準定理」。
-- [ ] 只有在 bounded-test approximation 或 DCT/MCT 選擇失敗時，讀 CE-S1 §§2、4–6。
-- **Required output**：從 generating class 識別 conditional expectation。
-- **Materials**：CE-TD1；CE-S1（conditional）。
+- [ ] RN-TD2 Exercise 4。
+- [ ] 比較 disjoint gluing 與 equivalent finite measures。
+- **Required output**：證明 common weight 可被移除。
+- **Materials**：RN-TD2。
 
 ## W3-S5 — Sunday, 2026-08-02, 10:00–12:00
 
-- [ ] 45 分鐘內完成 REV Exercise 4。
-- [ ] 30 分鐘內完成 CE-TD1 Reconstruction，並閉卷證明一條 tower identity。
-- [ ] 用 CE-C §§7–8 與 CE-S1 的 Reconstruction standard 審核版本紀律。
-- **Required output**：
+- [ ] 60 分鐘完成 RN-TD2 Reconstruction。
+- [ ] RN-C §§11–12 審核 theorem boundary。
+- [ ] 最後使用 RN-COR2，只記第一個失效步驟。
+- **Required output**：finite theorem＋一種 $\sigma$-finite passage。
+- **Materials**：RN-TD2；RN-C；RN-COR2。
 
-  $$
-  Y
-  \mapsto
-  \nu_{Y^+},\nu_{Y^-}
-  \mapsto
-  \frac{d\nu_{Y^+}}{d(\mathbb P|_{\mathcal G})}
-  -
-  \frac{d\nu_{Y^-}}{d(\mathbb P|_{\mathcal G})}.
-  $$
-
-- **Materials**：REV；CE-TD1；CE-C；CE-S1。
-
-## Week 3 record
-
-| Session | Done | Actual time | State | First rupture and minimal repair |
+| Session | Done | Actual time | State | First rupture / repair |
 | --- | --- | --- | --- | --- |
 | W3-S1 | [ ] |  | not-attempted |  |
 | W3-S2 | [ ] |  | not-attempted |  |
@@ -289,73 +241,54 @@ timezone: Asia/Taipei
 | W3-S4 | [ ] |  | not-attempted |  |
 | W3-S5 | [ ] |  | not-attempted |  |
 
-**CE reconstruction time**：  
-**Version or measurability rupture**：  
+**RN reconstruction time**：
 **Week 3 verdict**：rupture / reconstructible / deployable  
 
 ---
 
-# Week 4 — Finite conditioning and deployment
+# Week 4 — Conditional expectation as an RN representation
 
 **Period**：2026-08-04 to 2026-08-09  
-**Weekly output**：能在 event、finite $\sigma$-field、law decomposition 與新機率模型中辨認同一 representation mechanism，且不混淆不同 reference measures 上的 densities。
+**Output**：由 sub-$\sigma$-field 上的 measure representation 構造一般 $L^1$ conditional expectation，並用 uniqueness 推出 calculus。
 
 ## W4-S1 — Tuesday, 2026-08-04, 19:30–21:00
 
-- [ ] 讀 CE-C §6。
-- [ ] 完成 CE-TD2 Exercise 1。
-- [ ] 為每個 derivative 寫 density ledger：object、domain、reference measure、ambient $L^1$、a.e. relation。
-- **Required output**：
-
-  $$
-  \frac{d\mathbb P_A}{d\mathbb P},
-  \qquad
-  \frac{d\mu_A}{d\mu_X},
-  \qquad
-  \frac{d\mu_A}{d\lambda}.
-  $$
-
-- **Materials**：CE-C；CE-TD2。
+- [ ] CE-C §§1–2。
+- [ ] CE-TD1 Exercise 1.1。
+- **Required output**：positive RN construction 與 reference measure。
+- **Materials**：CE-C；CE-TD1。
 
 ## W4-S2 — Wednesday, 2026-08-05, 19:30–21:00
 
-- [ ] 完成 CE-TD2 Exercise 2。
-- [ ] 回查 LP-M §5，證明 $L^1$ transfer 時同時處理 integrability 與 equivalence classes。
-- [ ] 將 indicator、distribution function、identity function 三個公式還原為同一 measure decomposition。
-- **Required output**：law mixture 與 total expectation 的共同表示。
-- **Materials**：CE-TD2；LP-M。
+- [ ] CE-C §§3–4。
+- [ ] CE-TD1 Exercise 1.2–1.4。
+- **Required output**：signed extension、decomposition independence、bounded tests、$L^1$ contraction。
+- **Materials**：CE-C；CE-TD1；LP-C1。
 
 ## W4-S3 — Friday, 2026-08-07, 19:30–21:00
 
-- [ ] 完成 CE-TD2 Exercise 3 與 Reconstruction。
-- [ ] 先由 $\mathcal G$-measurability 決定 piecewise-constant 形式，再由 integral identities 決定係數。
-- [ ] 用 tower property 反推出 Exercise 2 的三個公式。
-- **Required output**：一般 finite-partition formula，而不只 $\sigma(A)$ 的二格版本。
-- **Materials**：CE-TD2；CE-C。
+- [ ] CE-C §5。
+- [ ] CE-TD1 Exercise 3。
+- **Required output**：fixed point、pull-out、tower、linearity、positivity，只靠 uniqueness。
+- **Materials**：CE-C；CE-TD1。
 
 ## W4-S4 — Saturday, 2026-08-08, 10:00–12:00
 
-- [ ] ENS-CE Exercise 2：i.i.d. sum 的兩個 conditional expectations。
-- [ ] ENS-CE Exercise 8：generating class identification。
-- [ ] 在剩餘時間選做 Exercise 1（counterexamples）或 Exercise 5（independence with a measurable parameter）。
-- [ ] 每題結束後寫一句：本題用的是 computation、uniqueness、independence 還是 RN representation。
-- **Required output**：至少一題計算部署與一題抽象識別。
-- **Materials**：ENS-CE；CE-C；CE-TD1。
+- [ ] CE-TD1 Exercise 2。
+- [ ] 寫完整 $\pi$-$\lambda$ closure。
+- [ ] 只有 test-class 或 convergence rupture 時讀 CE-S1 §§2、4–6。
+- **Required output**：generating-class identification。
+- **Materials**：CE-TD1；CE-S1（conditional）。
 
 ## W4-S5 — Sunday, 2026-08-09, 10:00–12:00
 
-- [ ] **25 分鐘**：完整重建 finite RN theorem，附 uniqueness 與一種 $\sigma$-finite passage。
-- [ ] **20 分鐘**：由 RN 構造一般 $L^1$ conditional expectation，並證明一條 tower identity。
-- [ ] **15 分鐘**：完成一份 density ledger，至少包含 $d\mathbb P_A/d\mathbb P$、$d\mu_A/d\mu_X$、$d\mu_A/d\lambda$。
-- [ ] **20 分鐘**：完成 REV Exercise 2 或 4 中此前最弱的一題。
-- [ ] **20 分鐘**：核對、記錄第一個 rupture，決定下一 cycle。
-- [ ] 只有前三項均達 `reconstructible`，才讀 CE-S2 §§2–3，進入 conditional Jensen、$L^p$ contraction 與 $L^2$ projection。
-- **Required output**：cycle verdict；不得以「大致懂」結案。
-- **Materials**：RN-TD2；CE-TD1；CE-TD2；REV；CE-S2（conditional）。
+- [ ] 45 分鐘完成 REV Exercise 4。
+- [ ] 30 分鐘完成 CE-TD1 Reconstruction 與一條 tower identity。
+- [ ] 最後用 CE-COR1 核對。
+- **Required output**：一般 $L^1$ CE construction。
+- **Materials**：REV；CE-TD1；CE-COR1。
 
-## Week 4 record
-
-| Session | Done | Actual time | State | First rupture and minimal repair |
+| Session | Done | Actual time | State | First rupture / repair |
 | --- | --- | --- | --- | --- |
 | W4-S1 | [ ] |  | not-attempted |  |
 | W4-S2 | [ ] |  | not-attempted |  |
@@ -363,21 +296,75 @@ timezone: Asia/Taipei
 | W4-S4 | [ ] |  | not-attempted |  |
 | W4-S5 | [ ] |  | not-attempted |  |
 
-**Final RN time / state**：  
-**Final CE time / state**：  
-**Density-ledger state**：  
-**Next cycle object**：  
+**CE reconstruction time**：
+**Week 4 verdict**：rupture / reconstructible / deployable
+
+---
+
+# Week 5 — Finite conditioning and deployment
+
+**Period**：2026-08-11 to 2026-08-16
+**Output**：能區分 probability-space density、state-space density、Lebesgue density，並在有限 $\sigma$-field與外部題目中部署 CE。
+
+## W5-S1 — Tuesday, 2026-08-11, 19:30–21:00
+
+- [ ] CE-C §6。
+- [ ] CE-TD2 Exercise 1。
+- [ ] 每個 derivative 寫 density ledger。
+- **Required output**：$d\mathbb P_A/d\mathbb P$、$d\mu_A/d\mu_X$、$d\mu_A/d\lambda$。
+- **Materials**：CE-C；CE-TD2。
+
+## W5-S2 — Wednesday, 2026-08-12, 19:30–21:00
+
+- [ ] CE-TD2 Exercise 2；回查 LP-M §5。
+- [ ] 同時處理 integrability transfer 與 equivalence-class compatibility。
+- **Required output**：law mixture 與三種 test functions。
+- **Materials**：CE-TD2；LP-M。
+
+## W5-S3 — Friday, 2026-08-14, 19:30–21:00
+
+- [ ] CE-TD2 Exercise 3 與 Reconstruction。
+- [ ] 推廣到一般 finite partition formula。
+- **Required output**：measurability 先決定形式，integral identities 再決定係數。
+- **Materials**：CE-TD2；CE-C。
+
+## W5-S4 — Saturday, 2026-08-15, 10:00–12:00
+
+- [ ] ENS-CE Exercises 2、8。
+- [ ] 剩餘時間選 Exercise 1 或 5。
+- [ ] 每題標記使用 computation、uniqueness、independence 或 RN representation。
+- **Required output**：一題計算部署與一題抽象識別。
+- **Materials**：ENS-CE；CE-TD1。
+
+## W5-S5 — Sunday, 2026-08-16, 10:00–12:00
+
+- [ ] 25 分鐘：finite RN theorem＋一種 $\sigma$-finite passage。
+- [ ] 20 分鐘：一般 $L^1$ CE construction＋tower。
+- [ ] 15 分鐘：完整 density ledger。
+- [ ] 20 分鐘：核對 CE-COR2 並記第一個 rupture。
+- [ ] 前三項均達 `reconstructible` 後，才讀 CE-S2 §§2–3。
+- **Required output**：cycle verdict，不接受「大致懂」。
+- **Materials**：RN-TD2；CE-TD1；CE-TD2；CE-COR2；CE-S2（conditional）。
+
+| Session | Done | Actual time | State | First rupture / repair |
+| --- | --- | --- | --- | --- |
+| W5-S1 | [ ] |  | not-attempted |  |
+| W5-S2 | [ ] |  | not-attempted |  |
+| W5-S3 | [ ] |  | not-attempted |  |
+| W5-S4 | [ ] |  | not-attempted |  |
+| W5-S5 | [ ] |  | not-attempted |  |
 
 ---
 
 # Cycle closure
 
-The cycle is complete only if all four statements are true:
+Cycle 完成必須同時滿足：
 
-1. The finite RN construction is reconstructible without importing an $L^2$ proof or silently assuming the desired density.
-2. Conditional expectation is reconstructed as an RN derivative on $(\Omega,\mathcal G)$, including signed extension and uniqueness.
-3. Indicator tests, bounded tests and generating-class tests are distinguished and connected by explicit closure arguments.
-4. Every density is accompanied by its reference measure and almost-everywhere relation.
+1. finite RN construction 可閉卷重建，沒有偷用所求 density；
+2. CE 可由 $\nu_Y(A)=\mathbb E[Y\mathbf1_A]$ 與 RN 重建；
+3. indicator、bounded-test、generating-class 三種識別責任可區分；
+4. 每個 density 都附 reference measure 與 a.e. relation；
+5. Jensen、projection 與 moment comparison 不再由 CE supplement 倒供給 (L^p) prerequisite。
 
 ## Final record
 
@@ -386,4 +373,4 @@ The cycle is complete only if all four statements are true:
 - **Stable constructions**：
 - **Remaining rupture**：
 - **Minimal next repair**：
-- **Materials promoted to Corriges or Review**：
+- **Next cycle object**：

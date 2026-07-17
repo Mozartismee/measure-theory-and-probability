@@ -142,7 +142,13 @@ be a Hahn decomposition of $\tau_c$.
    \rho|_{N_c}\le c\mu|_{N_c}.
    $$
 
-2. Assume that $\rho\ll\mu$ and $\rho\ne0$. For each $n\ge1$, choose a positive set $P_n$ for
+2. Assume that $\rho\ll\mu$ and $\rho\ne0$. For each $n\ge1$, choose a Hahn decomposition
+
+   $$
+   E=P_n\sqcup N_n
+   $$
+
+   for
 
    $$
    \rho-\frac1n\mu.

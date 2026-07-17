@@ -6,7 +6,7 @@ status: canonical
 
 # Complement — Nonnegative Variables, Conditional Jensen, and $L^2$ Projection
 
-This supplement extends [[40_Conditional-Expectation/01_Cours/Cours|the $L^1$ construction of conditional expectation]]. It is not required for the basic Radon–Nikodym representation.
+This supplement extends [the $L^1$ construction of conditional expectation](../01_Cours/Cours.md). It is not required for the basic Radon–Nikodym representation.
 
 ## 1. Nonnegative variables
 

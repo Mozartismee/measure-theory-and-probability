@@ -157,19 +157,17 @@ for some measurable $h\ge0$.
    \int_E fh\,d\mu.
    $$
 
-2. Assume that $h\le C$ $\mu$-almost everywhere. Prove that
+2. Assume that $h\le C$ $\mu$-almost everywhere. Prove that the canonical rule
 
    $$
-   L^1(\mu)\hookrightarrow L^1(\nu)
+   T_{\mu\to\nu}:L^1(\mu)\longrightarrow L^1(\nu),
+   \qquad
+   [f]_\mu\longmapsto[f]_\nu,
    $$
 
-   and give the norm estimate.
+   is well defined and bounded, and give the norm estimate. Must it be injective?
 
-3. Give an example in which $\nu\ll\mu$ and both measures are finite, but
-
-   $$
-   L^1(\mu)\not\subseteq L^1(\nu).
-   $$
+3. Give an example in which $\nu\ll\mu$ and both measures are finite, but integrability does not transfer from $L^1(\mu)$ to $L^1(\nu)$.
 
 4. Separate the two assertions required for the map
 
@@ -177,7 +175,7 @@ for some measurable $h\ge0$.
    [f]_\mu\longmapsto[f]_\nu
    $$
 
-   to define an inclusion of $L^1$-spaces: integrability transfer and compatibility of equivalence classes.
+   to define a map on all of $L^1(\mu)$: integrability transfer and compatibility of equivalence classes. Then state the additional null-set relation that makes this map injective.
 
 5. Prove that if $h>0$ $\mu$-almost everywhere, then $\mu$ and $\nu$ have the same null sets.
 
