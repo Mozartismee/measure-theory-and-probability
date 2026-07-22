@@ -17,6 +17,14 @@ module-status: in-progress
 
 結構遵循 [Unit Structure](../00_Project/Unit%20Structure.md)。
 
+## Competency keys
+
+- `LP.ambient-measure`：追蹤 $L^p(\mu)$ 的 ambient measure、equivalence class 與 finite-measure boundary。
+- `LP.holder-cs-jensen`：部署 Hölder、Cauchy–Schwarz、Jensen 及 equality boundaries。
+- `LP.bounded-tests`：由 indicators 合法擴張至 bounded measurable tests。
+- `LP.density-change`：在 density-generated measures 與 RN reversal 間轉移。
+- `LP.l2-projection`：在本模組限定範圍內部署 $L^2$ geometry 與 projection。
+
 ## Files
 
 - Cours：[The $L^1$–$L^\infty$ Interface](01_Cours/Cours.md)；[Hölder, Jensen, and $L^2$ Geometry](01_Cours/Cours%2002%20—%20Hölder,%20Jensen,%20and%20L2%20Geometry.md)。

@@ -1,0 +1,4 @@
+interface:
+  display_name: "每日離線學習套件"
+  short_description: "依現行學習證據規劃並建立 ENS 式每日離線自學套件"
+  default_prompt: "Use $build-daily-offline-study-packet to plan and create today’s evidence-based offline study packet."

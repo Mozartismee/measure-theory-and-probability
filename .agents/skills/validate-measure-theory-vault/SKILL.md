@@ -13,6 +13,7 @@ Read the link and path rules in `AGENTS.md` before running checks. Treat those r
 
 - Use `--scope changed` for an ordinary local Markdown edit that does not rename or move a target.
 - Use `--scope all` after a rename, move, link migration, index rebuild, or other change that can break backlinks in untouched files.
+- Add `--study-state` after Study Log frontmatter, active cycle／packet／session IDs, competency ledgers, or derived packet authority metadata changes.
 - Add `--include-archive` only when the user explicitly places `_Archive/` in scope.
 - Add one `--mirror 'left=right'` argument for each pair that canonical context or the user explicitly declares byte-identical. Do not guess mirror pairs.
 
@@ -28,7 +29,13 @@ For a global path operation:
 python3 .agents/skills/validate-measure-theory-vault/scripts/validate_vault.py --root . --scope all
 ```
 
-The script checks local Markdown destinations against their source directory, requires explicit file extensions, rejects raw ASCII spaces, absolute or `file://` paths, and Obsidian wikilinks, and compares spelling with existing files while preferring Git-index paths. It also runs `git diff --check` and verifies declared mirror pairs.
+For the complete Study Log interface:
+
+```bash
+python3 .agents/skills/validate-measure-theory-vault/scripts/validate_vault.py --root . --scope all --study-state
+```
+
+The script checks local Markdown destinations against their source directory, requires explicit file extensions, rejects raw ASCII spaces, absolute or `file://` paths, Obsidian wikilinks, and literal TAB characters, and compares spelling with existing files while preferring Git-index paths. It also runs `git diff --check` and verifies declared mirror pairs. With `--study-state`, it additionally checks required frontmatter, controlled learning-state vocabulary, active ID resolution, declared competency keys, derived `canonical-sources`, and absolute dating in State／Chronology files.
 
 ## Interpret and repair
 

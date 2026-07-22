@@ -16,7 +16,9 @@ status: canonical
 6. change of variables;
 7. mixtures and total expectation/variance;
 8. Radon–Nikodym representation;
-9. conditional expectation and conditional laws.
+9. conditional expectation and conditional laws;
+10. independence of events and random variables, including product joint laws、factorization、independent sums and their moments;
+11. the iid Central Limit Theorem as a terminal approximation interface.
 
 ## Role of $L^p$
 
@@ -55,13 +57,30 @@ $$
 \text{change of variables}.
 $$
 
-The directory [Product Measures and Transformations](../35_Product-Measures-and-Transformations/00_Module%20Map.md) now contains an in-progress formal module after Integration and Convergence. Its Cours and first TD/corrigé supply the July deployment path; the deferred Colles and full Example Sheets remain part of the mastery edition.
+The formal [Product Measures and Transformations](../35_Product-Measures-and-Transformations/00_Module%20Map.md) module supplies this bridge after Integration and Convergence. Its current completion state and missing training roles belong exclusively to the Module Map; this scope file does not mirror them.
+
+## Independence and probability-convergence boundary
+
+Independence is part of the mandatory deployment core, not an optional consequence. The required structural interface is
+
+$$
+\text{event factorization}
+\longrightarrow
+\text{joint law as a product law}
+\longrightarrow
+\text{density／pmf factorization}
+\longrightarrow
+\text{convolution and independent-sum moments}.
+$$
+
+The current core also retains the iid CLT with finite nonzero variance, correct standardization, continuity correction for lattice sums and the distinction between approximation and exact law identity. It does not expand this terminal interface into a general theory of almost-sure、in-probability、$L^p$ or weak convergence.
 
 ## Excluded from the current core
 
 - full outer-measure construction of Lebesgue measure;
 - general existence theory for regular conditional probabilities and disintegration;
 - uniform integrability and martingale convergence;
+- general probability-convergence theory beyond the iid CLT deployment interface;
 - Banach-space duality and weak compactness.
 
 These topics are legitimate continuations, but they are not prerequisites for the current Exam P bridge.

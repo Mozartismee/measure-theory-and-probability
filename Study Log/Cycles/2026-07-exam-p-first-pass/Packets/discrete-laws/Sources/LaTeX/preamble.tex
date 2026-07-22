@@ -1,0 +1,86 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[a4paper,left=14mm,right=14mm,top=12mm,bottom=17mm,noheadfoot]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage{needspace}
+\usepackage{array,booktabs,tabularx,longtable}
+\usepackage{xcolor}
+\usepackage{iftex}
+
+\pagestyle{empty}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.34em}
+\setlength{\emergencystretch}{2em}
+\setlist{leftmargin=1.7em,itemsep=0.17em,topsep=0.32em}
+\renewcommand{\arraystretch}{1.11}
+\setlength{\tabcolsep}{4pt}
+\setlength{\jot}{3pt}
+\frenchspacing
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\brokenpenalty=10000
+\doublehyphendemerits=10000
+\finalhyphendemerits=5000
+\ifXeTeX
+  \microtypesetup{protrusion=true,expansion=false}
+\else
+  \microtypesetup{protrusion=true,expansion=true}
+\fi
+
+\titleformat{\section}
+  {\normalsize\bfseries}
+  {}
+  {0pt}
+  {}
+\titlespacing*{\section}{0pt}{0.96em}{0.34em}
+
+\titleformat{\subsection}
+  {\small\bfseries}
+  {}
+  {0pt}
+  {}
+\titlespacing*{\subsection}{0pt}{0.68em}{0.24em}
+
+\titleformat{\subsubsection}
+  {\small\itshape}
+  {}
+  {0pt}
+  {}
+\titlespacing*{\subsubsection}{0pt}{0.55em}{0.18em}
+
+\newcommand{\sheettitle}[2]{%
+  \needspace{5\baselineskip}
+  \par\medskip
+  {\large\bfseries #1\par}
+  {\footnotesize #2\par}
+  \vspace{0.42em}
+}
+
+\newcommand{\separator}{\par\vspace{0.8em}}
+\newcommand{\blankentry}[1]{%
+  \noindent #1\ \dotfill\par
+  \vspace{0.05em}
+}
+\newcommand{\ind}{\mathbf 1}
+\providecommand{\href}[2]{#2}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\hypertarget}[2]{#2}
+\providecommand{\hyperlink}[2]{#2}
+\newcommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
+}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\AtBeginDocument{%
+  \fontsize{9.8}{11.8}\selectfont
+  \setlength{\abovedisplayskip}{6pt}
+  \setlength{\belowdisplayskip}{6pt}
+  \setlength{\abovedisplayshortskip}{4pt}
+  \setlength{\belowdisplayshortskip}{4pt}
+}

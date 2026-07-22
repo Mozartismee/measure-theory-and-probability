@@ -24,20 +24,32 @@ $$
 
 Pushforwards and Laws 與 Product Measures and Transformations 構成 state-space 支線；有限 $L^p$ interface 則供應 integrability、test functions、moments 與 projection 所需的工具。
 
-目前執行中的半個月壓縮循環統一記錄於 [Study Schedule — July Exam P Measure-Theory First Pass](00_Project/Study%20Schedule%20—%20July%20Exam%20P%20Measure-Theory%20First%20Pass.md)。完整五週版本保留為 [RN Reconstruction to Conditional Expectation — Full Mastery Reference](00_Project/Study%20Schedule%20—%20RN%20Reconstruction%20to%20Conditional%20Expectation.md)。
+目前學習對象、primary ruptures 與下一場契約統一由 [Current Learning State](Study%20Log/State/CURRENT.md) 解析；active plan 不在本索引硬編碼。完整五週路徑保留於 [RN Reconstruction to Conditional Expectation — Full Mastery Route](00_Project/Training%20Route%20—%20RN%20Reconstruction%20to%20Conditional%20Expectation.md)。
+
+## 學習運作
+
+```mermaid
+flowchart LR
+    C["Canonical mathematics"] --> S["Séance attempt"]
+    S --> E["Carnet / Daily evidence"]
+    E --> P["State promotion"]
+    P --> N["Next contract"]
+```
+
+使用者只需從 [Current Learning State](Study%20Log/State/CURRENT.md) 進入當前唯一工作文件並完成其 Bilan；Daily 與長期 State 由證據 reconciliation 更新，不要求在學習中來回維護多份 ledger。
 
 ## 正式模組
 
-| 順序 | 模組 | 現況 |
-| --- | --- | --- |
-| 10 | [Integration and Convergence](10_Integration-and-Convergence/00_Module%20Map.md) | in-progress |
-| 15 | [$L^p$ Interface](15_Lp-Interface/00_Module%20Map.md) | in-progress |
-| 18 | [Signed Measures](18_Signed-Measures/00_Module%20Map.md) | in-progress |
-| 20 | [Radon–Nikodym](20_Radon-Nikodym/00_Module%20Map.md) | in-progress |
-| 30 | [Pushforwards and Laws](30_Pushforwards-and-Laws/00_Module%20Map.md) | in-progress |
-| 35 | [Product Measures and Transformations](35_Product-Measures-and-Transformations/00_Module%20Map.md) | in-progress |
-| 40 | [Conditional Expectation](40_Conditional-Expectation/00_Module%20Map.md) | in-progress |
-| 50 | [Conditional Laws](50_Conditional-Laws/00_Module%20Map.md) | in-progress |
+| 順序 | 模組 |
+| --- | --- |
+| 10 | [Integration and Convergence](10_Integration-and-Convergence/00_Module%20Map.md) |
+| 15 | [$L^p$ Interface](15_Lp-Interface/00_Module%20Map.md) |
+| 18 | [Signed Measures](18_Signed-Measures/00_Module%20Map.md) |
+| 20 | [Radon–Nikodym](20_Radon-Nikodym/00_Module%20Map.md) |
+| 30 | [Pushforwards and Laws](30_Pushforwards-and-Laws/00_Module%20Map.md) |
+| 35 | [Product Measures and Transformations](35_Product-Measures-and-Transformations/00_Module%20Map.md) |
+| 40 | [Conditional Expectation](40_Conditional-Expectation/00_Module%20Map.md) |
+| 50 | [Conditional Laws](50_Conditional-Laws/00_Module%20Map.md) |
 
 每個正式模組均遵循 [Unit Structure](00_Project/Unit%20Structure.md)：
 
@@ -78,8 +90,10 @@ Pushforwards and Laws 與 Product Measures and Transformations 構成 state-spac
 
 - [Applications](60_Applications/INDEX.md)：Exam P 轉譯與統計應用。
 - [Lemmas](80_Lemmas/INDEX.md)：可獨立部署、附證明的重要引理。
+- [Examples and Counterexamples](85_Examples-and-Counterexamples/INDEX.md)：跨模組可引用的合法 regime／移除假設後 failure 配對。
 - [Review](90_Review/INDEX.md)：跨模組白紙重建。
 - [Sources](99_Sources/ENS/INDEX.md)：唯讀原始文獻。
+- [Study Log](Study%20Log/README.md)：cycles、Daily evidence 與長期 learner state；不保存正式數學正本。
 - _Archive：非現行正本，不得成為主線依賴。
 
 ## 兩種 regime
@@ -99,6 +113,7 @@ Pushforwards and Laws 與 Product Measures and Transformations 構成 state-spac
 - [概念依賴圖](00_Project/Dependency%20Map.md)
 - [文獻與使用位置](00_Project/Bibliography.md)
 - [Exam P 語義範圍](00_Project/Exam%20P%20Semantic%20Scope.md)
+- [完整 mastery route](00_Project/Training%20Route%20—%20RN%20Reconstruction%20to%20Conditional%20Expectation.md)
 - [ENS 原始文獻索引](99_Sources/ENS/INDEX.md)
 
 每一數學物件只保留一份現行正本；其餘文件以連結引用，不以複製維持表面完整。

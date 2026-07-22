@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write ENS Measure-Theory TD"
+  short_description: "Design dependency-driven TD, DM, assessments, and Corrige"
+  default_prompt: "Use $write-ens-td to design a measure-theory TD or assessment with a genuine ENS-level dependency chain."

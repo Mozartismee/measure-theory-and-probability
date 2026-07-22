@@ -1,0 +1,4 @@
+interface:
+  display_name: "Promote Measure-Theory Lemma"
+  short_description: "Promote reusable measure-theory lemmas"
+  default_prompt: "Use $promote-reusable-measure-theory-lemma to assess this source and, when authorized, promote the best reusable result into the lemma registry."

@@ -17,6 +17,14 @@ module-status: in-progress
 
 結構遵循 [Unit Structure](../00_Project/Unit%20Structure.md)。
 
+## Competency keys
+
+- `PM.sections`：由 rectangles 經 stable class 證明 measurable sections。
+- `PM.product-measure`：陳述 product-measure construction 與 uniqueness regime。
+- `PM.tonelli-fubini`：區分 nonnegative 與 absolutely integrable regimes。
+- `PM.marginalization`：由 joint law 合法推出 marginals 與 layer-cake identities。
+- `PM.change-of-variables`：將 Euclidean transformations 表示為 measure transport 並追蹤 Jacobian hypotheses。
+
 ## Files
 
 - Cours：[Cours](01_Cours/Cours.md)

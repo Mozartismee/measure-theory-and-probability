@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write ENS Measure-Theory Notes"
+  short_description: "Create canonical ENS-level measure-theory notes"
+  default_prompt: "Use $write-ens-math-notes to create a canonical ENS-level measure-theory Cours from the relevant module contract."

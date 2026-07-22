@@ -17,6 +17,13 @@ module-status: in-progress
 
 結構遵循 [Unit Structure](../00_Project/Unit%20Structure.md)。
 
+## Competency keys
+
+- `CL.state-space-rn`：對 $Y\in L^1(\mathbb P)$ 構造 $dX_\#(Y\mathbb P)/d\mu_X$ 並拉回 probability space。
+- `CL.version-transfer`：追蹤 state-space representatives 與 composed versions 的 a.e. basis。
+- `CL.dominated-kernel`：在 dominated Euclidean regime 建立 jointly measurable conditional kernel。
+- `CL.eventwise-boundary`：說明 eventwise RN representatives 不足以產生一般 disintegration。
+
 ## Files
 
 - Cours：[Cours](01_Cours/Cours.md)

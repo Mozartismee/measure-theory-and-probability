@@ -17,6 +17,13 @@ module-status: in-progress
 
 結構遵循 [Unit Structure](../00_Project/Unit%20Structure.md)。
 
+## Competency keys
+
+- `SM.hahn`：建立 Hahn decomposition 並辨認其 ambiguity。
+- `SM.jordan`：由 sign structure 建立 canonical Jordan decomposition。
+- `SM.total-variation`：構造與部署 total variation。
+- `SM.local-domination`：建立 Hahn-first RN proof 使用的局部 domination fragment。
+
 ## Files
 
 - Cours：[Signed Measures and Hahn–Jordan Decomposition](01_Cours/Cours.md)

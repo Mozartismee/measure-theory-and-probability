@@ -17,6 +17,15 @@ module-status: in-progress
 
 結構遵循 [Unit Structure](../00_Project/Unit%20Structure.md)。
 
+## Competency keys
+
+- `RN.hypotheses`：陳述 positive、signed、finite 與 $\sigma$-finite regimes 的 exact hypotheses。
+- `RN.local-density`：由 Hahn structure 建立非零 local density fragment。
+- `RN.maximal-mass`：構造 maximal representable submeasure。
+- `RN.residue`：以 strict improvement contradiction 消去 residue。
+- `RN.sigma-finite-gluing`：由 finite pieces 建立 global density。
+- `RN.uniqueness`：在正確 reference measure 下證明 a.e. uniqueness。
+
 ## Files
 
 - Cours：[Cours](01_Cours/Cours.md)

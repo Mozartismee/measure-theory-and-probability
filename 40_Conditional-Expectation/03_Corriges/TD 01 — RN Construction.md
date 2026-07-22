@@ -287,7 +287,7 @@ $$
 \beta\left(\bigcup_nA_n\right).
 $$
 
-Thus $\mathcal D$ is a Dynkin system. Since $\Pi$ is a $\pi$-system and $\sigma(\Pi)=\mathcal G$, the $\pi$-$\lambda$ theorem yields
+Thus $\mathcal D$ is a Dynkin system. Since $\Pi$ is a $\pi$-system and $\sigma(\Pi)=\mathcal G$, the [π–λ transfer principle](../../80_Lemmas/Dynkin%20Systems%20and%20the%20Pi-Lambda%20Transfer%20Principle.md) yields
 
 $$
 \mathcal D=\mathcal G.

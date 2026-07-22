@@ -17,6 +17,13 @@ module-status: in-progress
 
 結構遵循 [Unit Structure](../00_Project/Unit%20Structure.md)。
 
+## Competency keys
+
+- `IC.integral-construction`：由 simple functions 建立 Lebesgue integral。
+- `IC.mct-fatou-dct`：重建 MCT、Fatou、DCT 及其 exact hypotheses。
+- `IC.theorem-selection`：依 sign、domination 與 convergence regime 選擇合法定理。
+- `IC.boundary-counterexamples`：在移除 decisive hypothesis 時定位失效。
+
 ## Files
 
 - Cours：[Integration and Convergence](01_Cours/Cours.md)

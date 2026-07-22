@@ -6,7 +6,7 @@ status: canonical
 
 # ENS Source Index
 
-The files in this directory are immutable reference documents.
+The PDF files in this tree are immutable reference documents. Local filenames may be normalized for portability; the PDF bytes are not edited. The Markdown indexes record provenance, level and intended use.
 
 ## Intégration et probabilités — ENS Paris
 
@@ -37,6 +37,26 @@ Corresponding corrigés:
 
 - [Espérance conditionnelle](TD%205%20-%20Espérance%20conditionnelle.pdf)
 
-## Book
+## Cours
 
-- [Le Gall — *Measure Theory, Probability, and Stochastic Processes*](Le%20Gall.pdf)
+- [Le Gall — *Cours d'intégration et probabilités*](Le%20Gall（法文原版%20建議使用）.pdf)
+
+## Extended ENS corpus
+
+### ENS Paris — Département de mathématiques et applications
+
+- [Analyse fonctionnelle](Paris-DMA/Analyse-Fonctionnelle/INDEX.md): one complete Cours, a fourteen-sheet TD/corrigé sequence and an examination pair.
+- [Statistique](Paris-DMA/Statistique/INDEX.md): FIMFA M1 sheets, a partial correction, a devoir and an examination pair.
+- [Processus aléatoires](Paris-DMA/Processus-Aleatoires/INDEX.md): corrected TDs on Brownian motion, conditional expectation, martingales and Markov chains, plus assessment pairs.
+- [Intégration et probabilités — annales](Paris-DMA/Integration-et-Probabilites/INDEX.md): one partiel/corrigé pair and one examen/corrigé pair.
+
+### ENS de Lyon
+
+- [Intégration et probabilités](Lyon/Integration-et-Probabilites/INDEX.md): L3 analysis/probability TDs, DM and recent assessment pairs.
+- [Processus stochastiques](Lyon/Processus-Stochastiques/INDEX.md): recent M1 partiel and examination solutions.
+
+## Use boundary
+
+This corpus calibrates prerequisite level, proof responsibility, exercise morphology, correction density, counterexample placement and assessment scale. It does not enlarge the project's mathematical scope by itself, and it does not override the canonical Cours, TD, Module Maps or `PROJECT_SPEC.md`.
+
+When a source corrigé is used to design learner-facing work, the resulting exercise must still preserve the project's closed-book attempt boundary. An institutional PDF is evidence about an ENS course; it is not incense that turns an ordinary worksheet into one.

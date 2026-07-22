@@ -1,0 +1,7 @@
+interface:
+  display_name: "Calibrate with ENS Corpus"
+  short_description: "Select ENS sources and build a structural calibration brief"
+  default_prompt: "Use $calibrate-with-ens-corpus to select a minimal ENS source set and calibrate the requested mathematical artifact."
+
+policy:
+  allow_implicit_invocation: true

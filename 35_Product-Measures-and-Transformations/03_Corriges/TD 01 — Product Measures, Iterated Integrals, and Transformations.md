@@ -68,7 +68,7 @@ $$
 \sum_n\nu((C_n)_x).
 $$
 
-Monotone convergence and countable additivity show that $\bigcup_nC_n\in\mathcal D$. Therefore $\mathcal D$ is a Dynkin system containing the generating $\pi$-system of measurable rectangles. The $\pi$-$\lambda$ theorem gives $\mathcal D=\mathcal A\otimes\mathcal B$.
+Monotone convergence and countable additivity show that $\bigcup_nC_n\in\mathcal D$. Therefore $\mathcal D$ is a Dynkin system containing the generating $\pi$-system of measurable rectangles. The [π–λ transfer principle](../../80_Lemmas/Dynkin%20Systems%20and%20the%20Pi-Lambda%20Transfer%20Principle.md) gives $\mathcal D=\mathcal A\otimes\mathcal B$.
 
 For the $\sigma$-finite case, take increasing exhaustions $E_n\uparrow E$ and $F_n\uparrow F$ of finite measure. By uniqueness on measurable rectangles, the product of the restricted measures is the restriction of $\mu\otimes\nu$ to $E_n\times F_n$. Applying the finite result yields
 

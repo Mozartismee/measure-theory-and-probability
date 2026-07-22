@@ -20,6 +20,8 @@ $$
 \sigma\bigl(\{A\times B:A\in\mathcal A,\ B\in\mathcal B\}\bigr).
 $$
 
+Its initial mapping property is isolated in [Lemma 8 — Coordinatewise Measurability into Product Spaces](../../80_Lemmas/Coordinatewise%20Measurability%20into%20Product%20Spaces.md): a map into a product measurable space is measurable exactly when its coordinate maps are measurable.
+
 For $C\subseteq E\times F$, define the sections
 
 $$
@@ -104,44 +106,12 @@ $$
 
 ### Proof
 
-Assume first that $\mu(E)<+\infty$ and $\nu(F)<+\infty$. Let $\mathcal D$ be the class of sets $C\in\mathcal A\otimes\mathcal B$ such that $x\mapsto\nu(C_x)$ is measurable and
-
-$$
-(\mu\otimes\nu)(C)=\int_E\nu(C_x)\,\mu(dx).
-$$
-
-Every measurable rectangle belongs to $\mathcal D$, since
-
-$$
-\nu((A\times B)_x)=\mathbf1_A(x)\nu(B).
-$$
-
-The finiteness of both measures permits complements relative to $E\times F$: if $C\in\mathcal D$, then
-
-$$
-\nu((C^c)_x)=\nu(F)-\nu(C_x),
-$$
-
-and subtracting the two finite identities proves $C^c\in\mathcal D$. If $(C_n)$ is a disjoint sequence in $\mathcal D$, then
-
-$$
-\nu\!\left(\left(\bigcup_nC_n\right)_x\right)
-=
-\sum_n\nu((C_n)_x),
-$$
-
-and monotone convergence together with countable additivity gives $\bigcup_nC_n\in\mathcal D$. Thus $\mathcal D$ is a Dynkin system containing the measurable rectangles. Since the rectangles form a generating $\pi$-system, the $\pi$-$\lambda$ theorem yields $\mathcal D=\mathcal A\otimes\mathcal B$. The argument for $y\mapsto\mu(C^y)$ is symmetric.
-
-For the $\sigma$-finite case, choose increasing exhaustions $E_n\uparrow E$ and $F_n\uparrow F$ with $\mu(E_n),\nu(F_n)<+\infty$. By uniqueness on rectangles, the product of the restricted measures is the restriction of $\mu\otimes\nu$ to $E_n\times F_n$. Applying the finite case therefore gives
-
-$$
-\int_E
-\mathbf1_{E_n}(x)\nu(C_x\cap F_n)\,\mu(dx)
-=
-(\mu\otimes\nu)\bigl(C\cap(E_n\times F_n)\bigr).
-$$
-
-The integrands increase pointwise to $x\mapsto\nu(C_x)$, while the sets on the right increase to $C$. Monotone convergence and continuity from below prove the first identity and its measurability statement. The second identity follows symmetrically.
+The complete proof is isolated in
+[Lemma 10 — Section-Mass Representation of Product Measures](../../80_Lemmas/Section-Mass%20Representation%20of%20Product%20Measures.md).
+It first proves section-mass measurability in the finite inner-measure regime,
+passes to $\sigma$-finite measures by finite exhaustion, constructs the two
+section-integral measures, and identifies them by uniqueness on measurable
+rectangles.
 
 ## 3. Tonelli's theorem
 

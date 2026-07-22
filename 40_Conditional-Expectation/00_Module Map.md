@@ -17,6 +17,14 @@ module-status: in-progress
 
 結構遵循 [Unit Structure](../00_Project/Unit%20Structure.md)。
 
+## Competency keys
+
+- `CE.rn-construction`：在 sub-$\sigma$-field 上以 RN representation 構造 conditional expectation。
+- `CE.test-functions`：由 event identities 擴張至合法 test classes。
+- `CE.uniqueness-calculus`：由 a.e. uniqueness 推出 linearity、positivity、fixed-point 與 pull-out properties。
+- `CE.tower`：在正確 nested $\sigma$-fields 下部署 tower property。
+- `CE.finite-sigma-fields`：重建 event 與 finite-partition formulas。
+
 ## Files
 
 - Cours：[Cours](01_Cours/Cours.md)

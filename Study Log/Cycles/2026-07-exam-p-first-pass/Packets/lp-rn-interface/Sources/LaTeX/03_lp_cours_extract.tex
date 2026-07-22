@@ -1,0 +1,87 @@
+\sheettitle
+  {Optional course extract}
+  {Results in $L^p$ retained for later work}
+
+This extract is omitted from the main document by default because the preparatory notes already contain the proofs. It records only the statements needed later.
+
+\section*{Ambient object and probability hierarchy}
+
+For $1\le p<\infty$,
+\[
+L^p(\mu)
+=
+\left\{f:\int|f|^p\,d\mu<\infty\right\}\big/\!\sim_\mu,
+\qquad
+f\sim_\mu g
+\Longleftrightarrow
+f=g\quad\mu\text{-almost everywhere}.
+\]
+If $\mu(E)<\infty$ and $1\le p<q\le\infty$, then
+\[
+\|f\|_p
+\le
+\mu(E)^{1/p-1/q}\|f\|_q.
+\]
+Therefore, on a probability space,
+\[
+L^\infty(\mathbb P)
+\subseteq
+L^2(\mathbb P)
+\subseteq
+L^1(\mathbb P).
+\]
+
+\section*{Integrable products}
+
+\[
+Y\in L^1(\mu),\ Z\in L^\infty(\mu)
+\Longrightarrow
+YZ\in L^1(\mu),
+\qquad
+\|YZ\|_1\le\|Y\|_1\|Z\|_\infty,
+\]
+and
+\[
+U,V\in L^2(\mu)
+\Longrightarrow
+UV\in L^1(\mu),
+\qquad
+\|UV\|_1\le\|U\|_2\|V\|_2.
+\]
+The first estimate controls bounded tests; the second controls cross-moments.
+
+\section*{Density generation and change of measure}
+
+If $h\ge0$ is measurable, then $h\mu$ is a positive measure absolutely continuous with respect to $\mu$. If $f\in L^1(\mu)$, then
+\[
+\nu_f=f\mu
+\]
+is a finite signed measure and
+\[
+|\nu_f|=|f|\mu.
+\]
+Moreover,
+\[
+\nu_f=\nu_g
+\Longrightarrow
+f=g\quad\mu\text{-almost everywhere}.
+\]
+If $\nu=h\mu$, then
+\[
+\int\varphi\,d\nu
+=
+\int\varphi h\,d\mu
+\]
+for nonnegative measurable $\varphi$, and for signed $\varphi$ under absolute integrability.
+
+\section*{Representation boundary}
+
+Forward density generation requires no RN theorem. Conversely, in the standard positive RN regime,
+\[
+\rho\ll\mu,
+\qquad
+\rho,\mu\text{ are }\sigma\text{-finite}
+\Longrightarrow
+\rho=\frac{d\rho}{d\mu}\,\mu,
+\]
+with uniqueness $\mu$-almost everywhere. A finite signed numerator is represented by applying the positive theorem to its Jordan parts.

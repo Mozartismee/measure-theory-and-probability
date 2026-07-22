@@ -31,8 +31,6 @@ flowchart LR
     CL --> EP
 ```
 
-Product Measures and Transformations is now a formal in-progress module. Its Cours and first TD/corrigé establish the product-integration interface; Colles and full Example Sheets remain deferred, so the module is not yet marked deployable.
-
 ## Function-space gate
 
 The $L^p$ interface supplies admissible inputs to later probability constructions:
