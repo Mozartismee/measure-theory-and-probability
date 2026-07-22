@@ -1,0 +1,84 @@
+% !TeX program = pdflatex
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[a4paper,left=14mm,right=14mm,top=12mm,bottom=14mm,noheadfoot]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage{needspace}
+\usepackage{array,booktabs,tabularx}
+\usepackage{iftex}
+
+\pagestyle{empty}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.36em}
+\setlength{\emergencystretch}{2em}
+\setlist{leftmargin=1.7em,itemsep=0.18em,topsep=0.35em}
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{4.2pt}
+\setlength{\jot}{3pt}
+\frenchspacing
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\brokenpenalty=10000
+\doublehyphendemerits=10000
+\finalhyphendemerits=5000
+\ifXeTeX
+  \microtypesetup{protrusion=true,expansion=false}
+\else
+  \microtypesetup{protrusion=true,expansion=true}
+\fi
+
+\titleformat{\section}
+  {\normalsize\bfseries}
+  {}
+  {0pt}
+  {}
+\titlespacing*{\section}{0pt}{1.0em}{0.36em}
+
+\titleformat{\subsection}
+  {\small\bfseries}
+  {}
+  {0pt}
+  {}
+\titlespacing*{\subsection}{0pt}{0.72em}{0.26em}
+
+\newcommand{\sheettitle}[2]{%
+  \needspace{5\baselineskip}
+  \par\medskip
+  {\large\bfseries #1\par}
+  {\footnotesize #2\par}
+  \vspace{0.45em}
+}
+
+\newcommand{\separator}{\par\vspace{0.9em}}
+\newcommand{\blankentry}[1]{%
+  \noindent #1\ \dotfill\par
+  \vspace{0.28em}
+}
+\newcommand{\ind}{\mathbf 1}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\AtBeginDocument{%
+  \fontsize{9.8}{11.8}\selectfont
+  \setlength{\abovedisplayskip}{6pt}
+  \setlength{\belowdisplayskip}{6pt}
+  \setlength{\abovedisplayshortskip}{4pt}
+  \setlength{\belowdisplayshortskip}{4pt}
+}
+
+\begin{document}
+\input{01_session_plan}
+\separator
+\input{02_lecture_notes}
+\separator
+\input{03_exercises}
+\separator
+\input{04_work_record}
+\end{document}

@@ -136,29 +136,29 @@ with the norm bound
 C\|f\|_{L^1(\mu)}.
 \]
 
-Thus domination of measures induces a continuous inclusion
+Since \(\nu\ll\mu\), domination of measures induces a well-defined bounded map
 
 \[
-L^1(\mu)\hookrightarrow L^1(\nu).
+T_{\mu\to\nu}:L^1(\mu)\longrightarrow L^1(\nu),
+\qquad
+[f]_\mu\longmapsto[f]_\nu.
 \]
+
+This map need not be injective. For example, if \(A\) is \(\nu\)-null and \(0<\mu(A)<\infty\), then the nonzero class \([\mathbf1_A]_\mu\) maps to zero. The reverse relation \(\mu\ll\nu\) is a natural sufficient condition for injectivity; without such a condition, a hook arrow is not justified.
 
 ---
 
 ## 4. Radon–Nikodym formulation
 
-If
-
-\[
-\nu\ll\mu
-\]
-
-and
+Assume that \(\nu\) admits a Radon–Nikodym density with respect to \(\mu\), and write
 
 \[
 h=\frac{d\nu}{d\mu},
+\qquad
+\nu=h\mu.
 \]
 
-then for every nonnegative measurable \(f\),
+Then for every nonnegative measurable \(f\),
 
 \[
 \int_E f\,d\nu
@@ -190,7 +190,7 @@ then
 C\|f\|_{L^1(\mu)}.
 \]
 
-This is equivalent to the measure inequality
+In particular, this bound implies the measure inequality
 
 \[
 \nu\le C\mu.
@@ -222,15 +222,15 @@ so
 \mu_k\le \frac1{a_k}\mu.
 \]
 
-Therefore
+Therefore the canonical maps
 
 \[
-L^1(\mu)
-\subset
-L^1(\mu_k)
+T_k:L^1(\mu)\longrightarrow L^1(\mu_k),
+\qquad
+[f]_\mu\longmapsto[f]_{\mu_k},
 \]
 
-and
+are well defined and satisfy
 
 \[
 \|f\|_{L^1(\mu_k)}
@@ -247,6 +247,8 @@ Equivalently, for nonnegative measurable \(f\),
 \]
 
 If the left-hand side is finite, then every term on the right-hand side is finite because all coefficients \(a_k\) are strictly positive.
+
+The maps \(T_k\) need not be injective: \(\mu\) may see sets that \(\mu_k\) does not.
 
 ---
 
@@ -296,10 +298,10 @@ f=g
 
 ## 7. The representative issue
 
-An inclusion such as
+A rule such as
 
 \[
-L^1(\mu)\subset L^1(\nu)
+[f]_\mu\longmapsto[f]_\nu
 \]
 
 is not merely a statement about integrability.
@@ -334,7 +336,7 @@ f=g
 \nu\text{-a.e.}
 \]
 
-Thus two checks are conceptually distinct:
+Thus two checks are required before this rule defines a map on all of \(L^1(\mu)\):
 
 1. **integrability transfer**
    \[
@@ -350,6 +352,14 @@ Thus two checks are conceptually distinct:
 
 The first usually follows from a domination estimate.  
 The second follows from absolute continuity.
+
+Injectivity is a third, separate issue. It follows from the reverse relation
+
+\[
+\mu\ll\nu.
+\]
+
+Without this reverse absolute continuity, the canonical map may collapse nonzero \(L^1(\mu)\)-classes and should not be called an inclusion.
 
 ---
 
@@ -391,7 +401,8 @@ a_k^{-1}\|f\|_{L^1(\mu)}
 
 \[
 \boxed{
-L^1(\mu)\hookrightarrow L^1(\mu_k)
+T_k:L^1(\mu)\longrightarrow L^1(\mu_k)
+\text{ is well defined and bounded}
 }
 \]
 
@@ -402,3 +413,5 @@ together with
 \]
 
 which guarantees compatibility of the corresponding almost-everywhere equivalence classes.
+
+No injectivity is asserted without the reverse relation \(\mu\ll\mu_k\).

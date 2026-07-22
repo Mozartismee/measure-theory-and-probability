@@ -15,17 +15,25 @@ module-status: in-progress
 - Prerequisites：Radon–Nikodym、$L^1$ interface、bounded test functions。
 - Output：能重建 existence、uniqueness、test-function characterization、tower property 與 finite-$\sigma$-field formula。
 
-結構遵循 [[00_Project/Unit Structure|Unit Structure]]。
+結構遵循 [Unit Structure](../00_Project/Unit%20Structure.md)。
+
+## Competency keys
+
+- `CE.rn-construction`：在 sub-$\sigma$-field 上以 RN representation 構造 conditional expectation。
+- `CE.test-functions`：由 event identities 擴張至合法 test classes。
+- `CE.uniqueness-calculus`：由 a.e. uniqueness 推出 linearity、positivity、fixed-point 與 pull-out properties。
+- `CE.tower`：在正確 nested $\sigma$-fields 下部署 tower property。
+- `CE.finite-sigma-fields`：重建 event 與 finite-partition formulas。
 
 ## Files
 
-- Cours：[[40_Conditional-Expectation/01_Cours/Cours|Cours]]
-- TD：[[40_Conditional-Expectation/02_TD/TD 01 — RN Construction|TD 01]]；[[40_Conditional-Expectation/02_TD/TD 02 — Finite Sigma-Fields|TD 02]]
-- Corriges：尚未建置。
+- Cours：[Cours](01_Cours/Cours.md)
+- TD：[TD 01](02_TD/TD%2001%20—%20RN%20Construction.md)；[TD 02](02_TD/TD%2002%20—%20Finite%20Sigma-Fields.md)
+- Corriges：[TD 01 corrigé](03_Corriges/TD%2001%20—%20RN%20Construction.md)；[TD 02 corrigé](03_Corriges/TD%2002%20—%20Finite%20Sigma-Fields.md)。
 - Colles：尚未建置。
 - Example-Sheets：尚未建置。
-- Supplements：[[40_Conditional-Expectation/06_Supplements/Signed Extension, Test Functions, and Convergence|Signed Extension, Test Functions, and Convergence]]；[[40_Conditional-Expectation/06_Supplements/Nonnegative Variables, Jensen, and L2 Projection|Nonnegative Variables, Jensen, and L2 Projection]]
+- Supplements：[Signed Extension, Test Functions, and Convergence](06_Supplements/Signed%20Extension,%20Test%20Functions,%20and%20Convergence.md)；[Nonnegative Variables, Jensen, and L2 Projection](06_Supplements/Nonnegative%20Variables,%20Jensen,%20and%20L2%20Projection.md)
 
 ## Completion criterion
 
-補齊 corrigés、colles 與 finite-partition/independence examples；supplements 只保留超出核心部署面的延伸。
+補齊 colles 與 finite-partition/independence examples；supplements 只保留超出核心部署面的延伸。

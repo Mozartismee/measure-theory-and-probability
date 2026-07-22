@@ -15,17 +15,24 @@ module-status: in-progress
 - Prerequisites：measurable functions、simple functions、a.e. convergence。
 - Output：能由積分構造重建 MCT、Fatou、DCT，並辨認各定理的適用邊界。
 
-結構遵循 [[00_Project/Unit Structure|Unit Structure]]。
+結構遵循 [Unit Structure](../00_Project/Unit%20Structure.md)。
+
+## Competency keys
+
+- `IC.integral-construction`：由 simple functions 建立 Lebesgue integral。
+- `IC.mct-fatou-dct`：重建 MCT、Fatou、DCT 及其 exact hypotheses。
+- `IC.theorem-selection`：依 sign、domination 與 convergence regime 選擇合法定理。
+- `IC.boundary-counterexamples`：在移除 decisive hypothesis 時定位失效。
 
 ## Files
 
-- Cours：[[10_Integration-and-Convergence/01_Cours/Cours|Integration and Convergence]]
-- TD：[[10_Integration-and-Convergence/02_TD/TD 01 — Integration and Convergence|TD 01]]
-- Corriges：尚未建置。
+- Cours：[Integration and Convergence](01_Cours/Cours.md)
+- TD：[TD 01](02_TD/TD%2001%20—%20Integration%20and%20Convergence.md)
+- Corriges：[TD 01 corrigé](03_Corriges/TD%2001%20—%20Integration%20and%20Convergence.md)。
 - Colles：尚未建置。
 - Example-Sheets：尚未建置。
 - Supplements：目前無必要補件。
 
 ## Completion criterion
 
-補齊 TD corrigé、口試題與 theorem-selection examples；不得把三者混成一份帶答案的題庫。
+補齊口試題與 theorem-selection examples；不得把兩者混成一份帶答案的題庫。

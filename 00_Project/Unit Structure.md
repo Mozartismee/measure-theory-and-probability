@@ -21,7 +21,7 @@ status: canonical
 
 | 位置 | 數學職能 |
 | --- | --- |
-| 00_Module Map | 指定 object、purpose、regime、先備、輸出與完成條件 |
+| 00_Module Map | 指定 object、purpose、regime、先備、輸出、穩定 competency keys 與完成條件 |
 | 01_Cours | 定義、核心定理、證明架構、假設邊界 |
 | 02_TD | 以依賴鏈配置構造、表示、轉移與失效 |
 | 03_Corriges | 完整、壓縮、可白紙重建的解答 |
@@ -36,6 +36,10 @@ status: canonical
 - deployable：Cours、TD、Corriges、Colles、Example-Sheets 均足以獨立使用。
 
 Supplements 的位置固定，但內容不是強制項。沒有局部缺口時，空白比人工製造一份補充講義更誠實。
+
+## Competency keys
+
+每個 Module Map 以 `<module>.<capability>` 宣告可被 Study Log 長期狀態引用的穩定 key，例如 `RN.uniqueness`。Key 指向數學能力，不指向某份檔案、某日排程或某次題號；只有能力本身的語義改變時才更名。Study Log 的 Mastery 與 Rupture ledgers 引用這些 keys，不重抄定義。
 
 ## 正式單元
 
@@ -52,4 +56,4 @@ Supplements 的位置固定，但內容不是強制項。沒有局部缺口時�
 
 ## 非單元目錄
 
-00_Project、60_Applications、80_Lemmas、90_Review、99_Sources 與 _Archive 各有跨模組或保存職能，不套用教學單元骨架。
+00_Project、Study Log、60_Applications、80_Lemmas、85_Examples-and-Counterexamples、90_Review、99_Sources 與 _Archive 各有跨模組、學習執行或保存職能，不套用教學單元骨架。`85_Examples-and-Counterexamples` 是非教學單元的 canonical example-pair library：保存可重用的合法 regime／移除假設後 failure 配對，不承載定理正本。Study Log 只保存 cycle、evidence 與 learner state，不承載正式數學正本。

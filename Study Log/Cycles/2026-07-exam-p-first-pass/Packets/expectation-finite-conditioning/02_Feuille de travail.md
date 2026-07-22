@@ -1,0 +1,138 @@
+---
+type: study-packet-work-sheet
+start: 2026-07-17
+end: 2026-07-19
+cycle: 2026-07-exam-p-first-pass
+packet: expectation-finite-conditioning
+solutions-policy: attempt-before-corrige
+math-authority: derived
+canonical-sources:
+  - ../../../../../30_Pushforwards-and-Laws/01_Cours/Pushforward Integration Formula.md
+  - ../../../../../35_Product-Measures-and-Transformations/02_TD/TD 01 — Product Measures, Iterated Integrals, and Transformations.md
+  - ../../../../../40_Conditional-Expectation/02_TD/TD 02 — Finite Sigma-Fields.md
+---
+
+# Feuille de travail — Expectation and Finite Conditioning
+
+Exercise 2 is retained for the continuation of the module; it is not part of the 18 July repair séance.
+
+## Exercise 0 — $L^p$–RN retention gate
+
+Let $q>1$, let $Y\in L^q(\mathbb P)$, and let $\mathcal G\subseteq\mathcal F$ be a sub-$\sigma$-field. Define
+
+$$
+\nu_Y^{\mathcal G}(A)=\mathbb E[Y\mathbf1_A],
+\qquad A\in\mathcal G.
+$$
+
+1. State why $Y\in L^1(\mathbb P)$ and give the norm inequality used.
+2. Identify the numerator measure, reference measure and measurable space. State why the numerator is finite signed and absolutely continuous with respect to the reference measure; do not re-prove countable additivity.
+3. State the signed Radon–Nikodym conclusion, including the space containing the representative and its uniqueness relation.
+4. Let $X$ be a random element with law $\mu_X=X_\#\mathbb P$. Explain why LOTUS requires no assumption $\mu_X\ll\lambda$, whereas a probability-density representation $f_X=d\mu_X/d\lambda$ does.
+
+Limit: 15 minutes. This is a recognition gate; the full Hahn-first construction is not requested.
+
+## Exercise 1 — Expectation through the law
+
+Let $X:(\Omega,\mathcal F,\mathbb P)\to(S,\mathcal S)$ be measurable and let $\mu_X=X_\#\mathbb P$.
+
+1. Prove for indicators, then for nonnegative simple functions, that
+
+   $$
+   \mathbb E[\varphi(X)]
+   =
+   \int_S\varphi\,d\mu_X.
+   $$
+
+2. Extend the formula to nonnegative measurable $\varphi$ and state the convergence theorem used.
+3. Extend it to signed $\varphi$ whenever the integral is defined.
+4. Give one example of a nonnegative $X$ with $\mathbb E[X]=+\infty$, and one signed $X$ for which $\mathbb E[X]$ is undefined because both parts have infinite expectation.
+5. Explain why the discrete sum and continuous density formulas are representations of this identity rather than definitions of different expectations.
+
+## Exercise 2 — Insurance payments from the tail formula
+
+First complete Exercise 1(1)–(2) in the formal [Product Measures TD](../../../../../35_Product-Measures-and-Transformations/02_TD/TD%2001%20—%20Product%20Measures,%20Iterated%20Integrals,%20and%20Transformations.md). Use the resulting tail formula throughout this exercise. Let $X\ge0$.
+
+1. For $d,u>0$, prove
+
+   $$
+   \mathbb E[(X-d)_+]
+   =
+   \int_d^\infty\mathbb P(X>t)\,dt
+   $$
+
+   and
+
+   $$
+   \mathbb E[X\wedge u]
+   =
+   \int_0^u\mathbb P(X>t)\,dt.
+   $$
+
+2. If $X$ is exponential with rate $\lambda$, compute both expectations.
+3. Determine $\mathbb E[\min\{(X-d)_+,u\}]$ in tail form.
+4. State one convexity condition under which Jensen compares $\mathbb E[g(X)]$ with $g(\mathbb E[X])$, and explain why this comparison does not compute the expected payment.
+
+## Exercise 3 — Conditioning on a finite partition
+
+Let $(B_i)_{1\le i\le r}$ be a measurable partition and let $Y\in L^1(\mathbb P)$. Assume first that $\mathbb P(B_i)>0$ for every $i$.
+
+1. Determine the general form of a $\sigma(B_1,\ldots,B_r)$-measurable random variable.
+2. Use the conditional-expectation integral identities to prove
+
+   $$
+   \mathbb E[Y\mid\sigma(B_1,\ldots,B_r)]
+   =
+   \sum_i\frac{\mathbb E[Y\mathbf1_{B_i}]}{\mathbb P(B_i)}\mathbf1_{B_i}.
+   $$
+
+3. Deduce the law of total expectation.
+4. Treat a partition containing a null atom and identify exactly what remains undetermined.
+5. For an event $A$, apply the formula to $Y=\mathbf1_A$ and recover the law of total probability.
+
+## Exercise 4 — Bayes and density bookkeeping
+
+Let $(B_i)_{1\le i\le r}$ be a partition with positive probabilities, let $A$ satisfy $\mathbb P(A)>0$, and let $Y\in L^1(\mathbb P)$.
+
+1. Derive Bayes' formula from the joint masses $\mathbb P(A\cap B_i)$.
+2. Define $\mathbb P_A(C)=\mathbb P(C\cap A)/\mathbb P(A)$ and prove
+
+   $$
+   \frac{d\mathbb P_A}{d\mathbb P}
+   =
+   \frac{\mathbf1_A}{\mathbb P(A)}.
+   $$
+
+3. Fill the numerator measure, reference measure, domain and a.e. basis for:
+
+   $$
+   \frac{d\mathbb P_A}{d\mathbb P},
+   \qquad
+   \mathbb E[Y\mid\sigma(B_1,\ldots,B_r)].
+   $$
+
+4. Explain why $\mathbb P(C\mid X=x)$ cannot in general be defined by the event-ratio formula when $X$ has a continuous law.
+
+## Closure
+
+Without notes, complete
+
+$$
+\boxed{X}
+\longmapsto
+\boxed{\mu_X}
+\longmapsto
+\boxed{\int\varphi\,d\mu_X}
+$$
+
+and
+
+$$
+\boxed{\text{finite partition}}
+\longmapsto
+\boxed{\text{atomwise form}}
+\longmapsto
+\boxed{\text{integral identities}}
+\longmapsto
+\boxed{\text{Bayes / total expectation}}.
+$$

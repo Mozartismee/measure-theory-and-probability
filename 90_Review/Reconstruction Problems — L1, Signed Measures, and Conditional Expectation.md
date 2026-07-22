@@ -8,6 +8,8 @@ status: canonical
 
 ## 1. Reconstruction problems
 
+Let \((E,\mathcal A,\mu)\) be a measure space.
+
 ### Exercise 1 — The endpoint pairing
 
 Let \(f\in L^1(\mu)\) and let \(Z\) be measurable.
@@ -21,7 +23,7 @@ Let \(f\in L^1(\mu)\) and let \(Z\) be measurable.
    1\leq p\leq q\leq\infty.
    $$
 
-3. Give counterexamples to these inclusions when \(\mu(E)=\infty\).
+3. Give examples of infinite-measure spaces and functions showing that the displayed chain need not hold.
 
 ---
 
@@ -98,7 +100,7 @@ be a Hahn decomposition for \(\sigma_c\).
 
 ### Exercise 4 — Conditional expectation from Radon–Nikodym
 
-Let \(X\in L^1(\mathbb P)\), and let \(\mathcal G\subseteq\mathcal F\).
+Let \((\Omega,\mathcal F,\mathbb P)\) be a probability space, let \(X\in L^1(\mathbb P)\), and let \(\mathcal G\subseteq\mathcal F\) be a sub-\(\sigma\)-field.
 
 1. Construct \(\mathbb E[X\mid\mathcal G]\) using only the positive Radon–Nikodym theorem.
 2. Prove uniqueness.
@@ -112,6 +114,8 @@ Let \(X\in L^1(\mathbb P)\), and let \(\mathcal G\subseteq\mathcal F\).
    \leq
    \mathbb E[|X|\mid\mathcal G].
    $$
+
+   \(\mathbb P\)-almost surely.
 
 5. Deduce that conditional expectation is a contraction on \(L^1(\mathbb P)\).
 
@@ -128,7 +132,7 @@ A\longmapsto\int_Af\,d\mu
 \text{ is a finite signed measure}.
 $$
 
-For a positive measure \(\nu\) satisfying
+For \(\sigma\)-finite positive measures \(\mu\) and \(\nu\) satisfying
 
 $$
 \nu\ll\mu,

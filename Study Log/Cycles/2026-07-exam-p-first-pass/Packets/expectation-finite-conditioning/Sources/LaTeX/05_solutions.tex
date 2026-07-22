@@ -1,0 +1,304 @@
+\sheettitle
+  {Independent solutions}
+  {Expectation, laws, tail integrals, and finite conditioning}
+
+Use this document only after a complete attempt. Compare the first step at which your argument ceases to be legitimate; do not replace the work record with a cleaner proof.
+
+\section*{Exercise 0 -- The $L^p$--RN retention gate}
+
+Since $\mathbb P(\Omega)=1$ and $q>1$, the finite-measure embedding gives
+\[
+\|Y\|_1\le\|Y\|_q,
+\]
+so $Y\in L^1(\mathbb P)$. The numerator is the restriction of the finite signed measure $Y\mathbb P$ to $(\Omega,\mathcal G)$; the reference is $\mathbb P|_{\mathcal G}$; both live on $(\Omega,\mathcal G)$. Moreover,
+\[
+|\nu_Y^{\mathcal G}|(\Omega)
+\le
+\mathbb E[|Y|]
+<+\infty,
+\]
+and $\mathbb P(A)=0$ implies $\nu_Y^{\mathcal G}(A)=0$.
+
+The signed Radon--Nikodym theorem therefore supplies a $\mathcal G$-measurable
+\[
+H\in L^1(\mathbb P|_{\mathcal G})
+\]
+such that
+\[
+\nu_Y^{\mathcal G}(A)
+=
+\int_AH\,d\mathbb P,
+\qquad A\in\mathcal G,
+\]
+with $H$ unique $\mathbb P$-almost surely. This representative is $\mathbb E[Y\mid\mathcal G]$.
+
+For a random element $X$, LOTUS is the pushforward integration identity for the measure $\mu_X=X_\#\mathbb P$. It therefore needs no dominating Lebesgue measure. A formula involving $f_X$ additionally requires $\mu_X\ll\lambda$; only then does Radon--Nikodym provide $f_X=d\mu_X/d\lambda$, unique $\lambda$-almost everywhere.
+
+\section*{Exercise 1 -- Expectation through the law}
+
+For $C\in\mathcal S$,
+\[
+\mathbb E[\ind_C(X)]
+=
+\mathbb P(X\in C)
+=
+\mu_X(C)
+=
+\int_S\ind_C\,d\mu_X.
+\]
+If $\varphi=\sum_{k=1}^na_k\ind_{C_k}$ is nonnegative simple, linearity gives
+\[
+\mathbb E[\varphi(X)]
+=
+\sum_{k=1}^na_k\mu_X(C_k)
+=
+\int_S\varphi\,d\mu_X.
+\]
+For nonnegative measurable $\varphi$, choose $\varphi_n\uparrow\varphi$ with $\varphi_n$ simple. Monotone convergence on $S$ and on $\Omega$ yields
+\[
+\mathbb E[\varphi(X)]
+=
+\lim_n\mathbb E[\varphi_n(X)]
+=
+\lim_n\int_S\varphi_n\,d\mu_X
+=
+\int_S\varphi\,d\mu_X.
+\]
+For signed $\varphi$, apply this result to $\varphi^+$ and $\varphi^-$ whenever their difference is defined.
+
+On $((0,1),\mathcal B((0,1)),\lambda)$, the nonnegative variable $X(t)=1/t$ has infinite expectation. For an undefined signed expectation, take the identity variable on $\mathbb R$ under the standard Cauchy probability law: both $\mathbb E[X^+]$ and $\mathbb E[X^-]$ are infinite.
+
+If $\mu_X$ is atomic, integration against it is a weighted sum. If $\mu_X\ll\lambda$ with density $f_X$, the same integral is represented by $\int\varphi(x)f_X(x)\,dx$. Neither representation changes the definition of expectation.
+
+\section*{Exercise 2 -- Subgraphs, tail integration, and insurance payments}
+
+For $q\in\mathbb Q_{>0}$, both $\{f>q\}\in\mathcal A$ and $(0,q)\in\mathcal B((0,+\infty))$. The identity
+\[
+H_f
+=
+\bigcup_{q\in\mathbb Q_{>0}}
+\{f>q\}\times(0,q)
+\]
+therefore proves product measurability. Indeed, if $t<f(x)$, density of the rationals supplies $q$ with $t<q<f(x)$; the converse is immediate.
+
+Because $\ind_{H_f}\ge0$, Tonelli applies without any prior integrability claim:
+\[
+\begin{aligned}
+\int_Ef(x)\,\mu(dx)
+&=
+\int_E\int_0^\infty\ind_{\{t<f(x)\}}\,dt\,\mu(dx)\\
+&=
+\int_0^\infty\int_E\ind_{\{f(x)>t\}}\,\mu(dx)\,dt\\
+&=
+\int_0^\infty\mu(f>t)\,dt.
+\end{aligned}
+\]
+
+Apply the same identity to the transformed variables. Since
+\[
+\mathbb P((X-d)_+>t)=\mathbb P(X>d+t),
+\]
+the change of variable $s=d+t$ gives
+\[
+\mathbb E[(X-d)_+]
+=
+\int_d^\infty\mathbb P(X>s)\,ds.
+\]
+Since $\mathbb P(X\wedge u>t)=\mathbb P(X>t)$ for $0\le t<u$ and is zero for $t\ge u$,
+\[
+\mathbb E[X\wedge u]
+=
+\int_0^u\mathbb P(X>t)\,dt.
+\]
+If $X\sim\operatorname{Exp}(\lambda)$, these are
+\[
+\frac{e^{-\lambda d}}{\lambda}
+\quad\text{and}\quad
+\frac{1-e^{-\lambda u}}{\lambda}.
+\]
+
+For the limited-loss payment,
+\[
+\mathbb E[\min\{(X-d)_+,u\}]
+=
+\int_d^{d+u}\mathbb P(X>s)\,ds.
+\]
+Under the exponential law this equals
+\[
+\frac{e^{-\lambda d}-e^{-\lambda(d+u)}}{\lambda}
+=
+\frac{e^{-\lambda d}(1-e^{-\lambda u})}{\lambda}.
+\]
+
+If $g$ is convex and both $X$ and $g(X)$ are integrable, Jensen gives
+\[
+g(\mathbb E[X])\le\mathbb E[g(X)].
+\]
+It supplies a bound. It does not evaluate the tail integral defining the expected payment.
+
+\section*{Exercise 3 -- Conditioning on a finite partition}
+
+Let $\mathcal G=\sigma(B_1,\ldots,B_r)$. A finite real-valued $\mathcal G$-measurable random variable is constant on each atom, so it has the form
+\[
+H=\sum_{i=1}^rc_i\ind_{B_i}.
+\]
+Testing the conditional-expectation identity on $B_j$ gives
+\[
+c_j\mathbb P(B_j)
+=
+\mathbb E[Y\ind_{B_j}].
+\]
+When $\mathbb P(B_j)>0$, this determines
+\[
+c_j
+=
+\frac{\mathbb E[Y\ind_{B_j}]}{\mathbb P(B_j)}.
+\]
+Hence
+\[
+\mathbb E[Y\mid\mathcal G]
+=
+\sum_{i=1}^r
+\frac{\mathbb E[Y\ind_{B_i}]}{\mathbb P(B_i)}\ind_{B_i}.
+\]
+Taking expectations yields
+\[
+\mathbb E[Y]
+=
+\sum_{i=1}^r\mathbb P(B_i)\mathbb E[Y\mid B_i].
+\]
+On a null atom, the equation is $0=0$, so its coefficient is arbitrary. This is precisely version freedom on a null set. Taking $Y=\ind_A$ gives
+\[
+\mathbb P(A)
+=
+\sum_i\mathbb P(A\mid B_i)\mathbb P(B_i),
+\]
+the law of total probability.
+
+\section*{Exercise 4 -- Bayes and representation bookkeeping}
+
+The joint masses satisfy
+\[
+\mathbb P(A\cap B_i)
+=
+\mathbb P(A\mid B_i)\mathbb P(B_i).
+\]
+Summing over the partition gives
+\[
+\mathbb P(A)
+=
+\sum_i\mathbb P(A\mid B_i)\mathbb P(B_i).
+\]
+Therefore
+\[
+\mathbb P(B_j\mid A)
+=
+\frac{\mathbb P(A\mid B_j)\mathbb P(B_j)}
+{\sum_i\mathbb P(A\mid B_i)\mathbb P(B_i)}.
+\]
+
+For $C\in\mathcal F$,
+\[
+\mathbb P_A(C)
+=
+\frac{\mathbb P(C\cap A)}{\mathbb P(A)}
+=
+\int_C\frac{\ind_A}{\mathbb P(A)}\,d\mathbb P.
+\]
+Thus
+\[
+\frac{d\mathbb P_A}{d\mathbb P}
+=
+\frac{\ind_A}{\mathbb P(A)}
+\quad\mathbb P\text{-almost surely}.
+\]
+
+The two requested ledger rows are:
+
+{\footnotesize
+\hbadness=10000
+\begin{tabularx}{\textwidth}{@{}Y Y Y Y Y@{}}
+\toprule
+Representative & Numerator measure & Reference & Domain & Uniqueness \\
+\midrule
+$d\mathbb P_A/d\mathbb P$ & $C\mapsto\mathbb P(C\cap A)/\mathbb P(A)$ & $\mathbb P$ & $(\Omega,\mathcal F)$ & $\mathbb P$-a.s. \\
+$\mathbb E[Y\mid\mathcal G]$ & $C\mapsto\mathbb E[Y\ind_C]$, $C\in\mathcal G$ & $\mathbb P|_{\mathcal G}$ & $(\Omega,\mathcal G)$ & $\mathbb P$-a.s. \\
+\bottomrule
+\end{tabularx}
+\par
+}
+
+If $X$ has a continuous law, $\mathbb P(X=x)=0$ for each fixed $x$. The event-ratio denominator therefore vanishes. A conditional kernel or density may provide a version, but it is a different construction and is not determined pointwise everywhere by the joint law.
+
+\section*{Exercise 5 -- Original deployment analogues}
+
+\textbf{(a) Capped-payment mechanism.}
+The transformed payment is $X\wedge1$. The tail formula gives
+\[
+\mathbb E[X\wedge1]
+=
+\int_0^1\mathbb P(X>t)\,dt
+=
+\int_0^1(1+t)^{-2}\,dt
+=
+\left[-\frac1{1+t}\right]_0^1
+=
+\frac12.
+\]
+
+\textbf{(b) Nonlinear Poisson moment.}
+For $N\sim\operatorname{Poisson}(2)$,
+\[
+\mathbb E[N]=2,
+\qquad
+\operatorname{Var}(N)=2,
+\qquad
+\mathbb E[N^2]=2+2^2=6.
+\]
+Hence
+\[
+\mathbb E\!\left[\frac{N(N+1)}2\right]
+=
+\frac{\mathbb E[N^2]+\mathbb E[N]}2
+=
+\frac{6+2}{2}
+=
+4.
+\]
+The required object is $\mathbb E[g(N)]$; $g(\mathbb E[N])=3$ is a different quantity.
+
+\textbf{(c) Finite-mixture inversion.}
+The joint masses are
+\[
+\mathbb P(A\cap B_1)=0.3\cdot0.8=0.24,
+\qquad
+\mathbb P(A\cap B_2)=0.7\cdot0.2=0.14.
+\]
+Thus $\mathbb P(A)=0.38$ and
+\[
+\mathbb P(B_1\mid A)
+=
+\frac{0.24}{0.38}
+=
+\frac{12}{19}.
+\]
+
+\section*{Closed-book reconstruction}
+
+The first chain is
+\[
+X
+\longmapsto
+\mu_X=X_\#\mathbb P
+\longmapsto
+\mathbb E[\varphi(X)]=\int_S\varphi\,d\mu_X.
+\]
+No density is needed. A pdf appears only after choosing a reference $\lambda$ and verifying $\mu_X\ll\lambda$.
+
+For a finite partition, $\mathcal G$-measurability forces atomwise constants; the identities
+\[
+\int_{B_i}H\,d\mathbb P
+=
+\int_{B_i}Y\,d\mathbb P
+\]
+determine those constants on positive-probability atoms. Summation yields total expectation, and normalization of the corresponding joint masses yields Bayes' formula. Null atoms retain arbitrary coefficients because conditional expectation is defined only up to almost-sure equality.

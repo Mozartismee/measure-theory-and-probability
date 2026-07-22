@@ -140,7 +140,7 @@ $$
 \mu=\alpha\mu_1+(1-\alpha)\mu_2,
 $$
 
-where both component measures have finite second moments.
+where $\alpha\in[0,1]$ and both component measures have finite second moments.
 
 Prove that
 
@@ -198,7 +198,7 @@ Hint: use Bernoulli random variables with different dependence structures.
 
 ## Exercise 7 — Mixture Realization by a Selector
 
-Let $I$ be Bernoulli with
+Let $\alpha\in(0,1)$, and let $I$ be a $\{1,2\}$-valued random variable with
 
 $$
 \mathbb P(I=1)=\alpha,

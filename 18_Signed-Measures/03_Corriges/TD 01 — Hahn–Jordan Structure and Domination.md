@@ -149,7 +149,23 @@ $$
 \alpha\perp\beta.
 $$
 
-Choose disjoint measurable sets $S,T$ carrying $\alpha$ and $\beta$, respectively. Then $S$ is positive for $\sigma$ and $T$ is negative, so $(S,T)$ is a Hahn decomposition up to a common null remainder. The construction above therefore gives
+By mutual singularity, choose $S\in\mathcal A$ such that
+
+$$
+\alpha(E\setminus S)=0,
+\qquad
+\beta(S)=0.
+$$
+
+Then $S$ is positive for $\sigma$ and $E\setminus S$ is negative, so $(S,E\setminus S)$ is a Hahn decomposition. Moreover, for every $A\in\mathcal A$,
+
+$$
+\sigma(A\cap S)=\alpha(A),
+\qquad
+-\sigma(A\cap(E\setminus S))=\beta(A).
+$$
+
+The construction above therefore gives
 
 $$
 \alpha=\sigma^+,

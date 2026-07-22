@@ -8,7 +8,7 @@ status: canonical
 
 Let $(\Omega,\mathcal F,\mathbb P)$ be a probability space and let $\mathcal G\subset\mathcal F$ be a sub-$\sigma$-field.
 
-This module depends on [[20_Radon-Nikodym/01_Cours/Cours|the Radon–Nikodym construction]].
+This module depends on [the Radon–Nikodym construction](../../20_Radon-Nikodym/01_Cours/Cours.md).
 
 ## 1. Conditional expectation
 
@@ -113,7 +113,7 @@ in the signed Radon–Nikodym sense.
 
 ### Proposition
 
-Let $Y,Z\in L^1(\mathbb P)$, with $Z$ $\mathcal G$-measurable. The following assertions are equivalent:
+By [the observed-test characterization](../../80_Lemmas/Observed-Test%20Characterization%20of%20Conditional%20Expectation.md), if $Y,Z\in L^1(\mathbb P)$ and $Z$ is $\mathcal G$-measurable, the following assertions are equivalent:
 
 1. $Z=\mathbb E[Y\mid\mathcal G]$;
 
@@ -137,20 +137,10 @@ If $Y,Z\ge0$, the identity also holds for every nonnegative $\mathcal G$-measura
 
 ### Demonstration
 
-The passage from indicators to nonnegative simple functions follows by linearity, and the passage to arbitrary nonnegative $H$ follows by monotone convergence. Bounded signed functions are obtained from positive and negative parts.
-
-If $Z_1$ and $Z_2$ satisfy the defining identity, apply it to
-
-$$
-A=\{Z_1>Z_2\}\in\mathcal G
-$$
-
-and then exchange $Z_1$ and $Z_2$. Thus
-
-$$
-Z_1=Z_2
-\qquad\mathbb P\text{-almost surely}.
-$$
+The equivalence for bounded tests and the almost-sure uniqueness mechanism are
+proved in the cited lemma. In the nonnegative regime, indicators extend to
+nonnegative simple functions by linearity and then to arbitrary nonnegative
+$H$ by monotone convergence.
 
 ## 5. Conditional-expectation calculus
 
@@ -303,7 +293,7 @@ The first object is a real number. The second is a random variable defined up to
 
 ## 7. Version discipline
 
-The ambient measure, $L^1$-space and almost-everywhere relation are recorded in [[15_Lp-Interface/06_Supplements/Version Discipline|Version Discipline]].
+The ambient measure, $L^1$-space and almost-everywhere relation are recorded in [Version Discipline](../../15_Lp-Interface/06_Supplements/Version%20Discipline.md).
 
 ## 8. Reconstruction
 
@@ -335,4 +325,4 @@ $$
 
 ## 9. Continuation
 
-Conditioning on a random variable and conditional event laws belong to [[50_Conditional-Laws/01_Cours/Cours|Conditional Laws]].
+Conditioning on a random variable and conditional event laws belong to [Conditional Laws](../../50_Conditional-Laws/01_Cours/Cours.md).

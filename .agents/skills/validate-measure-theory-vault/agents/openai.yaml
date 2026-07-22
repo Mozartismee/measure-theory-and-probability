@@ -1,0 +1,4 @@
+interface:
+  display_name: "Validate Measure-Theory Vault"
+  short_description: "Check portable links, mirrors, and repository hygiene"
+  default_prompt: "Use $validate-measure-theory-vault to check internal links and report any portability failures."

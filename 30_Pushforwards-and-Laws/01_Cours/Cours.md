@@ -27,7 +27,7 @@ $$
 
 ## Proposition 1 — Pushforward Integration
 
-The complete proof is isolated in [[30_Pushforwards-and-Laws/01_Cours/Pushforward Integration Formula|Pushforward Integration Formula]].
+The complete proof is isolated in [Pushforward Integration Formula](Pushforward%20Integration%20Formula.md).
 
 For every measurable $\varphi:S\to[0,\infty]$,
 
@@ -69,7 +69,13 @@ $$
 
 ## Corollary 1 — Expectations Depend Only on the Law
 
-If
+Let $(\Omega',\mathcal F',\mathbb Q)$ be a probability space and let
+
+$$
+Y:(\Omega',\mathcal F',\mathbb Q)\to(S,\Sigma)
+$$
+
+be measurable. If
 
 $$
 X_\#\mathbb P=Y_\#\mathbb Q,
@@ -83,10 +89,12 @@ $$
 \int_{\Omega'}\varphi(Y)\,d\mathbb Q.
 $$
 
-In particular, whenever finite,
+If $S=\mathbb R$, then for every integer $k\ge1$ such that $x\mapsto x^k$ is $\mu_X$-integrable,
 
 $$
-\mathbb E[X^k]=\mathbb E[Y^k].
+\mathbb E_{\mathbb P}[X^k]
+=
+\mathbb E_{\mathbb Q}[Y^k].
 $$
 
 Thus the concrete realization of a random variable may change while all law-determined quantities remain unchanged.
@@ -133,7 +141,7 @@ Hence a pdf is not a measure. It is a Radon–Nikodym derivative of a measure wi
 
 ## Corollary 2 — Density Form of Expectation
 
-If
+Assume $S=\mathbb R$. If
 
 $$
 \mu_X\ll\lambda,
@@ -151,7 +159,7 @@ $$
 
 for every admissible measurable $\varphi$.
 
-In particular,
+In particular, if $X\in L^1(\mathbb P)$,
 
 $$
 \mathbb E[X]
@@ -159,7 +167,7 @@ $$
 \int_{\mathbb R}x f_X(x)\,dx,
 $$
 
-and
+and, if $X\in L^2(\mathbb P)$,
 
 $$
 \mathbb E[X^2]
@@ -195,7 +203,7 @@ $$
 \mu:=\alpha\mu_1+(1-\alpha)\mu_2.
 $$
 
-Then $\mu$ is a probability measure, and for every nonnegative measurable or integrable $\varphi$,
+Then $\mu$ is a probability measure. For every nonnegative measurable $\varphi$,
 
 $$
 \int_S\varphi\,d\mu
@@ -205,11 +213,23 @@ $$
 (1-\alpha)\int_S\varphi\,d\mu_2.
 $$
 
+Here the endpoint cases use the convention
+
+$$
+0\cdot(+\infty)=0.
+$$
+
+The same identity holds, with all terms finite, for every real-valued measurable
+
+$$
+\varphi\in L^1(\mu_1)\cap L^1(\mu_2).
+$$
+
 ---
 
 ## Corollary 3 — Mixture Densities
 
-Assume
+In the setting of Proposition 3, assume $S=\mathbb R$, let $\lambda$ denote Lebesgue measure, and suppose
 
 $$
 \mu_i\ll\lambda,
@@ -218,7 +238,7 @@ f_i=\frac{d\mu_i}{d\lambda},
 \quad i=1,2.
 $$
 
-Then
+Then the mixture defined above,
 
 $$
 \mu:=\alpha\mu_1+(1-\alpha)\mu_2
@@ -245,7 +265,7 @@ Thus mixture formation is linear at the level of measures and densities.
 
 ## Proposition 4 — Mean and Variance of a Mixture
 
-Let $\mu_1,\mu_2$ be probability measures on $\mathbb R$ with finite second moments. Set
+Let $\mu_1,\mu_2$ be probability measures on $\mathbb R$ with finite second moments, and let $\alpha\in[0,1]$. Set
 
 $$
 m_i:=\int_{\mathbb R}x\,d\mu_i(x),
@@ -320,24 +340,33 @@ Take
 $$
 \Omega
 =
-(\{1\}\times S)\sqcup(\{2\}\times S),
-$$
-
-define
-
-$$
-\mathbb P(\{1\}\times A)
+\{1,2\}\times S,
+\qquad
+\mathcal F_\Omega
 =
-\alpha\mu_1(A),
+2^{\{1,2\}}\otimes\Sigma.
 $$
 
+For $E\in\mathcal F_\Omega$, write
+
 $$
-\mathbb P(\{2\}\times A)
+E_i
 =
-(1-\alpha)\mu_2(A),
+\{s\in S:(i,s)\in E\},
+\qquad i=1,2,
 $$
 
-and set
+and define
+
+$$
+\mathbb P(E)
+=
+\alpha\mu_1(E_1)
++
+(1-\alpha)\mu_2(E_2).
+$$
+
+Then $\mathbb P$ is a probability measure on $(\Omega,\mathcal F_\Omega)$; set
 
 $$
 X(i,s)=s.
@@ -399,28 +428,24 @@ Marginal laws determine law-level quantities, but not joint operations.
 
 ## Structural Chain
 
+Let $m$ be a $\sigma$-finite measure on $(S,\Sigma)$. Whenever $\mu_X\ll m$, the chain is
+
 $$
 X
 \longmapsto
 \mu_X=X_\#\mathbb P
 \longmapsto
-f_X=\frac{d\mu_X}{d\lambda}
+f_X=\frac{d\mu_X}{dm}.
 $$
 
-with the last arrow available only when
-
-$$
-\mu_X\ll\lambda.
-$$
-
-The corresponding integration chain is
+The last arrow is available only under the displayed absolute-continuity hypothesis. The corresponding integration chain is
 
 $$
 \int_\Omega \varphi(X)\,d\mathbb P
 =
 \int_S\varphi\,d\mu_X
 =
-\int_S\varphi f_X\,d\lambda,
+\int_S\varphi f_X\,dm,
 $$
 
-whenever the density representation exists.
+for every nonnegative measurable $\varphi$, and for every signed measurable $\varphi$ whenever the integrals are defined.

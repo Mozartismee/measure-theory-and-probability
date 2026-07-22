@@ -2,7 +2,7 @@
 type: module-map
 module: product-measures-and-transformations
 status: canonical
-module-status: planned
+module-status: in-progress
 ---
 
 # Module Map — Product Measures and Transformations
@@ -15,17 +15,25 @@ module-status: planned
 - Prerequisites：Integration and Convergence、Pushforwards and Laws。
 - Output：能判斷非負與可積 regimes，合法交換積分，並將 transformations 表示為 measure transport。
 
-結構遵循 [[00_Project/Unit Structure|Unit Structure]]。
+結構遵循 [Unit Structure](../00_Project/Unit%20Structure.md)。
+
+## Competency keys
+
+- `PM.sections`：由 rectangles 經 stable class 證明 measurable sections。
+- `PM.product-measure`：陳述 product-measure construction 與 uniqueness regime。
+- `PM.tonelli-fubini`：區分 nonnegative 與 absolutely integrable regimes。
+- `PM.marginalization`：由 joint law 合法推出 marginals 與 layer-cake identities。
+- `PM.change-of-variables`：將 Euclidean transformations 表示為 measure transport 並追蹤 Jacobian hypotheses。
 
 ## Files
 
-- Cours：尚未建置。
-- TD：尚未建置。
-- Corriges：尚未建置。
+- Cours：[Cours](01_Cours/Cours.md)
+- TD：[TD 01](02_TD/TD%2001%20—%20Product%20Measures,%20Iterated%20Integrals,%20and%20Transformations.md)
+- Corriges：[TD 01 corrigé](03_Corriges/TD%2001%20—%20Product%20Measures,%20Iterated%20Integrals,%20and%20Transformations.md)
 - Colles：尚未建置。
 - Example-Sheets：尚未建置。
 - Supplements：目前無必要補件。
 
 ## Completion criterion
 
-建立完整 Cours、依賴式 TD、corrigé、口試題與 transformation examples。Tonelli/Fubini 與 change of variables 不得藏入 supplement。
+補齊口試題與獨立 transformation examples。Cours、依賴式 TD 與 corrigé 已覆蓋 product measure、indicator-to-Tonelli reconstruction、Fubini、marginalization、layer cake 與 Euclidean change of variables；未補齊 Colles 與 Example-Sheets 前維持 `in-progress`。

@@ -1,0 +1,157 @@
+\sheettitle
+  {Exercise sheet}
+  {Complete every exercise before opening the independent solutions}
+
+\section*{Exercise 0 -- The $L^p$--RN retention gate}
+
+Let $q>1$, let $Y\in L^q(\mathbb P)$, and let $\mathcal G\subseteq\mathcal F$ be a sub-$\sigma$-field. Define
+\[
+\nu_Y^{\mathcal G}(A)=\mathbb E[Y\ind_A],
+\qquad A\in\mathcal G.
+\]
+\begin{enumerate}
+  \item State why $Y\in L^1(\mathbb P)$ and give the exact norm inequality.
+  \item Identify the numerator measure, reference measure, and measurable space. State why the numerator is finite signed and absolutely continuous with respect to the reference measure; do not re-prove countable additivity.
+  \item State the signed Radon--Nikodym conclusion, including the space containing the representative and its uniqueness relation.
+  \item Let $X$ be a random element with law $\mu_X=X_\#\mathbb P$. Explain why LOTUS requires no assumption $\mu_X\ll\lambda$, whereas a density representation $f_X=d\mu_X/d\lambda$ does.
+\end{enumerate}
+Limit: 15 minutes. This is a recognition gate; the full Hahn-first construction is not requested.
+
+\section*{Exercise 1 -- Expectation through the law}
+
+Let $X:(\Omega,\mathcal F,\mathbb P)\to(S,\mathcal S)$ be measurable and let $\mu_X=X_\#\mathbb P$.
+\begin{enumerate}
+  \item Prove for indicators, then for nonnegative simple functions, that
+  \[
+  \mathbb E[\varphi(X)]
+  =
+  \int_S\varphi\,d\mu_X.
+  \]
+  \item Extend the formula to nonnegative measurable $\varphi$ and state the convergence theorem used.
+  \item Extend it to signed $\varphi$ whenever the integral is defined.
+  \item Give one example of a nonnegative $X$ with $\mathbb E[X]=+\infty$, and one signed $X$ for which $\mathbb E[X]$ is undefined because both parts have infinite expectation.
+  \item Explain why discrete sums and continuous density integrals are representations of this identity rather than definitions of different expectations.
+\end{enumerate}
+
+\section*{Exercise 2 -- Subgraphs, tail integration, and insurance payments}
+
+Let $(E,\mathcal A,\mu)$ be a $\sigma$-finite measure space and let $f:E\to[0,+\infty]$ be measurable.
+\begin{enumerate}
+  \item Prove that
+  \[
+  H_f=\{(x,t)\in E\times(0,+\infty):t<f(x)\}
+  \]
+  is $\mathcal A\otimes\mathcal B((0,+\infty))$-measurable.
+  \item Apply Tonelli to $\ind_{H_f}$ and prove
+  \[
+  \int_Ef\,d\mu
+  =
+  \int_0^\infty\mu(f>t)\,dt.
+  \]
+\end{enumerate}
+Now let $X\ge0$ be a random variable and let $d,u>0$.
+\begin{enumerate}[resume]
+  \item Prove
+  \[
+  \mathbb E[(X-d)_+]
+  =
+  \int_d^\infty\mathbb P(X>t)\,dt,
+  \qquad
+  \mathbb E[X\wedge u]
+  =
+  \int_0^u\mathbb P(X>t)\,dt.
+  \]
+  \item If $X\sim\operatorname{Exp}(\lambda)$, compute both expectations.
+  \item Determine $\mathbb E[\min\{(X-d)_+,u\}]$ in tail form and then for an exponential loss.
+  \item State one convexity regime in which Jensen compares $\mathbb E[g(X)]$ with $g(\mathbb E[X])$, and explain why the comparison does not compute the expected payment.
+\end{enumerate}
+
+\section*{Exercise 3 -- Conditioning on a finite partition}
+
+Let $(B_i)_{1\le i\le r}$ be a measurable partition and let $Y\in L^1(\mathbb P)$. Assume first that $\mathbb P(B_i)>0$ for every $i$.
+\begin{enumerate}
+  \item Determine the general form of a $\sigma(B_1,\ldots,B_r)$-measurable finite real-valued random variable.
+  \item Use the conditional-expectation integral identities to prove
+  \[
+  \mathbb E[Y\mid\sigma(B_1,\ldots,B_r)]
+  =
+  \sum_i
+  \frac{\mathbb E[Y\ind_{B_i}]}{\mathbb P(B_i)}\ind_{B_i}.
+  \]
+  \item Deduce the law of total expectation.
+  \item Treat a partition containing a null atom and identify exactly what remains undetermined.
+  \item For an event $A$, apply the formula to $Y=\ind_A$ and recover the law of total probability.
+\end{enumerate}
+
+\section*{Exercise 4 -- Bayes and representation bookkeeping}
+
+Let $(B_i)_{1\le i\le r}$ be a partition with positive probabilities and let $A$ satisfy $\mathbb P(A)>0$.
+\begin{enumerate}
+  \item Derive Bayes' formula from the joint masses $\mathbb P(A\cap B_i)$.
+  \item Define $\mathbb P_A(C)=\mathbb P(C\cap A)/\mathbb P(A)$ and prove
+  \[
+  \frac{d\mathbb P_A}{d\mathbb P}
+  =
+  \frac{\ind_A}{\mathbb P(A)}.
+  \]
+  \item For $Y\in L^1(\mathbb P)$ and $\mathcal G=\sigma(B_1,\ldots,B_r)$, fill in the numerator measure, reference measure, domain, and almost-everywhere basis for
+  \[
+  \frac{d\mathbb P_A}{d\mathbb P},
+  \qquad
+  \mathbb E[Y\mid\mathcal G].
+  \]
+  \item Explain why $\mathbb P(C\mid X=x)$ cannot in general be defined by an event ratio when $X$ has a continuous law.
+\end{enumerate}
+
+\section*{Exercise 5 -- Original deployment analogues}
+
+The following are original problems. The labels record only the structural mechanism of the corresponding official-question anchors; no official problem statement is reproduced.
+\begin{enumerate}
+  \item \textbf{Capped-payment mechanism (Q50 anchor).}
+  A nonnegative loss $X$ satisfies
+  \[
+  \mathbb P(X>t)=(1+t)^{-2},
+  \qquad t\ge0.
+  \]
+  Identify the transformed payment and compute $\mathbb E[X\wedge1]$.
+  \item \textbf{Nonlinear Poisson moment (Q386 anchor).}
+  Let $N\sim\operatorname{Poisson}(2)$ and let the payment be
+  \[
+  g(N)=\frac{N(N+1)}2.
+  \]
+  Compute $\mathbb E[g(N)]$ and state why $g(\mathbb E[N])$ is not the required object.
+  \item \textbf{Finite-mixture inversion (Q370 anchor).}
+  A policy belongs to class $B_1$ with probability $0.3$ and to class $B_2$ with probability $0.7$. An observed event $A$ satisfies
+  \[
+  \mathbb P(A\mid B_1)=0.8,
+  \qquad
+  \mathbb P(A\mid B_2)=0.2.
+  \]
+  Form the two joint masses and compute $\mathbb P(B_1\mid A)$.
+\end{enumerate}
+
+\section*{Closed-book reconstruction}
+
+Without notes, complete the two chains
+\[
+\boxed{X}
+\longmapsto
+\boxed{\mu_X}
+\longmapsto
+\boxed{\int\varphi\,d\mu_X}
+\]
+and
+\[
+\boxed{\text{finite partition}}
+\longmapsto
+\boxed{\text{atomwise form}}
+\longmapsto
+\boxed{\text{integral identities}}
+\longmapsto
+\boxed{\text{Bayes / total expectation}}.
+\]
+For every density encountered, name the numerator, reference measure, domain, and almost-everywhere basis. For $\mu_X$, explain why those density fields are not applicable until a reference measure is chosen.
+
+\section*{Deferred proof debts}
+
+The full Hahn-first construction of Radon--Nikodym, $\sigma$-finite gluing, and general conditional kernels or conditional densities are not completion requirements for this packet.

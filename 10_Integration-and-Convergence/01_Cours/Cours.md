@@ -181,7 +181,7 @@ Fatou is one-sided. Equality requires additional structure; optimism is not a co
 
 ## 4. Dominated convergence theorem
 
-### Theorem — DCT
+#### Theorem — DCT
 
 Let $(f_n)$ be measurable and suppose
 
